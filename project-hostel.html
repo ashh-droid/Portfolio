@@ -1,187 +1,54 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="Case study: Hostel Allocation System built by Asmita G V using Django, SQLite, Docker, and Kubernetes." name="description"/>
-<meta content="Hostel Allocation System Case Study — Asmita G V" property="og:title"/>
-<meta content="A role-based Django application for hostel applications, room allocation, administration, and containerised deployment." property="og:description"/>
-<meta content="article" property="og:type"/>
-<title>Hostel Allocation System Case Study — Asmita G V</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#222b45" name="theme-color"/>
-<meta content="light" name="color-scheme"/>
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="styles.css" rel="stylesheet"/>
-<script defer="" src="script.js"></script>
+  <meta charset="utf-8">
+  <meta name="description" content="Case study: Hostel Allocation System built by Asmita G V using Python, Django, SQLite, Docker, and Kubernetes.">
+  <meta property="og:title" content="Hostel Allocation System Case Study — Asmita G V">
+  <meta property="og:description" content="A role-based Django application covering student applications, room allocation, dashboards, and Kubernetes deployment.">
+  <meta property="og:type" content="article">
+  <title>Hostel Allocation System Case Study — Asmita G V</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0f172a">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="refresh.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header">
-<div class="container nav-shell">
-<a aria-label="Asmita G V portfolio home" class="brand" href="index.html">
-<span class="brand-mark">AG</span>
-<span>
-<strong>Asmita G V</strong>
-<small>Computer Science Graduate</small>
-</span>
-</a>
-<button aria-controls="site-nav" aria-expanded="false" class="menu-button" type="button">
-<span>Menu</span>
-</button>
-<nav aria-label="Primary navigation" id="site-nav">
-<a aria-current="page" href="index.html#work">Work</a>
-<a href="index.html#experience">Experience</a>
-<a href="index.html#about">About</a>
-<a href="resume.html">Resume</a>
-<a class="nav-contact" href="index.html#contact">Contact</a>
-</nav>
-</div>
-</header>
-<main id="main">
-<section class="case-hero hostel-case-hero">
-<div class="container case-hero-grid">
-<div>
-<a class="back-link" href="index.html#work">← Back to selected work</a>
-<p class="eyebrow">Case study · Full-stack application</p>
-<h1>Hostel Allocation System</h1>
-<p class="case-summary">A web-based hostel management application that supports student applications, administrative review, room allocation, and deployment through Docker and Kubernetes.</p>
-<div class="case-actions">
-<a class="button button-primary" href="https://github.com/ashh-droid/Hostel-Allocation-System" rel="noreferrer" target="_blank">View GitHub repository ↗</a>
-</div>
-</div>
-<div class="case-facts">
-<dl>
-<div><dt>Role</dt><dd>Full-stack development</dd></div>
-<div><dt>Backend</dt><dd>Python and Django</dd></div>
-<div><dt>Deployment</dt><dd>Docker and Kubernetes</dd></div>
-<div><dt>Year</dt><dd>2026</dd></div>
-</dl>
-</div>
-</div>
-</section>
-<section aria-label="Hostel Allocation System screenshots" class="screenshot-gallery">
-<div class="container">
-<div class="gallery-main">
-<img alt="Administrator dashboard showing hostel statistics" loading="eager" src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/rector_dashboard.png"/>
-</div>
-<div class="gallery-pair">
-<figure>
-<img alt="Student dashboard for hostel application and allocation details" loading="lazy" src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/student_dashboard.png"/>
-<figcaption>Student workflow</figcaption>
-</figure>
-<figure>
-<img alt="Administrator room allocation interface" loading="lazy" src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/allocation.png"/>
-<figcaption>Room allocation workflow</figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section class="section case-content-section">
-<div class="container case-content-grid">
-<aside class="case-nav">
-<a href="#problem">Problem</a>
-<a href="#workflow">Workflow</a>
-<a href="#architecture">Architecture</a>
-<a href="#deployment">Deployment</a>
-<a href="#future">Future work</a>
-</aside>
-<div class="case-content">
-<section id="problem">
-<p class="eyebrow">The problem</p>
-<h2>Bringing hostel applications, records, and room allocation into one system.</h2>
-<p>
-      The project replaces disconnected manual steps with a role-based
-      application where students can apply and track their status while wardens
-      and administrators review records and manage room allocation.
-    </p>
-</section>
-<section id="workflow">
-<p class="eyebrow">Application workflow</p>
-<h2>Separate experiences for students, wardens, and administrators.</h2>
-<div aria-label="Application workflow" class="workflow-line">
-<span>Register or sign in</span>
-<i>→</i>
-<span>Submit hostel request</span>
-<i>→</i>
-<span>Review records</span>
-<i>→</i>
-<span>Allocate room</span>
-<i>→</i>
-<span>View allocation details</span>
-</div>
-<div class="decision-grid">
-<article><h3>Student workflow</h3><p>Registration, authentication, hostel applications, status tracking, and allocation details.</p></article>
-<article><h3>Warden workflow</h3><p>Request review, student and room oversight, and operational record management.</p></article>
-<article><h3>Administrator workflow</h3><p>User management, dashboards, allocation records, configuration, and system administration.</p></article>
-</div>
-</section>
-<section id="architecture">
-<p class="eyebrow">Application structure</p>
-<h2>Django-based application with clear domain entities.</h2>
-<p>
-              The project uses Django ORM and separates core information into
-              users, student profiles, hostel rooms, applications, and final allocations.
-            </p>
-<div class="architecture-diagram">
-<div><strong>Browser</strong><span>Django templates</span></div>
-<b>→</b>
-<div><strong>Django application</strong><span>Views · Forms · Auth</span></div>
-<b>→</b>
-<div><strong>Data layer</strong><span>Django ORM · SQLite</span></div>
-</div>
-<div class="case-points">
-<article><span>01</span><div><h3>Role-based access</h3><p>Student and administrator permissions are separated through Django authentication and application logic.</p></div></article>
-<article><span>02</span><div><h3>Security foundations</h3><p>The project uses password hashing, CSRF protection, role-based access control, and form validation.</p></div></article>
-<article><span>03</span><div><h3>Operational data</h3><p>Models cover student information, room availability, accommodation applications, and allocations.</p></div></article>
-</div>
-</section>
-<section id="deployment">
-<p class="eyebrow">Deployment work</p>
-<h2>Moving the application beyond local development.</h2>
-<p>
-      The application was containerised using Docker and prepared for Kubernetes
-      deployment with Deployments, Services, configuration management, secrets,
-      replicas, and application health monitoring.
-    </p>
-<div class="decision-grid">
-<article><h3>Docker</h3><p>Provides a consistent runtime environment for the Django application and its dependencies.</p></article>
-<article><h3>Kubernetes</h3><p>Uses Deployments and Services for application orchestration and access.</p></article>
-<article><h3>Operational reliability</h3><p>Includes liveness checks, readiness checks, ConfigMaps, Secrets, and replica support.</p></article>
-</div>
-</section>
-<section id="future">
-<p class="eyebrow">What I would improve next</p>
-<h2>Strengthening production readiness.</h2>
-<p>
-      The next steps would include PostgreSQL, automated tests, CI/CD, cloud
-      deployment, centralised monitoring, and stronger transaction handling
-      for room allocation.
-    </p>
-</section>
-</div>
-</div>
-</section>
-<section class="next-project">
-<div class="container next-project-inner">
-<div><p class="eyebrow">Previous case study</p><h2>Arcanelinx Corporate Website</h2></div>
-<a class="button button-primary" href="project-arcanelinx.html">View project →</a>
-</div>
-</section>
-</main>
-<footer class="site-footer">
-<div class="container footer-shell">
-<div>
-<strong>Asmita G V</strong>
-<p>Computer Science graduate based in Bengaluru, India.</p>
-</div>
-<div class="footer-links">
-<a href="mailto:gujjarasmita@gmail.com">Email</a>
-<a href="https://www.linkedin.com/in/asmita-gv/" rel="noreferrer" target="_blank">LinkedIn</a>
-<a href="https://github.com/ashh-droid" rel="noreferrer" target="_blank">GitHub</a>
-</div>
-<p class="copyright">© <span data-current-year="">2026</span></p>
-</div>
-</footer>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="container nav-shell"><a class="brand" href="index.html" aria-label="Asmita G V portfolio home"><span class="brand-mark">AG</span><span><strong>Asmita G V</strong><small>Computer Science &amp; Engineering Graduate</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button><nav id="site-nav" aria-label="Primary navigation"><a href="index.html#work" aria-current="page">Work</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="resume.html">Resume</a><a class="nav-contact" href="index.html#contact">Contact</a></nav></div></header>
+  <main id="main">
+    <section class="case-hero hostel-case-hero">
+      <div class="container case-hero-grid">
+        <div>
+          <a class="back-link" href="index.html#work">← Back to selected work</a>
+          <p class="eyebrow">Case study · Django application</p>
+          <h1>Hostel Allocation System</h1>
+          <p class="case-summary">A role-based hostel management system covering student applications, administrative review, room allocation, dashboards, and containerised deployment.</p>
+          <div class="case-actions"><a class="button button-primary" href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noreferrer">View GitHub repository ↗</a></div>
+        </div>
+        <div class="case-facts"><dl><div><dt>Role</dt><dd>Full-stack development</dd></div><div><dt>Application</dt><dd>Python · Django · SQLite</dd></div><div><dt>Deployment</dt><dd>Docker · Kubernetes / Minikube</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl></div>
+      </div>
+    </section>
+
+    <section class="screenshot-gallery" aria-label="Hostel Allocation System screenshots"><div class="container"><div class="gallery-main"><img src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/rector_dashboard.png" alt="Administrator dashboard showing hostel statistics" loading="eager"></div><div class="gallery-pair"><figure><img src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/student_dashboard.png" alt="Student dashboard for hostel applications and allocation details" loading="lazy"><figcaption>Student workflow</figcaption></figure><figure><img src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/allocation.png" alt="Administrator room allocation interface" loading="lazy"><figcaption>Room allocation workflow</figcaption></figure></div></div></section>
+
+    <section class="section case-content-section">
+      <div class="container case-content-grid">
+        <aside class="case-nav"><a href="#problem">Problem</a><a href="#workflow">Workflow</a><a href="#architecture">Architecture</a><a href="#deployment">Deployment</a><a href="#future">Next steps</a></aside>
+        <div class="case-content">
+          <section id="problem"><p class="eyebrow">The problem</p><h2>Bring hostel applications, records, and room allocation into one system.</h2><p>Disconnected manual steps make it difficult to track student requests, room availability, and allocation status. The application centralises those workflows with role-based access.</p></section>
+          <section id="workflow"><p class="eyebrow">Application workflow</p><h2>Separate experiences for students and administration.</h2><div class="workflow-line" aria-label="Application workflow"><span>Register or sign in</span><i>→</i><span>Submit request</span><i>→</i><span>Review records</span><i>→</i><span>Allocate room</span><i>→</i><span>View allocation</span></div><div class="decision-grid"><article><h3>Student workflow</h3><p>Authentication, hostel applications, status tracking, and allocation details.</p></article><article><h3>Administration</h3><p>Application review, student records, room allocation, dashboards, and allocation records.</p></article><article><h3>Data model</h3><p>Django ORM models cover users, student profiles, rooms, applications, and final allocations.</p></article></div></section>
+          <section id="architecture"><p class="eyebrow">Application structure</p><h2>Django authentication and ORM organise the application around clear domain entities.</h2><div class="architecture-diagram"><div><strong>Browser</strong><span>Django templates</span></div><b>→</b><div><strong>Django</strong><span>views · forms · auth</span></div><b>→</b><div><strong>ORM</strong><span>SQLite data</span></div></div><div class="case-points"><article><span>01</span><div><h3>Role-based access</h3><p>Authentication and application logic separate user capabilities.</p></div></article><article><span>02</span><div><h3>Security foundations</h3><p>Password hashing, CSRF protection, form validation, and access control support safer workflows.</p></div></article><article><span>03</span><div><h3>Operational records</h3><p>Applications and allocations remain tied to structured student and room data.</p></div></article></div></section>
+          <section id="deployment"><p class="eyebrow">Deployment work</p><h2>Containerise the application and run it through Kubernetes resources.</h2><p>The project includes Docker packaging and Kubernetes/Minikube resources for Deployments, Services, configuration, secrets, health probes, and replica scaling.</p><div class="decision-grid"><article><h3>Docker</h3><p>Packages the application and dependencies in a repeatable environment.</p></article><article><h3>Kubernetes</h3><p>Deployments and Services manage runtime instances and application access.</p></article><article><h3>Reliability</h3><p>Readiness/liveness probes, ConfigMaps, Secrets, and replicas support a more robust deployment model.</p></article></div></section>
+          <section id="future"><p class="eyebrow">What I would improve next</p><h2>Move the project closer to production conditions.</h2><p>PostgreSQL, automated tests, CI/CD, stronger transaction handling, cloud deployment, and centralised monitoring are the next logical improvements.</p></section>
+        </div>
+      </div>
+    </section>
+
+    <section class="next-project"><div class="container next-project-inner"><div><p class="eyebrow">Back to</p><h2>Selected work</h2></div><a class="button button-primary" href="index.html#work">View all work →</a></div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-shell"><div><strong>Asmita G V</strong><p>Computer Science &amp; Engineering graduate based in Bengaluru, India.</p></div><div class="footer-links"><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span data-current-year>2026</span></p></div></footer>
 </body>
 </html>
