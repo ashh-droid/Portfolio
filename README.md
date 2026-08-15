@@ -1,6 +1,6 @@
 # Asmita G V — Portfolio
 
-A responsive, project-first portfolio featuring selected case studies, internship experience, technical skills, education, certifications, and contact details.
+A responsive, project-first portfolio featuring selected case studies, internship experience, technical skills, education, certifications, leadership, and contact details.
 
 ## Live
 
