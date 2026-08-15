@@ -1,20 +1,12 @@
 # Asmita G V — Portfolio
 
-A responsive portfolio presenting my projects, internship experience, technical skills, education, certifications, and contact details.
+A responsive, project-first portfolio featuring selected case studies, internship experience, technical skills, education, certifications, and contact details.
 
-## Live Website
+## Live
 
 https://ashh-droid.github.io/Portfolio/
 
-## Built With
+## Links
 
-- HTML
-- CSS
-- JavaScript
-- GitHub Pages
-
-## Contact
-
-- LinkedIn: https://www.linkedin.com/in/asmita-gv/
+- LinkedIn: https://linkedin.com/in/asmita-gv
 - GitHub: https://github.com/ashh-droid
-- Email: gujjarasmita@gmail.com
