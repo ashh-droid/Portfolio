@@ -1,0 +1,426 @@
+/* August 2026 visual refresh
+   Deep navy + indigo + teal while preserving the existing portfolio structure. */
+
+:root {
+  --ink: #1e293b;
+  --navy: #0f172a;
+  --navy-2: #334155;
+  --lavender: #4f46e5;
+  --lavender-soft: #eef2ff;
+  --peach: #14b8a6;
+  --peach-soft: #ecfdf5;
+  --paper: #fbfaf7;
+  --surface: #ffffff;
+  --muted: #64748b;
+  --line: #dbe3eb;
+  --green: #0f766e;
+  --shadow: 0 22px 60px rgba(15, 23, 42, 0.12);
+  --shadow-soft: 0 12px 35px rgba(15, 23, 42, 0.08);
+}
+
+html,
+body {
+  background: var(--paper);
+}
+
+.site-header {
+  background: rgba(251, 250, 247, 0.94);
+  border-bottom-color: rgba(15, 23, 42, 0.10);
+}
+
+.brand-mark {
+  background: var(--navy);
+  box-shadow: 4px 4px 0 var(--peach);
+}
+
+#site-nav a:hover,
+#site-nav a[aria-current="page"] {
+  background: var(--lavender-soft);
+}
+
+.hero {
+  background:
+    radial-gradient(circle at 82% 22%, rgba(79, 70, 229, 0.14), transparent 28%),
+    radial-gradient(circle at 18% 86%, rgba(20, 184, 166, 0.16), transparent 31%),
+    linear-gradient(135deg, #fbfaf7 0%, #f7fbfa 58%, #f5f7ff 100%);
+  border-bottom-color: rgba(15, 23, 42, 0.10);
+}
+
+.hero::before {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+.identity-card {
+  border-color: rgba(15, 23, 42, 0.16);
+}
+
+.identity-monogram {
+  background: var(--navy);
+  box-shadow: 7px 7px 0 var(--peach);
+}
+
+.proof-bar {
+  background: linear-gradient(115deg, #0f172a, #172554 72%, #134e4a);
+}
+
+.proof-grid strong {
+  color: #5eead4;
+}
+
+.work-section,
+.about-section {
+  background: var(--paper);
+}
+
+.project-visual {
+  border-color: rgba(15, 23, 42, 0.12);
+}
+
+.project-proof span,
+.resume-certificates span {
+  border-color: #c7d2fe;
+  background: var(--lavender-soft);
+}
+
+.experience-section {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(20, 184, 166, 0.13), transparent 26%),
+    var(--lavender-soft);
+  border-color: #dfe4f5;
+}
+
+.capabilities-section {
+  background: #ffffff;
+}
+
+.capability-grid article:hover {
+  background: #f0fdfa;
+}
+
+.about-opportunity {
+  border-left-color: var(--lavender);
+}
+
+.contact-section {
+  background:
+    radial-gradient(circle at 82% 15%, rgba(79, 70, 229, 0.34), transparent 30%),
+    linear-gradient(120deg, #0f172a, #172554 65%, #134e4a);
+  border-top-color: var(--peach);
+}
+
+.site-footer {
+  background: #0b1120;
+}
+
+.case-hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(20, 184, 166, 0.16), transparent 30%),
+    linear-gradient(135deg, var(--paper), var(--lavender-soft));
+}
+
+.hostel-case-hero {
+  background:
+    radial-gradient(circle at 82% 18%, rgba(79, 70, 229, 0.15), transparent 30%),
+    linear-gradient(135deg, var(--paper), #eefbf8);
+}
+
+.agentflow-case-hero {
+  background:
+    radial-gradient(circle at 80% 15%, rgba(20, 184, 166, 0.18), transparent 30%),
+    linear-gradient(135deg, #fbfaf7, #eef2ff);
+}
+
+.next-project {
+  background: linear-gradient(135deg, #eef2ff, #ecfdf5);
+  border-color: #dfe4f5;
+}
+
+.project-reverse .project-visual {
+  order: 2;
+}
+
+.project-reverse .project-copy {
+  order: 1;
+}
+
+.agentflow-visual {
+  background: linear-gradient(145deg, #eef2ff 0%, #f8fafc 48%, #ecfdf5 100%);
+}
+
+.workflow-canvas {
+  position: relative;
+  min-height: 362px;
+  overflow: hidden;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(79,70,229,0.13), transparent 28%),
+    radial-gradient(circle at 85% 78%, rgba(20,184,166,0.14), transparent 28%),
+    #f8fafc;
+}
+
+.workflow-grid-lines {
+  position: absolute;
+  inset: 0;
+  opacity: .55;
+  background-image:
+    linear-gradient(rgba(15,23,42,.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+.workflow-topline {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--navy);
+  font-size: .72rem;
+  font-weight: 850;
+}
+
+.workflow-status {
+  border: 1px solid rgba(15,118,110,.25);
+  border-radius: 999px;
+  background: rgba(20,184,166,.10);
+  color: #0f766e;
+  padding: 5px 9px;
+  letter-spacing: .08em;
+}
+
+.workflow-node {
+  position: absolute;
+  z-index: 3;
+  width: 146px;
+  border: 1px solid rgba(15,23,42,.13);
+  border-radius: 14px;
+  background: rgba(255,255,255,.96);
+  padding: 13px 14px;
+  box-shadow: 0 12px 28px rgba(15,23,42,.10);
+}
+
+.workflow-node small {
+  color: var(--lavender);
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.workflow-node strong,
+.workflow-node span {
+  display: block;
+}
+
+.workflow-node strong {
+  margin-top: 5px;
+  color: var(--navy);
+  font-size: .88rem;
+}
+
+.workflow-node > span {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: .69rem;
+}
+
+.node-llm { left: 34px; top: 92px; }
+.node-condition { left: 255px; top: 92px; }
+.node-http { right: 40px; top: 72px; }
+.node-approval { right: 40px; bottom: 80px; border-color: rgba(20,184,166,.35); }
+.node-db { left: 255px; bottom: 48px; }
+
+.workflow-lines {
+  position: absolute;
+  inset: 40px 0 0;
+  z-index: 1;
+  width: 100%;
+  height: calc(100% - 40px);
+  fill: none;
+  stroke: rgba(79,70,229,.38);
+  stroke-width: 2.2;
+  stroke-linecap: round;
+}
+
+.agentflow-large {
+  background: #f8fafc;
+}
+
+.workflow-case-canvas {
+  min-height: 520px;
+  display: grid;
+  align-content: center;
+  gap: 46px;
+  padding: 55px;
+  background:
+    radial-gradient(circle at 18% 22%, rgba(79,70,229,.12), transparent 25%),
+    radial-gradient(circle at 82% 72%, rgba(20,184,166,.12), transparent 28%),
+    #f8fafc;
+}
+
+.flow-lane {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.flow-lane.second {
+  margin-left: 80px;
+}
+
+.flow-box {
+  min-height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255,255,255,.95);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+}
+
+.flow-box span {
+  color: var(--lavender);
+  font-size: .64rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.flow-box strong,
+.flow-box small {
+  display: block;
+}
+
+.flow-box strong {
+  margin-top: 7px;
+  color: var(--navy);
+}
+
+.flow-box small {
+  margin-top: 5px;
+  color: var(--muted);
+}
+
+.flow-ai {
+  border-color: rgba(79,70,229,.35);
+}
+
+.flow-approval {
+  border-color: rgba(20,184,166,.45);
+}
+
+.flow-arrow {
+  color: var(--lavender);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+
+.flow-observer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 14px;
+  background: var(--navy);
+  color: white;
+  padding: 16px 20px;
+}
+
+.flow-observer span {
+  color: #cbd5e1;
+}
+
+.agent-architecture {
+  grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr;
+}
+
+.hero-grid {
+  min-height: 620px;
+  padding-block: 72px;
+}
+
+.hero-lead {
+  max-width: 760px;
+}
+
+@media (max-width: 1020px) {
+  .project-reverse .project-visual,
+  .project-reverse .project-copy {
+    order: initial;
+  }
+
+  .flow-lane.second {
+    margin-left: 0;
+  }
+
+  .agent-architecture {
+    grid-template-columns: 1fr;
+  }
+
+  .agent-architecture b {
+    transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    background: var(--paper) !important;
+  }
+
+  .hero {
+    background:
+      radial-gradient(circle at 88% 12%, rgba(79,70,229,.11), transparent 24%),
+      radial-gradient(circle at 8% 82%, rgba(20,184,166,.11), transparent 24%),
+      var(--paper) !important;
+  }
+
+  .workflow-canvas {
+    min-height: 330px;
+    padding: 18px;
+  }
+
+  .workflow-node {
+    width: 124px;
+    padding: 10px 11px;
+  }
+
+  .node-llm { left: 18px; top: 78px; }
+  .node-condition { right: 18px; left: auto; top: 78px; }
+  .node-http { left: 18px; right: auto; top: 180px; }
+  .node-approval { right: 18px; bottom: 38px; }
+  .node-db { display: none; }
+  .workflow-lines { display: none; }
+
+  .workflow-case-canvas {
+    min-height: auto;
+    gap: 22px;
+    padding: 24px;
+  }
+
+  .flow-lane,
+  .flow-lane.second {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+
+  .flow-arrow {
+    transform: rotate(90deg);
+    justify-self: center;
+  }
+
+  .flow-observer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 360px) {
+  .workflow-node { width: 116px; }
+  .node-llm { left: 12px; }
+  .node-condition { right: 12px; }
+  .node-http { left: 12px; }
+  .node-approval { right: 12px; }
+}
