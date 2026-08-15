@@ -1,270 +1,58 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="description" content="Portfolio of Asmita G V, a Computer Science and Engineering graduate with internship and project experience in full-stack development, AI workflows, cloud deployment, and cybersecurity.">
-  <meta property="og:title" content="Asmita G V — Computer Science & Engineering Graduate">
-  <meta property="og:description" content="Selected projects, internship experience, technical foundation, education, certifications, leadership, and contact details.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/">
-  <meta property="og:image" content="https://ashh-droid.github.io/Portfolio/og-portfolio.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://ashh-droid.github.io/Portfolio/">
-  <title>Asmita G V — Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf5">
-  <meta name="color-scheme" content="light">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refresh.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refine.css?v=20260816-refine2">
-  <script src="script.js?v=20260816-refine2" defer></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Asmita G V — Portfolio</title>
+<meta name="description" content="Portfolio of Asmita G V — Computer Science & Engineering graduate with internship and project experience across full-stack development, AI workflows, cloud deployment, and cybersecurity.">
+<meta name="theme-color" content="#f6f4ef">
+<meta property="og:title" content="Asmita G V — Computer Science & Engineering Graduate">
+<meta property="og:description" content="Backend systems, AI applications, and cloud-ready products.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ashh-droid.github.io/Portfolio/">
+<meta property="og:image" content="https://ashh-droid.github.io/Portfolio/og-portfolio.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://ashh-droid.github.io/Portfolio/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,100..900,0..100,0..1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6f4ef;--bg-surface:#efeae1;--bg-card:#f0ece4;--bg-raised:#e6e1d6;--border:#d5d0c4;--border-dim:#e0dbd0;--ink:#2c2a25;--text-2:#5e5a50;--text-3:#8a8578;--sage:#4e7350;--sage-light:#6a9a6c;--sage-dim:#3d5c3e;--sage-bg:rgba(78,115,80,.07);--sage-bg2:rgba(78,115,80,.04);--serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--mono:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}body{font-family:var(--sans);font-size:16px;line-height:1.7;color:var(--text-2);background:var(--bg);overflow-x:hidden}::selection{background:var(--sage);color:#fff}a{color:var(--ink);text-decoration:none;transition:color .2s}a:hover{color:var(--sage)}.skip{position:absolute;top:-100%;left:1rem;background:var(--sage);color:#fff;padding:.4rem 1rem;border-radius:4px;font-weight:600;z-index:999}.skip:focus{top:.8rem}
+:where(.nav-logo,.hero h1,.sec-h,.pcard-num,.pcard-name,.exp-role,.pull-quote,.edu h3,.edu-gpa,.lead-num,.email-addr,.stat-num){font-family:var(--serif);font-optical-sizing:auto}@supports(font-variation-settings:normal){.hero h1{font-variation-settings:'opsz' 88,'wght' 520,'SOFT' 70,'WONK' .92}.sec-h{font-variation-settings:'opsz' 58,'wght' 500,'SOFT' 55,'WONK' .55}.pcard-name,.exp-role,.edu h3,.pull-quote,.email-addr{font-variation-settings:'opsz' 34,'wght' 500,'SOFT' 45,'WONK' .3}.stat-num,.lead-num,.edu-gpa{font-variation-settings:'opsz' 48,'wght' 560,'SOFT' 55,'WONK' .45}.nav-logo,.pcard-num{font-variation-settings:'opsz' 24,'wght' 500,'SOFT' 45,'WONK' .35}}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.02;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:150px}.scroll-bar{position:fixed;top:0;left:0;height:2px;z-index:500;background:linear-gradient(90deg,var(--sage-dim),var(--sage),var(--sage-light));width:0%;transition:width 80ms linear}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv.on{opacity:1;transform:none}.rv-clip{clip-path:inset(0 0 100% 0);transition:clip-path 1.1s var(--ease)}.rv-clip.on{clip-path:inset(0 0 0 0)}.rv-left{opacity:0;transform:translateX(-30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv-left.on{opacity:1;transform:none}.rv-right{opacity:0;transform:translateX(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.rv-right.on{opacity:1;transform:none}.rv-scale{opacity:0;transform:scale(.95);transition:opacity .7s var(--ease),transform .7s var(--ease)}.rv-scale.on{opacity:1;transform:none}.stg>.rv:nth-child(1),.stg>.rv-scale:nth-child(1){transition-delay:0s}.stg>.rv:nth-child(2),.stg>.rv-scale:nth-child(2){transition-delay:.07s}.stg>.rv:nth-child(3),.stg>.rv-scale:nth-child(3){transition-delay:.14s}.stg>.rv:nth-child(4),.stg>.rv-scale:nth-child(4){transition-delay:.21s}.stg>.rv:nth-child(5),.stg>.rv-scale:nth-child(5){transition-delay:.28s}.stg>.rv:nth-child(6),.stg>.rv-scale:nth-child(6){transition-delay:.35s}@media(prefers-reduced-motion:reduce){.rv,.rv-clip,.rv-left,.rv-right,.rv-scale{opacity:1;transform:none;clip-path:none;transition:none}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 2rem}section{padding:5.5rem 0}.divider{display:flex;align-items:center;gap:1.5rem;padding:0 2rem;max-width:1080px;margin:0 auto}.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}.divider-mark{width:5px;height:5px;background:var(--sage);transform:rotate(45deg);flex-shrink:0;transition:transform .6s var(--ease)}.divider:hover .divider-mark{transform:rotate(225deg)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1rem 0;background:rgba(246,244,239,.85);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-bottom:1px solid transparent;transition:border-color .3s,padding .3s}.nav.scrolled{border-bottom-color:var(--border-dim);padding:.55rem 0}.nav-inner{display:flex;align-items:center;justify-content:space-between}.nav-logo{font-family:var(--serif);font-size:1.25rem;color:var(--ink);font-style:italic}.nav-links{display:flex;align-items:center;gap:1.8rem;list-style:none}.nav-links a{font-size:.76rem;font-weight:500;color:var(--text-3);text-transform:uppercase;letter-spacing:.1em;position:relative;transition:color .25s}.nav-links a:hover{color:var(--ink)}.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1px;background:var(--sage);transition:width .3s var(--ease)}.nav-links a:hover::after{width:100%}.nav-cta{font-size:.76rem!important;color:var(--sage)!important;padding:5px 16px;border:1px solid var(--sage);border-radius:4px;letter-spacing:.08em;transition:all .25s!important}.nav-cta:hover{background:var(--sage);color:#fff!important}.nav-cta::after{display:none!important}.ham{display:none;background:none;border:none;cursor:pointer;padding:.5rem}.ham span{display:block;width:20px;height:1.5px;background:var(--ink);margin:5px 0;transition:.3s;border-radius:1px}.ham.on span:nth-child(1){transform:rotate(45deg) translate(4.5px,4.5px)}.ham.on span:nth-child(2){opacity:0}.ham.on span:nth-child(3){transform:rotate(-45deg) translate(4.5px,-4.5px)}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:80px;position:relative;overflow:hidden}.hero-watermark{position:absolute;right:-4%;top:50%;transform:translateY(-55%);font-family:var(--serif);font-size:clamp(20rem,40vw,38rem);font-style:italic;color:var(--sage);opacity:.03;line-height:1;pointer-events:none;user-select:none}.hero::before{content:'';position:absolute;top:5%;right:10%;width:50%;height:60%;background:radial-gradient(ellipse,rgba(78,115,80,.045) 0%,transparent 70%);pointer-events:none}.hero-content{position:relative;z-index:1;max-width:760px}.hero-tag{display:inline-flex;align-items:center;gap:.5rem;font-family:var(--mono);font-size:.66rem;font-weight:600;color:var(--sage);text-transform:uppercase;letter-spacing:.12em;margin-bottom:2rem;padding:4px 14px;background:var(--sage-bg);border:1px solid rgba(78,115,80,.1);border-radius:100px}.hero-tag-dot{width:6px;height:6px;border-radius:50%;background:var(--sage-light);box-shadow:0 0 8px rgba(78,115,80,.3);animation:pulse 2.5s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(78,115,80,.3)}50%{opacity:.6;box-shadow:0 0 0 5px rgba(78,115,80,0)}}.hero h1{font-family:var(--serif);font-size:clamp(2.7rem,4.7vw,4.15rem);font-weight:500;color:var(--ink);line-height:1.1;letter-spacing:-.025em;margin-bottom:1.5rem}.hero h1 em{font-style:italic;color:var(--sage)}.hero-sub{font-size:1.02rem;line-height:1.75;color:var(--text-2);max-width:570px;margin-bottom:2.5rem}.hero-btns{display:flex;align-items:center;gap:.8rem;margin-bottom:3rem;flex-wrap:wrap}.btn-fill{display:inline-flex;align-items:center;gap:.4rem;padding:12px 28px;background:var(--sage);color:#fff;font-weight:600;font-size:.84rem;border-radius:6px;border:none;cursor:pointer;transition:all .3s var(--ease);box-shadow:0 1px 3px rgba(78,115,80,.15)}.btn-fill:hover{background:var(--sage-dim);color:#fff;transform:translateY(-2px);box-shadow:0 6px 24px rgba(78,115,80,.18)}.btn-line{display:inline-flex;align-items:center;gap:.4rem;padding:12px 28px;background:transparent;color:var(--ink);font-weight:600;font-size:.84rem;border-radius:6px;border:1px solid var(--border);cursor:pointer;transition:all .3s var(--ease)}.btn-line:hover{border-color:var(--text-3);transform:translateY(-2px)}.hero-links{display:flex;gap:1.5rem}.hero-links a{font-size:.78rem;font-weight:500;color:var(--text-3);display:flex;align-items:center;gap:.35rem;transition:all .25s}.hero-links a svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.hero-links a:hover{color:var(--sage);transform:translateY(-1px)}
+.stats{display:flex;gap:2rem;padding:3rem 0;flex-wrap:wrap}.stat{display:flex;flex-direction:column;min-width:150px}.stat-num{font-family:var(--serif);font-size:2rem;color:var(--ink);line-height:1}.stat-label{font-family:var(--mono);font-size:.6rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-top:.35rem}.eye{font-family:var(--mono);font-size:.66rem;font-weight:600;color:var(--sage);text-transform:uppercase;letter-spacing:.12em;margin-bottom:.75rem}.sec-h{font-family:var(--serif);font-size:clamp(1.85rem,3vw,2.5rem);font-weight:500;color:var(--ink);line-height:1.15;letter-spacing:-.015em;margin-bottom:.75rem}.sec-p{font-size:.95rem;color:var(--text-2);max-width:560px;line-height:1.7}
+.projects{display:flex;flex-direction:column;gap:1.5rem;margin-top:2.5rem}.pcard{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;padding:2.25rem;background:var(--bg-card);border:1px solid var(--border-dim);border-left:3px solid transparent;border-radius:12px;position:relative;transition:all .4s var(--ease)}.pcard:hover{border-left-color:var(--sage);border-color:var(--sage);box-shadow:0 8px 32px rgba(78,115,80,.07),0 2px 8px rgba(0,0,0,.04);transform:translateY(-3px)}.pcard-vis{background:var(--bg-surface);border-radius:8px;padding:1.5rem;display:flex;align-items:center;justify-content:center;min-height:240px;transition:background .3s}.pcard:hover .pcard-vis{background:var(--bg-raised)}.nodes{display:flex;flex-direction:column;gap:6px;width:100%}.node{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--sage-bg2);border:1px solid rgba(78,115,80,.08);border-radius:6px;font-family:var(--mono);font-size:.68rem;color:var(--text-2);transition:all .25s}.node:hover{background:var(--sage-bg);border-color:rgba(78,115,80,.18);transform:translateX(3px)}.node-ic{width:26px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0}.node-ic.ai{background:rgba(78,115,80,.12);color:var(--sage)}.node-ic.if{background:rgba(180,140,60,.1);color:#9a7a30}.node-ic.api{background:rgba(70,130,120,.1);color:#468278}.node-ic.ht{background:rgba(140,100,140,.1);color:#8c648c}.node-ic.db{background:rgba(80,110,150,.1);color:#506e96}.node-name{color:var(--ink);font-weight:600}.node-desc{margin-left:auto;color:var(--text-3);font-size:.6rem}.browser{width:100%;background:var(--bg);border-radius:8px;border:1px solid var(--border);overflow:hidden;transition:box-shadow .3s}.pcard:hover .browser{box-shadow:0 4px 16px rgba(0,0,0,.05)}.browser-top{display:flex;align-items:center;gap:5px;padding:8px 12px;background:var(--bg-surface);border-bottom:1px solid var(--border-dim)}.browser-dot{width:7px;height:7px;border-radius:50%;background:var(--border)}.browser-url{font-family:var(--mono);font-size:.6rem;color:var(--text-3);margin-left:8px}.browser-body{padding:1.5rem;text-align:center}.browser-body .b-tag{font-family:var(--mono);font-size:.56rem;font-weight:600;color:var(--sage);text-transform:uppercase;letter-spacing:.1em}.browser-body .b-name{font-family:var(--serif);font-size:1.3rem;color:var(--ink);margin-top:4px}.browser-body .b-desc{font-size:.78rem;color:var(--text-3);margin-top:6px;font-style:italic}.dash{width:100%;display:flex;flex-direction:column;gap:6px}.dash-r{display:flex;gap:6px}.dash-b{flex:1;padding:10px;background:var(--sage-bg2);border:1px solid var(--border-dim);border-radius:6px;transition:background .3s}.pcard:hover .dash-b{background:var(--sage-bg)}.dash-b-l{font-family:var(--mono);font-size:.56rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.06em}.dash-b-v{font-size:1.15rem;font-weight:700;color:var(--ink);margin-top:2px}.dash-bar{height:3px;background:var(--border-dim);border-radius:2px;margin-top:6px;overflow:hidden}.dash-bar-f{height:100%;border-radius:2px;transition:width 1s var(--ease)}.pcard-info{display:flex;flex-direction:column;justify-content:center}.pcard-num{font-family:var(--serif);font-size:.9rem;color:var(--sage);font-style:italic;margin-bottom:.2rem}.pcard-type{font-family:var(--mono);font-size:.6rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.85rem}.pcard-name{font-family:var(--serif);font-size:1.55rem;color:var(--ink);line-height:1.2;margin-bottom:.2rem}.pcard-sub{font-size:.8rem;color:var(--text-3);margin-bottom:1rem;font-style:italic}.pcard-ul{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}.pcard-ul li{font-size:.8rem;line-height:1.6;color:var(--text-2);padding-left:14px;position:relative}.pcard-ul li::before{content:'';position:absolute;left:0;top:9px;width:4px;height:4px;border-radius:50%;background:var(--sage)}.tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:1rem}.tag{font-family:var(--mono);font-size:.6rem;font-weight:600;padding:3px 9px;background:var(--sage-bg);color:var(--sage);border-radius:3px;transition:all .2s}.tag:hover{background:var(--sage);color:#fff}.pcard-links{display:flex;gap:1rem;flex-wrap:wrap}.pcard-links a{font-size:.78rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:3px;transition:all .2s}.pcard-links a:hover{color:var(--sage)}.arr{display:inline-block;transition:transform .25s}.pcard-links a:hover .arr{transform:translate(2px,-2px)}
+.timeline{position:relative;margin-top:2rem;padding-left:2rem}.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg,var(--sage),var(--border))}.timeline-dot{position:absolute;left:-4px;top:2rem;width:9px;height:9px;border-radius:50%;background:var(--sage);border:2px solid var(--bg)}.exp{padding:1.75rem 2rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:12px;transition:all .3s var(--ease);position:relative}.exp:hover{border-color:var(--sage);box-shadow:0 4px 20px rgba(78,115,80,.06)}.exp-header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:.5rem;margin-bottom:.75rem}.exp-role{font-family:var(--serif);font-size:1.2rem;color:var(--ink)}.exp-date{font-family:var(--mono);font-size:.66rem;color:var(--text-3)}.exp-co{font-size:.86rem;color:var(--sage);font-weight:500;margin-bottom:1rem}
+.tgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:.6rem;margin-top:2rem}.tcell{padding:1.15rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:8px;transition:all .3s var(--ease);position:relative;overflow:hidden}.tcell-wide{grid-column:span 2}.tcell::before{content:'';position:absolute;top:0;left:0;width:0;height:2px;background:var(--sage);transition:width .4s var(--ease)}.tcell:hover{border-color:var(--sage);background:var(--bg-surface)}.tcell:hover::before{width:100%}.tcell-h{font-family:var(--mono);font-size:.56rem;font-weight:600;color:var(--sage);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.4rem}.tcell-body{font-size:.8rem;color:var(--text-2);line-height:1.75}
+.about-grid{display:grid;grid-template-columns:5fr 2fr;gap:3rem;margin-top:2rem}.about-grid p{margin-bottom:1rem;font-size:.9rem;line-height:1.8}.pull-quote{font-family:var(--serif);font-size:1.15rem;color:var(--ink);font-style:italic;line-height:1.5;border-left:2px solid var(--sage);padding-left:1.25rem;margin:1.5rem 0}.about-detail{margin-bottom:1.4rem}.about-detail-l{font-family:var(--mono);font-size:.56rem;font-weight:600;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}.about-detail-v{font-size:.86rem;color:var(--ink);font-weight:500}
+.edu-row{display:flex;flex-direction:column;gap:.6rem;margin-top:1.5rem}.edu{display:flex;align-items:center;justify-content:space-between;padding:1.4rem 2rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:12px;flex-wrap:wrap;gap:1rem;transition:all .3s}.edu:hover{border-color:var(--sage)}.edu h3{font-family:var(--serif);font-size:1.08rem;color:var(--ink)}.edu p{font-size:.8rem;color:var(--text-2);margin-top:2px}.edu-gpa{font-family:var(--serif);font-size:1.7rem;color:var(--sage)}.edu-gpa span{font-size:.8rem;color:var(--text-3);font-family:var(--sans)}.lead-card{display:flex;align-items:center;gap:2rem;padding:1.4rem 2rem;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:12px;transition:all .3s}.lead-card:hover{border-color:var(--sage)}.lead-num{font-family:var(--serif);font-size:2.2rem;color:var(--sage);flex-shrink:0}.lead-card h3{font-family:var(--serif);font-size:.95rem;color:var(--ink)}.lead-card p{font-size:.8rem;color:var(--text-2);margin-top:2px}
+.contact-email{display:flex;align-items:center;gap:1.5rem;padding:2rem 2.5rem;background:var(--sage-bg);border:1px solid rgba(78,115,80,.12);border-radius:12px;margin-top:2rem;transition:all .3s var(--ease);flex-wrap:wrap}.contact-email:hover{border-color:var(--sage);box-shadow:0 4px 24px rgba(78,115,80,.08)}.contact-email-text{flex:1}.contact-email-text p{font-size:.85rem;color:var(--text-2)}.email-addr{font-family:var(--serif);font-size:1.3rem;color:var(--ink);display:block;margin-top:.3rem}.contact-email .btn-fill{flex-shrink:0}.contact-row{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}.clink{padding:11px 22px;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:8px;font-size:.8rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.5rem;transition:all .3s var(--ease)}.clink:hover{border-color:var(--sage);background:var(--sage-bg);color:var(--sage);transform:translateY(-2px)}.clink svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}.footer{padding:2rem 0;border-top:1px solid var(--border-dim)}.footer-inner{display:flex;align-items:center;justify-content:space-between}.footer-copy{font-size:.68rem;color:var(--text-3)}.footer-r{display:flex;gap:1.5rem}.footer-r a{font-size:.68rem;color:var(--text-3)}.footer-r a:hover{color:var(--sage)}
+@media(max-width:768px){.ham{display:block}.nav-links{position:fixed;top:0;right:-100%;width:260px;height:100vh;background:var(--bg);border-left:1px solid var(--border);flex-direction:column;justify-content:center;padding:2rem;gap:2rem;transition:right .4s var(--ease)}.nav-links.open{right:0}.pcard{grid-template-columns:1fr;border-left:3px solid transparent;padding:1.5rem;gap:1.5rem}.pcard-vis{min-height:180px}.tgrid{grid-template-columns:1fr}.tcell-wide{grid-column:auto}.about-grid{grid-template-columns:1fr}.hero{min-height:auto;padding-top:120px;padding-bottom:4.5rem}.hero h1{font-size:clamp(2.35rem,10vw,3.2rem)}.hero-watermark{font-size:22rem;right:-25%}.wrap{padding:0 1.25rem}section{padding:4rem 0}.stats{gap:1.5rem}.stat{min-width:calc(50% - 1rem)}}@media(max-width:640px){.stats{gap:1.5rem}.stat-num{font-size:1.6rem}.lead-card{flex-direction:column;text-align:center}.footer-inner{flex-direction:column;gap:.8rem;text-align:center}.hero-links{flex-wrap:wrap}.contact-email{padding:1.5rem}.email-addr{font-size:1.1rem}.stat{min-width:100%}}@media(max-width:390px){.hero h1{font-size:2.2rem}.hero-btns{display:grid;grid-template-columns:1fr}.hero-btns a{justify-content:center}.pcard{padding:1.1rem}.pcard-vis{padding:1rem}.node-desc{display:none}.nav-links{width:min(280px,86vw)}}
+</style>
 </head>
 <body>
-<a class="skip-link" href="#main">Skip to content</a>
-
-<header class="site-header">
-  <div class="container nav-shell">
-    <a class="brand" href="index.html" aria-label="Asmita G V portfolio home">
-      <span class="brand-mark">AG</span>
-      <span><strong>Asmita G V</strong><small>Computer Science &amp; Engineering Graduate</small></span>
-    </a>
-    <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
-    <nav id="site-nav" aria-label="Primary navigation">
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#about">About</a>
-      <a href="resume.html">Resume</a>
-      <a class="nav-contact" href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
-
-<main id="main">
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
-        <div class="availability"><span></span> Bengaluru · Open to entry-level backend, full-stack & software roles</div>
-        <h1>Building backend systems, AI-powered applications, and cloud-ready products.</h1>
-        <p class="hero-lead">I’m Asmita G V, a Computer Science & Engineering graduate with internship and project experience in full-stack development, AI workflows, cloud deployment, and cybersecurity. My work spans Python and Django backends, Next.js and TypeScript interfaces, GraphQL and PostgreSQL systems, Docker, Kubernetes, and Cloudflare.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#projects">View projects</a>
-          <a class="button button-quiet" href="Asmita_GV_Resume.pdf" target="_blank" rel="noreferrer">Open resume <span aria-hidden="true">↗</span></a>
-        </div>
-        <div class="hero-links" aria-label="Professional links">
-          <a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="mailto:gujjarasmita@gmail.com">Email</a>
-        </div>
-      </div>
-
-      <aside class="identity-card" aria-label="What I build">
-        <div class="identity-top">
-          <div class="identity-monogram">AG</div>
-          <div><p class="overline">What I build</p><h2>Systems that connect application logic, data, AI, deployment, and security.</h2></div>
-        </div>
-        <p class="identity-note">The same engineering areas appear repeatedly across my internship and project work.</p>
-        <div class="focus-list">
-          <div><span>Backend</span><strong>APIs · authentication · databases · business logic</strong></div>
-          <div><span>AI apps</span><strong>LLM workflows · orchestration · external integrations</strong></div>
-          <div><span>Cloud</span><strong>Docker · Kubernetes · CI/CD · deployment</strong></div>
-          <div><span>Security</span><strong>SIEM · logging · networking · access control</strong></div>
-        </div>
-      </aside>
-    </div>
-  </section>
-
-  <section class="proof-bar" aria-label="Profile evidence">
-    <div class="container proof-grid">
-      <div><strong>3</strong><span>Featured systems</span></div>
-      <div><strong>5 months</strong><span>Python full-stack internship</span></div>
-      <div><strong>400+</strong><span>BUILDATHON participants</span></div>
-      <div><strong>8.38/10</strong><span>B.E. GPA</span></div>
-    </div>
-  </section>
-
-  <section class="section work-section" id="projects" aria-labelledby="projects-title">
-    <div class="container">
-      <div class="section-intro">
-        <div><p class="eyebrow">Selected projects</p><h2 id="projects-title">Three systems that show different parts of how I build.</h2></div>
-        <p>AgentFlow demonstrates AI orchestration and multi-tenant backend design, Arcanelinx shows real company delivery, and Hostel Allocation demonstrates Django application and deployment fundamentals.</p>
-      </div>
-
-      <div class="featured-work">
-        <article class="project-feature project-agentflow">
-          <a class="project-visual agentflow-visual" href="project-agentflow.html" aria-label="Read the AgentFlow case study">
-            <div class="browser-bar"><i></i><i></i><i></i><span>agentflow · live workflow</span></div>
-            <div class="workflow-canvas">
-              <div class="workflow-topline"><span>Northstar AI</span><span class="workflow-status">RUNNING</span></div>
-              <div class="workflow-grid-lines"></div>
-              <div class="workflow-node node-llm"><small>AI</small><strong>Gemini LLM</strong><span>Classify input</span></div>
-              <div class="workflow-node node-condition"><small>IF</small><strong>Conditional</strong><span>Route result</span></div>
-              <div class="workflow-node node-http"><small>API</small><strong>HTTP request</strong><span>POST payload</span></div>
-              <div class="workflow-node node-approval"><small>HITL</small><strong>Approval gate</strong><span>Pause / resume</span></div>
-              <div class="workflow-node node-db"><small>DB</small><strong>Persist</strong><span>PostgreSQL</span></div>
-              <svg class="workflow-lines" viewBox="0 0 760 360" aria-hidden="true"><path d="M150 95 C230 95 230 95 300 95"/><path d="M420 95 C500 95 500 180 560 180"/><path d="M420 95 C470 95 470 270 560 270"/><path d="M650 180 C700 180 700 270 650 270"/></svg>
-            </div>
-          </a>
-          <div class="project-copy">
-            <div class="project-label"><span>01</span> AI workflow orchestration · 2026</div>
-            <h3>AgentFlow</h3>
-            <p class="project-kicker">Multi-tenant AI workflow orchestrator</p>
-            <ul class="project-bullets">
-              <li>Built a workflow engine with 6 node types, 4 trigger modes, conditional routing, and approval pause/resume.</li>
-              <li>Enforced organization-scoped RBAC with Hasura/Nhost, with retry handling, quota accounting, and webhook security.</li>
-              <li>Used Gemini execution and live GraphQL status updates with PostgreSQL-backed workflow state.</li>
-            </ul>
-            <div class="project-proof"><span>Next.js</span><span>TypeScript</span><span>GraphQL</span><span>PostgreSQL</span><span>Gemini</span></div>
-            <div class="project-actions"><a href="project-agentflow.html">Case study →</a><a href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noreferrer">Live app ↗</a><a href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-          </div>
-        </article>
-
-        <article class="project-feature project-reverse project-arcanelinx">
-          <a class="project-visual arcanelinx-visual" href="project-arcanelinx.html" aria-label="Read the Arcanelinx Corporate Website case study">
-            <div class="browser-bar"><i></i><i></i><i></i><span>arcanelinx.com</span></div>
-            <div class="arc-screen"><div class="arc-nav"><span class="arc-logo">AI</span><span></span><span></span><span></span></div><div class="arc-hero"><small>INDUSTRIAL AUTOMATION WEBSITE</small><strong>Engineering intelligence for modern industry.</strong><div class="arc-buttons"><b></b><b></b></div></div><div class="arc-cards"><span></span><span></span><span></span></div></div>
-          </a>
-          <div class="project-copy">
-            <div class="project-label"><span>02</span> Real company website · 2026</div>
-            <h3>Arcanelinx Corporate Website</h3>
-            <p class="project-kicker">Built for an industrial automation company</p>
-            <ul class="project-bullets">
-              <li>Designed and developed a responsive company website using Next.js, React, and TypeScript.</li>
-              <li>Built responsive layouts, contact validation, downloadable company profiles, SEO metadata, and a guided quotation workflow.</li>
-              <li>Deployed the website through Cloudflare with GitHub-based version control and build validation.</li>
-            </ul>
-            <div class="project-proof"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Cloudflare</span></div>
-            <div class="project-actions"><a href="project-arcanelinx.html">Case study →</a><a href="https://arcanelinx.com" target="_blank" rel="noreferrer">Live website ↗</a></div>
-          </div>
-        </article>
-
-        <article class="project-feature project-hostel">
-          <a class="project-visual hostel-visual" href="project-hostel.html" aria-label="Read the Hostel Allocation System case study">
-            <img src="https://raw.githubusercontent.com/ashh-droid/Hostel-Allocation-System/main/screenshots/student_dashboard.png" alt="Student dashboard from the Hostel Allocation System" loading="lazy">
-            <div class="image-caption">Student dashboard · Django application</div>
-          </a>
-          <div class="project-copy">
-            <div class="project-label"><span>03</span> Full-stack application · 2026</div>
-            <h3>Hostel Allocation System</h3>
-            <p class="project-kicker">Role-based Django application with containerised deployment</p>
-            <ul class="project-bullets">
-              <li>Built student and administration workflows for applications, room allocation, and dashboards using Django authentication and ORM.</li>
-              <li>Containerized the application with Docker and deployed it on Kubernetes/Minikube.</li>
-              <li>Used Deployments, Services, configuration management, health probes, and replica scaling.</li>
-            </ul>
-            <div class="project-proof"><span>Python</span><span>Django</span><span>Docker</span><span>Kubernetes</span><span>SQLite</span></div>
-            <div class="project-actions"><a href="project-hostel.html">Case study →</a><a href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noreferrer">GitHub ↗</a></div>
-          </div>
-        </article>
-      </div>
-
-      <div class="more-work">
-        <div class="additional-heading"><p class="eyebrow">More things I’ve built</p><h3>Security, networking, and application fundamentals.</h3></div>
-        <div class="more-work-grid">
-          <article class="more-card"><span class="work-number">04</span><h4>Ethical Phishing & Cyber Defense Evaluation System</h4><p>Built an ethical phishing simulation and cyber-defense evaluation environment using SET, Apache, and Splunk SIEM, with Apache logs forwarded to Splunk and SPL queries for event and threat analysis.</p><span class="work-stack">Splunk SIEM · SET · Apache · SPL · Nmap</span></article>
-          <article class="more-card"><span class="work-number">05</span><h4>Real-Time Multi-Client Chat Application</h4><p>Built a TCP client-server chat application with POSIX threads for concurrent connections and real-time message broadcasting.</p><span class="work-stack">C · TCP/IP · POSIX Threads · Networking</span></article>
-          <article class="more-card"><span class="work-number">06</span><h4>WEE RIDE — Carpooling and Ride Sharing Platform</h4><p>Developed ride creation, discovery, account, booking, and responsive interface workflows for a Django-based carpooling platform.</p><span class="work-stack">Python · Django · JavaScript · SQLite</span></article>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section approach-section" aria-labelledby="approach-title">
-    <div class="container">
-      <div class="section-intro compact"><div><p class="eyebrow">Engineering approach</p><h2 id="approach-title">The pattern across my projects.</h2></div><p>Across the projects above, the work repeatedly comes down to understanding the workflow, connecting the full system, and verifying how it behaves after implementation.</p></div>
-      <div class="approach-grid">
-        <article><span>01</span><h3>Start with the system</h3><p>Understand the workflow, data, roles, and failure points before focusing on the interface.</p></article>
-        <article><span>02</span><h3>Build end to end</h3><p>Connect UI, APIs, persistence, validation, authentication, integrations, and deployment where the project requires them.</p></article>
-        <article><span>03</span><h3>Verify the behavior</h3><p>Use testing, validation, health checks, logging, and visible runtime state to make implementation easier to review and debug.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section experience-section" id="experience" aria-labelledby="experience-title">
-    <div class="container experience-layout">
-      <div class="experience-heading"><p class="eyebrow">Experience</p><h2 id="experience-title">Django backend and full-stack application experience.</h2><p>Five months of internship experience working with Python, Django, MySQL, REST APIs, debugging, testing, and feature implementation.</p></div>
-      <article class="experience-card">
-        <div class="experience-meta"><span>Jan 2026 — May 2026</span><span>Bengaluru</span></div>
-        <h3>Python Full Stack Intern</h3>
-        <p class="company">Skyllx Technologies Pvt. Ltd.</p>
-        <ul><li>Built and maintained backend modules and REST API endpoints using Python, Django, and MySQL for web application features.</li><li>Debugged defects, tested features, and collaborated on implementation changes across full-stack application workflows.</li></ul>
-        <div class="experience-chips"><span>Backend modules</span><span>REST APIs</span><span>Debugging</span><span>Testing</span><span>Full-stack collaboration</span></div>
-      </article>
-    </div>
-  </section>
-
-  <section class="section capabilities-section" aria-labelledby="capabilities-title">
-    <div class="container">
-      <div class="section-intro compact"><div><p class="eyebrow">Technical foundation</p><h2 id="capabilities-title">Technologies connected to the work.</h2></div><p>The detailed stack lives here so the hero can stay focused on what I build instead of repeating technology names.</p></div>
-      <div class="capability-grid">
-        <article><span>01</span><h3>Languages</h3><p>Python · TypeScript · JavaScript · Java · C · SQL</p></article>
-        <article><span>02</span><h3>Frontend</h3><p>Next.js · React · HTML5 · CSS3 · Tailwind CSS</p></article>
-        <article><span>03</span><h3>Backend & APIs</h3><p>Django · REST APIs · GraphQL · Hasura · Nhost · Cloudflare Workers</p></article>
-        <article><span>04</span><h3>Databases & cloud</h3><p>PostgreSQL · MySQL · SQLite · Cloudflare D1/R2 · Vercel · Cloudflare</p></article>
-        <article><span>05</span><h3>DevOps & tools</h3><p>Git · GitHub · GitHub Actions · Docker · Kubernetes · Linux/Ubuntu</p></article>
-        <article><span>06</span><h3>AI & cybersecurity</h3><p>Gemini API · LLM Integration · Generative AI · Splunk SIEM · SPL · Nmap · SET · Log Analysis</p></article>
-      </div>
-      <div class="core-cs"><strong>Core CS:</strong> DSA · OOP · DBMS · Operating Systems · Computer Networks</div>
-    </div>
-  </section>
-
-  <section class="section about-section" id="about" aria-labelledby="about-title">
-    <div class="container about-grid">
-      <div class="about-copy">
-        <p class="eyebrow">About</p>
-        <h2 id="about-title">I like understanding how the whole system fits together.</h2>
-        <div class="about-story">
-          <p>I am a Computer Science & Engineering graduate interested in software engineering, full-stack development, backend systems, AI applications, and cloud technologies. I enjoy projects that go beyond basic CRUD work and require attention to APIs, databases, security, deployment, and user experience.</p>
-          <p>Recent work includes AgentFlow, a multi-tenant AI workflow orchestrator; the Arcanelinx corporate website with a guided RFQ feature; and a Django Hostel Allocation System deployed with Docker and Kubernetes. I am currently looking for entry-level backend, full-stack, and software engineering roles where I can keep strengthening my engineering fundamentals through hands-on development.</p>
-        </div>
-      </div>
-      <div class="about-details">
-        <article><p class="overline">Location</p><h3>Bengaluru, Karnataka, India</h3></article>
-        <article><p class="overline">Open to</p><h3>On-site · Hybrid · Remote</h3></article>
-        <article><p class="overline">Languages</p><h3>English · Kannada · Hindi</h3></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section education-leadership" aria-labelledby="education-title">
-    <div class="container">
-      <div class="section-intro compact"><div><p class="eyebrow">Education & leadership</p><h2 id="education-title">Academic foundation and experience leading at scale.</h2></div><p>Projects and internship remain the main focus; education and leadership provide the supporting context.</p></div>
-      <div class="edu-lead-grid">
-        <article class="edu-card"><p class="overline">Education</p><h3>B.E. Computer Science & Engineering</h3><p>Channabasaveshwara Institute of Technology · Tumkur, India</p><p>2022–2026</p><strong>GPA 8.38/10</strong></article>
-        <article class="lead-card"><p class="overline">Leadership</p><div class="lead-number">400+</div><h3>BUILDATHON-2K25 — National-level hackathon</h3><p>Led BUILDATHON-2K25 with 400+ participants, coordinating planning, technical teams, and event execution.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section learning-section" aria-labelledby="learning-title">
-    <div class="container">
-      <div class="section-intro compact"><div><p class="eyebrow">Continuous learning</p><h2 id="learning-title">Certifications</h2></div><p>Credentials across full-stack development, Python, AI, machine learning, and cybersecurity.</p></div>
-      <div class="cert-grid">
-        <article class="cert-card"><small>Skyllx · May 2026</small><strong>Python Full Stack Internship</strong><span>Python · Django · Full-stack development</span></article>
-        <article class="cert-card"><small>Udemy · Mar 2026</small><strong>Complete AI & Machine Learning, Data Science Bootcamp</strong><span>AI · Machine learning · Data science</span></article>
-        <article class="cert-card"><small>Google Cloud Skills Boost · Aug 2025</small><strong>Generative AI Leader Track</strong><span>Generative AI</span></article>
-        <article class="cert-card"><small>Google Cloud Skills Boost · Aug 2025</small><strong>Prompt Design in Vertex AI Skill Badge</strong><span>AI · Generative AI · Prompt design</span></article>
-        <article class="cert-card"><small>Udemy · Oct 2024</small><strong>100 Days of Code: The Complete Python Pro Bootcamp</strong><span>Python</span></article>
-        <article class="cert-card"><small>GeeksforGeeks · Sep 2024</small><strong>Full Stack Developer Bootcamp — Master Frontend to Backend</strong><span>Full-stack development</span></article>
-        <article class="cert-card"><small>Coursera · Jan 2024</small><strong>Foundations of Cybersecurity</strong><span>Cybersecurity</span></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact-section" id="contact" aria-labelledby="contact-title">
-    <div class="container contact-grid">
-      <div><p class="eyebrow light">Contact</p><h2 id="contact-title">Open to entry-level backend, full-stack, and software engineering opportunities.</h2><p>Based in Bengaluru and open to on-site, hybrid, and remote roles. The quickest ways to review my work are the featured case studies, GitHub, and resume.</p></div>
-      <div class="contact-actions"><a class="button button-light" href="mailto:gujjarasmita@gmail.com">Email me</a><a class="button button-outline" href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a class="button button-outline" href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a><a class="button button-outline" href="Asmita_GV_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></div>
-    </div>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container footer-shell">
-    <div><strong>Asmita G V</strong><p>Computer Science & Engineering · Bengaluru</p></div>
-    <div class="footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></div>
-    <p class="copyright">© <span data-current-year>2026</span></p>
-  </div>
-</footer>
+<a class="skip" href="#main">Skip to content</a><div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav"><div class="wrap nav-inner"><a class="nav-logo" href="#main">Asmita.</a><button class="ham" id="ham" aria-label="Menu" aria-expanded="false" aria-controls="nl"><span></span><span></span><span></span></button><ul class="nav-links" id="nl"><li><a href="#projects">Projects</a></li><li><a href="#experience">Experience</a></li><li><a href="#stack">Stack</a></li><li><a href="#about">About</a></li><li><a href="Asmita_GV_Resume.pdf" class="nav-cta" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li></ul></div></nav>
+<section class="hero" id="main"><div class="hero-watermark" aria-hidden="true">A</div><div class="wrap hero-content"><div class="hero-tag rv"><span class="hero-tag-dot"></span>Open to opportunities · Bengaluru</div><h1 class="rv-clip">Building backend systems,<br>AI-powered applications,<br><em>and cloud-ready products.</em></h1><p class="hero-sub rv">I’m Asmita G V, a Computer Science &amp; Engineering graduate with internship and project experience across full-stack development, AI workflows, cloud deployment, and cybersecurity.</p><div class="hero-btns rv"><a href="#projects" class="btn-fill">View projects</a><a href="Asmita_GV_Resume.pdf" class="btn-line" target="_blank" rel="noopener noreferrer">Résumé <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7.8H7.8"/></svg></a></div><div class="hero-links rv"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a><a href="mailto:gujjarasmita@gmail.com"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>Email</a></div></div></section>
+<div class="wrap"><div class="stats rv"><div class="stat"><div class="stat-num" data-count="3">0</div><div class="stat-label">Featured systems</div></div><div class="stat"><div class="stat-num" data-count="5">0</div><div class="stat-label">Months internship</div></div><div class="stat"><div class="stat-num" data-count="400" data-suffix="+">0</div><div class="stat-label">Hackathon participants led</div></div><div class="stat"><div class="stat-num" data-count="8.38">0</div><div class="stat-label">B.E. GPA / 10</div></div></div></div><div class="divider"><span class="divider-mark"></span></div>
+<section id="projects"><div class="wrap"><p class="eye rv">Selected work</p><h2 class="sec-h rv">Three systems, three different<br>engineering problems.</h2><p class="sec-p rv">Each featured project has a case study showing what I built, the stack behind it, and the engineering decisions that shaped the implementation.</p><div class="projects">
+<article class="pcard rv-left"><div class="pcard-vis"><div class="nodes"><div class="node"><span class="node-ic ai">AI</span><span class="node-name">Gemini LLM</span><span class="node-desc">Classify input</span></div><div class="node"><span class="node-ic if">IF</span><span class="node-name">Conditional</span><span class="node-desc">Route result</span></div><div class="node"><span class="node-ic api">→</span><span class="node-name">HTTP request</span><span class="node-desc">POST payload</span></div><div class="node"><span class="node-ic ht">⏸</span><span class="node-name">Approval gate</span><span class="node-desc">Pause / resume</span></div><div class="node"><span class="node-ic db">◉</span><span class="node-name">Persist</span><span class="node-desc">PostgreSQL</span></div></div></div><div class="pcard-info"><span class="pcard-num">i.</span><span class="pcard-type">AI workflow orchestration · 2026</span><h3 class="pcard-name">AgentFlow</h3><p class="pcard-sub">Multi-tenant AI workflow orchestrator</p><ul class="pcard-ul"><li>Workflow engine with 6 node types, 4 trigger modes, conditional routing, and approval pause/resume.</li><li>Organization-scoped RBAC with Hasura/Nhost, retry handling, quota accounting, and webhook security.</li><li>Gemini execution with live GraphQL status and PostgreSQL-backed state.</li></ul><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">GraphQL</span><span class="tag">PostgreSQL</span><span class="tag">Gemini</span></div><div class="pcard-links"><a href="project-agentflow.html">Case study <span class="arr">→</span></a><a href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noopener noreferrer">Live <span class="arr">↗</span></a><a href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div></div></article>
+<article class="pcard rv-right"><div class="pcard-vis"><div class="browser"><div class="browser-top"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">arcanelinx.com</span></div><div class="browser-body"><div class="b-tag">Industrial Automation</div><div class="b-name">Arcanelinx</div><div class="b-desc">Engineering intelligence for modern industry.</div></div></div></div><div class="pcard-info"><span class="pcard-num">ii.</span><span class="pcard-type">Real company website · 2026</span><h3 class="pcard-name">Arcanelinx Corporate Website</h3><p class="pcard-sub">Built for an industrial automation company</p><ul class="pcard-ul"><li>Designed and deployed a responsive website for an industrial automation company using Next.js and TypeScript.</li><li>Built a guided RFQ feature with inline validation, multi-item requirements, private file uploads, and generated RFQ PDFs.</li><li>Used Cloudflare Workers, D1, and R2 for RFQ submissions, protected files, and delivery workflows.</li></ul><div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">Workers</span><span class="tag">D1</span><span class="tag">R2</span></div><div class="pcard-links"><a href="project-arcanelinx.html">Case study <span class="arr">→</span></a><a href="https://arcanelinx.com" target="_blank" rel="noopener noreferrer">Live <span class="arr">↗</span></a></div></div></article>
+<article class="pcard rv-left"><div class="pcard-vis"><div class="dash"><div class="dash-r"><div class="dash-b"><div class="dash-b-l">Rooms</div><div class="dash-b-v">248</div><div class="dash-bar"><div class="dash-bar-f" style="width:0%;background:var(--sage)" data-width="78"></div></div></div><div class="dash-b"><div class="dash-b-l">Allocated</div><div class="dash-b-v">193</div><div class="dash-bar"><div class="dash-bar-f" style="width:0%;background:#468278" data-width="62"></div></div></div></div><div class="dash-r"><div class="dash-b"><div class="dash-b-l">Pending</div><div class="dash-b-v">31</div><div class="dash-bar"><div class="dash-bar-f" style="width:0%;background:#9a7a30" data-width="25"></div></div></div><div class="dash-b"><div class="dash-b-l">Replicas</div><div class="dash-b-v">3</div><div class="dash-bar"><div class="dash-bar-f" style="width:0%;background:#506e96" data-width="100"></div></div></div></div></div></div><div class="pcard-info"><span class="pcard-num">iii.</span><span class="pcard-type">Full-stack application · 2026</span><h3 class="pcard-name">Hostel Allocation System</h3><p class="pcard-sub">Role-based Django app with containerised deployment</p><ul class="pcard-ul"><li>Student and admin workflows for applications, room allocation, and dashboards with Django auth and ORM.</li><li>Containerized with Docker and deployed on Kubernetes/Minikube with health probes and replica scaling.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div><div class="pcard-links"><a href="project-hostel.html">Case study <span class="arr">→</span></a><a href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div></div></article>
+</div></div></section><div class="divider"><span class="divider-mark"></span></div>
+<section id="experience"><div class="wrap"><p class="eye rv">Experience</p><h2 class="sec-h rv">Five months of Django backend<br>and full-stack experience.</h2><div class="timeline rv-scale"><div class="timeline-dot"></div><div class="exp"><div class="exp-header"><h3 class="exp-role">Python Full Stack Intern</h3><span class="exp-date">Jan — May 2026 · Bengaluru</span></div><div class="exp-co">Skyllx Technologies Pvt. Ltd.</div><ul class="pcard-ul"><li>Built and maintained backend modules and REST API endpoints using Python, Django, and MySQL for web application features.</li><li>Debugged defects, tested features, and collaborated on implementation changes across full-stack application workflows.</li></ul><div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST APIs</span></div></div></div></div></section><div class="divider"><span class="divider-mark"></span></div>
+<section id="stack"><div class="wrap"><p class="eye rv">Technical foundation</p><h2 class="sec-h rv">Technologies connected to the work.</h2><div class="tgrid stg"><div class="tcell rv-scale"><div class="tcell-h">Languages</div><div class="tcell-body">Python · TypeScript · JavaScript · Java · C · SQL</div></div><div class="tcell rv-scale"><div class="tcell-h">Frontend</div><div class="tcell-body">Next.js · React · HTML5 · CSS3 · Tailwind CSS</div></div><div class="tcell rv-scale"><div class="tcell-h">Backend & APIs</div><div class="tcell-body">Django · REST APIs · GraphQL · Hasura · Nhost · Cloudflare Workers</div></div><div class="tcell rv-scale"><div class="tcell-h">Databases & Cloud</div><div class="tcell-body">PostgreSQL · MySQL · SQLite · Cloudflare D1/R2 · Vercel · Cloudflare</div></div><div class="tcell rv-scale"><div class="tcell-h">DevOps</div><div class="tcell-body">Git · GitHub · GitHub Actions · Docker · Kubernetes · Linux/Ubuntu</div></div><div class="tcell rv-scale"><div class="tcell-h">AI & Security</div><div class="tcell-body">Gemini API · LLM workflows · Splunk SIEM · SPL · Nmap · SET · Log analysis</div></div><div class="tcell rv-scale tcell-wide"><div class="tcell-h">Core CS</div><div class="tcell-body">DSA · OOP · DBMS · Operating Systems · Computer Networks</div></div></div></div></section><div class="divider"><span class="divider-mark"></span></div>
+<section id="about"><div class="wrap"><p class="eye rv">About</p><h2 class="sec-h rv">I like understanding how the<br>whole system fits together.</h2><div class="about-grid rv"><div><p>I'm a Computer Science &amp; Engineering graduate who gravitates toward projects that go beyond basic CRUD work and require attention to APIs, databases, security, deployment, and user experience as one connected system.</p><div class="pull-quote">I enjoy the moment when the backend, the database, the deployment, and the interface finally click into one working thing.</div><p>Recent work includes AgentFlow, the Arcanelinx corporate website with its guided RFQ feature, and a Django hostel allocation system deployed with Docker and Kubernetes. I'm looking for entry-level backend, full-stack, and software engineering roles.</p></div><div><div class="about-detail"><div class="about-detail-l">Location</div><div class="about-detail-v">Bengaluru, Karnataka</div></div><div class="about-detail"><div class="about-detail-l">Open to</div><div class="about-detail-v">On-site · Hybrid · Remote</div></div><div class="about-detail"><div class="about-detail-l">Languages</div><div class="about-detail-v">English · Kannada · Hindi</div></div><div class="about-detail"><div class="about-detail-l">Education</div><div class="about-detail-v">B.E. Computer Science &amp; Engineering</div></div></div></div></div></section><div class="divider"><span class="divider-mark"></span></div>
+<section id="education"><div class="wrap"><p class="eye rv">Education & leadership</p><h2 class="sec-h rv">Academic foundation.</h2><div class="edu-row"><div class="edu rv-scale"><div><h3>B.E. Computer Science & Engineering</h3><p>Channabasaveshwara Institute of Technology · Tumkur · 2022–2026</p></div><div class="edu-gpa">8.38 <span>/ 10</span></div></div><div class="lead-card rv-scale"><div class="lead-num">400+</div><div><h3>BUILDATHON-2K25</h3><p>Led a national-level hackathon — planning, technical teams, and event execution.</p></div></div></div></div></section><div class="divider"><span class="divider-mark"></span></div>
+<section id="contact"><div class="wrap"><p class="eye rv">Get in touch</p><h2 class="sec-h rv">Let's build something.</h2><p class="sec-p rv">Open to backend, full-stack, and software engineering opportunities.</p><a href="mailto:gujjarasmita@gmail.com" class="contact-email rv-scale" style="text-decoration:none"><div class="contact-email-text"><p>The quickest way to reach me</p><span class="email-addr">gujjarasmita@gmail.com</span></div><span class="btn-fill">Send email →</span></a><div class="contact-row rv"><a href="https://linkedin.com/in/asmita-gv" class="clink" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>LinkedIn</a><a href="https://github.com/ashh-droid" class="clink" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>GitHub</a><a href="Asmita_GV_Resume.pdf" class="clink" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Résumé</a></div></div></section>
+<footer class="footer"><div class="wrap footer-inner"><span class="footer-copy">Designed & built by Asmita G V · 2026</span><div class="footer-r"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></div></footer>
+<script>(function(){'use strict';var els=document.querySelectorAll('.rv,.rv-clip,.rv-left,.rv-right,.rv-scale');if('IntersectionObserver'in window){var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});els.forEach(function(el){obs.observe(el)})}else{els.forEach(function(el){el.classList.add('on')})}var counters=document.querySelectorAll('[data-count]');var countObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){var el=e.target;var target=parseFloat(el.dataset.count);var suffix=el.dataset.suffix||'';var dur=1200;var start=performance.now();function tick(now){var p=Math.min((now-start)/dur,1);var eased=1-Math.pow(1-p,3);var value=eased*target;el.textContent=(Number.isInteger(target)?Math.round(value):value.toFixed(2))+suffix;if(p<1)requestAnimationFrame(tick)}requestAnimationFrame(tick);countObs.unobserve(el)}})},{threshold:.5});counters.forEach(function(c){countObs.observe(c)});var bars=document.querySelectorAll('[data-width]');var barObs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.width=e.target.dataset.width+'%';barObs.unobserve(e.target)}})},{threshold:.3});bars.forEach(function(b){barObs.observe(b)});var nav=document.getElementById('nav');window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40)},{passive:true});var sp=document.getElementById('sp');window.addEventListener('scroll',function(){var h=document.documentElement.scrollHeight-window.innerHeight;sp.style.width=(h>0?window.scrollY/h*100:0)+'%'},{passive:true});var ham=document.getElementById('ham'),nl=document.getElementById('nl');ham.addEventListener('click',function(){var open=ham.classList.toggle('on');nl.classList.toggle('open',open);ham.setAttribute('aria-expanded',open?'true':'false')});nl.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){ham.classList.remove('on');nl.classList.remove('open');ham.setAttribute('aria-expanded','false')})});document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var href=a.getAttribute('href');if(!href||href==='#')return;var t=document.querySelector(href);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});})();</script>
 </body>
 </html>
