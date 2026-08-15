@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Case study: Arcanelinx Engineering RFQ Platform built by Asmita G V with Next.js, TypeScript, Cloudflare Workers, D1, and R2.">
-  <meta property="og:title" content="Arcanelinx RFQ Platform Case Study — Asmita G V">
-  <meta property="og:description" content="A live engineering RFQ platform with multi-step validation, private uploads, Cloudflare storage, and secure delivery.">
+  <meta name="description" content="Case study: Arcanelinx Engineering Website built by Asmita G V for an industrial automation company, including a guided RFQ workflow powered by Cloudflare Workers, D1, and R2.">
+  <meta property="og:title" content="Arcanelinx Engineering Website Case Study — Asmita G V">
+  <meta property="og:description" content="A production company website for industrial automation and engineering, with a guided RFQ workflow as a key interactive feature.">
   <meta property="og:type" content="article">
-  <title>Arcanelinx RFQ Platform Case Study — Asmita G V</title>
+  <title>Arcanelinx Engineering Website Case Study — Asmita G V</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#090e1b">
   <meta name="color-scheme" content="light">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -18,37 +18,43 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header"><div class="container nav-shell"><a class="brand" href="index.html" aria-label="Asmita G V portfolio home"><span class="brand-mark">AG</span><span><strong>Asmita G V</strong><small>Computer Science &amp; Engineering Graduate</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button><nav id="site-nav" aria-label="Primary navigation"><a href="index.html#work" aria-current="page">Work</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="resume.html">Resume</a><a class="nav-contact" href="index.html#contact">Contact</a></nav></div></header>
+
   <main id="main">
     <section class="case-hero">
       <div class="container case-hero-grid">
         <div>
           <a class="back-link" href="index.html#work">← Back to selected work</a>
-          <p class="eyebrow">Case study · Engineering RFQ platform</p>
-          <h1>Arcanelinx Engineering RFQ Platform</h1>
-          <p class="case-summary">A live industrial web platform that turns complex engineering enquiries into structured quotation requests with validation, multi-item requirements, private attachments, and secure delivery.</p>
-          <div class="case-actions"><a class="button button-primary" href="https://arcanelinx.com" target="_blank" rel="noreferrer">Visit live platform ↗</a></div>
+          <p class="eyebrow">Case study · Corporate engineering website</p>
+          <h1>Arcanelinx Engineering Website</h1>
+          <p class="case-summary">A production website for an industrial automation company, designed to present its engineering capabilities clearly and give visitors a practical path from exploring solutions to submitting a structured quotation request.</p>
+          <div class="case-actions"><a class="button button-primary" href="https://arcanelinx.com" target="_blank" rel="noreferrer">Visit live website ↗</a></div>
         </div>
-        <div class="case-facts"><dl><div><dt>Role</dt><dd>Design and full-stack implementation</dd></div><div><dt>Frontend</dt><dd>Next.js · TypeScript</dd></div><div><dt>Backend</dt><dd>Cloudflare Workers · D1 · R2</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl></div>
+        <div class="case-facts"><dl><div><dt>Project</dt><dd>Company website + RFQ feature</dd></div><div><dt>Frontend</dt><dd>Next.js · TypeScript</dd></div><div><dt>RFQ backend</dt><dd>Cloudflare Workers · D1 · R2</dd></div><div><dt>Year</dt><dd>2026</dd></div></dl></div>
       </div>
     </section>
 
-    <section class="case-showcase"><div class="container"><div class="large-browser arc-large"><div class="browser-bar"><i></i><i></i><i></i><span>arcanelinx.com · guided RFQ</span></div><div class="arc-site-preview"><div class="preview-nav"><div class="preview-brand">ARCANELINX</div><div class="preview-links"><span></span><span></span><span></span><span></span></div></div><div class="preview-hero"><small>ENGINEERING RFQ</small><h2>Share a requirement through one guided workflow.</h2><p>Structured requirements, inline validation, attachments, acknowledgement, and secure engineering review.</p><div><b>Start quotation request</b><b>Explore solutions</b></div></div><div class="preview-grid"><article><strong>Requirement</strong><span></span><span></span></article><article><strong>Attachments</strong><span></span><span></span></article><article><strong>RFQ record</strong><span></span><span></span></article></div></div></div></div></section>
+    <section class="case-showcase"><div class="container"><div class="large-browser arc-large"><div class="browser-bar"><i></i><i></i><i></i><span>arcanelinx.com · company website</span></div><div class="arc-site-preview"><div class="preview-nav"><div class="preview-brand">ARCANELINX</div><div class="preview-links"><span></span><span></span><span></span><span></span></div></div><div class="preview-hero"><small>INDUSTRIAL AUTOMATION &amp; ENGINEERING</small><h2>Engineering intelligence for modern industry.</h2><p>Company capabilities, solutions, downloadable profiles, contact paths, and a guided quotation request workflow in one responsive website.</p><div><b>Explore solutions</b><b>Start quotation request</b></div></div><div class="preview-grid"><article><strong>Solutions</strong><span></span><span></span></article><article><strong>Company profile</strong><span></span><span></span></article><article><strong>RFQ workflow</strong><span></span><span></span></article></div></div></div></div></section>
 
     <section class="section case-content-section">
       <div class="container case-content-grid">
-        <aside class="case-nav"><a href="#challenge">Challenge</a><a href="#workflow">RFQ workflow</a><a href="#architecture">Architecture</a><a href="#security">Security</a><a href="#learning">Learning</a></aside>
+        <aside class="case-nav"><a href="#website">Website</a><a href="#rfq">RFQ feature</a><a href="#architecture">Architecture</a><a href="#security">Secure handling</a><a href="#learning">Learning</a></aside>
         <div class="case-content">
-          <section id="challenge"><p class="eyebrow">The challenge</p><h2>Collect enough engineering detail without making the enquiry process difficult.</h2><p>Industrial requests can include multiple technical items, documents, contact information, and different engineering disciplines. The interface needed to guide visitors while producing a structured request that could be reviewed accurately.</p></section>
-          <section id="workflow"><p class="eyebrow">What I built</p><h2>A guided quotation flow backed by durable records and private files.</h2><div class="case-points"><article><span>01</span><div><h3>Multi-step RFQ</h3><p>Guided visitors through requirement details, multiple items, contact information, and final review.</p></div></article><article><span>02</span><div><h3>Inline validation</h3><p>Surfaced incomplete or invalid information at the point of entry instead of only after submission.</p></div></article><article><span>03</span><div><h3>Private attachments</h3><p>Stored uploaded engineering files in private Cloudflare R2 rather than exposing public object URLs.</p></div></article><article><span>04</span><div><h3>Structured output</h3><p>Persisted submissions in D1 and generated RFQ documents for review and follow-up.</p></div></article></div></section>
-          <section id="architecture"><p class="eyebrow">Architecture</p><h2>Cloudflare services handle persistence, protected files, and server-side workflow logic.</h2><div class="architecture-diagram"><div><strong>Next.js</strong><span>guided interface</span></div><b>→</b><div><strong>Worker</strong><span>server workflow</span></div><b>→</b><div><strong>D1</strong><span>RFQ records</span></div><b>+</b><div><strong>R2</strong><span>private files</span></div></div></section>
-          <section id="security"><p class="eyebrow">Secure delivery</p><h2>Attachments and delivery paths stay protected after submission.</h2><div class="decision-grid"><article><h3>Private R2</h3><p>Uploaded files remain private and are accessed through controlled server-side paths.</p></article><article><h3>Signed access</h3><p>Protected attachments can be delivered through signed access rather than public storage links.</p></article><article><h3>Verified email flow</h3><p>HMAC-verified webhook handling and acknowledgement delivery support the RFQ follow-up process.</p></article></div></section>
-          <section id="learning"><p class="eyebrow">What I learned</p><h2>A business website becomes more valuable when it captures structured operational data.</h2><p>The project moved beyond static content into form architecture, validation, storage design, private file handling, server-side delivery, and deployment—while still keeping the customer journey simple.</p></section>
+          <section id="website"><p class="eyebrow">The website</p><h2>Presenting a technical industrial company without overwhelming the visitor.</h2><p>The website needed to explain Arcanelinx’s industrial automation and engineering capabilities in a clear, professional way across desktop, tablet, and mobile. I structured the content around solutions, company information, downloadable profiles, contact paths, and search-friendly metadata so visitors could understand the business before deciding how to engage.</p><div class="case-points"><article><span>01</span><div><h3>Responsive company experience</h3><p>Designed the information architecture and responsive layouts for the company’s industrial solutions and business content.</p></div></article><article><span>02</span><div><h3>Clear enquiry paths</h3><p>Connected solution discovery, contact information, company documentation, and quotation requests into one consistent experience.</p></div></article><article><span>03</span><div><h3>Business-ready content</h3><p>Added downloadable company profiles, contact validation, SEO metadata, and production build validation.</p></div></article></div></section>
+
+          <section id="rfq"><p class="eyebrow">Key feature · Guided RFQ</p><h2>Turning a complex engineering requirement into a structured quotation request.</h2><p>The RFQ workflow is an important feature inside the website. It guides visitors through requirement details, supports multiple items and private attachments, validates information inline, and produces a structured record for engineering review.</p><div class="case-points"><article><span>01</span><div><h3>Multi-step quotation flow</h3><p>Guided visitors through requirement details, multiple items, contact information, attachments, and final review.</p></div></article><article><span>02</span><div><h3>Inline validation</h3><p>Surfaced incomplete or invalid information at the point of entry instead of only after submission.</p></div></article><article><span>03</span><div><h3>Generated RFQ output</h3><p>Created structured quotation records and generated RFQ PDFs for review and follow-up.</p></div></article></div></section>
+
+          <section id="architecture"><p class="eyebrow">RFQ architecture</p><h2>Cloudflare services support the interactive workflow behind the website.</h2><div class="architecture-diagram"><div><strong>Next.js</strong><span>website + guided interface</span></div><b>→</b><div><strong>Worker</strong><span>server workflow</span></div><b>→</b><div><strong>D1</strong><span>submission records</span></div><b>+</b><div><strong>R2</strong><span>private files</span></div></div></section>
+
+          <section id="security"><p class="eyebrow">Secure handling</p><h2>Engineering attachments and delivery paths remain protected after submission.</h2><div class="decision-grid"><article><h3>Private R2</h3><p>Uploaded files are stored privately rather than exposed through public object URLs.</p></article><article><h3>Signed access</h3><p>Protected attachments can be delivered through controlled signed access paths.</p></article><article><h3>Verified delivery</h3><p>HMAC-verified email webhooks, acknowledgement emails, and server-side handling support the follow-up process.</p></article></div></section>
+
+          <section id="learning"><p class="eyebrow">What I learned</p><h2>A company website can communicate clearly and still support a useful operational workflow.</h2><p>This project combined responsive web development, information architecture, validation, cloud persistence, private file handling, secure delivery, SEO, and deployment. The RFQ feature adds practical business functionality without replacing the website’s primary role: presenting the company and helping potential customers understand its capabilities.</p></section>
         </div>
       </div>
     </section>
 
     <section class="next-project"><div class="container next-project-inner"><div><p class="eyebrow">Next case study</p><h2>Hostel Allocation System</h2></div><a class="button button-primary" href="project-hostel.html">View project →</a></div></section>
   </main>
+
   <footer class="site-footer"><div class="container footer-shell"><div><strong>Asmita G V</strong><p>Computer Science &amp; Engineering graduate based in Bengaluru, India.</p></div><div class="footer-links"><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a></div><p class="copyright">© <span data-current-year>2026</span></p></div></footer>
 </body>
 </html>
