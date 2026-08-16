@@ -2,59 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
   <meta name="description" content="Case study: AgentFlow, a multi-tenant AI workflow orchestrator built with Next.js, TypeScript, Nhost, Hasura, PostgreSQL, GraphQL, and Gemini.">
   <meta property="og:title" content="AgentFlow Case Study — Asmita G V">
   <meta property="og:description" content="Multi-tenant AI workflow orchestration with conditional routing, human approval, live GraphQL status, organization-scoped access, and Gemini execution.">
   <meta property="og:type" content="article">
   <title>AgentFlow Case Study — Asmita G V</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf5">
-  <meta name="color-scheme" content="light">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refresh.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refine.css?v=20260816-refine2">
-  <script src="script.js?v=20260816-refine2" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="container nav-shell"><a class="brand" href="index.html" aria-label="Asmita G V portfolio home"><span class="brand-mark">AG</span><span><strong>Asmita G V</strong><small>Computer Science &amp; Engineering Graduate</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button><nav id="site-nav" aria-label="Primary navigation"><a href="index.html#projects" aria-current="page">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="resume.html">Resume</a><a class="nav-contact" href="index.html#contact">Contact</a></nav></div></header>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">Asmita.</a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
 
 <main id="main">
-  <section class="case-hero agentflow-case-hero">
-    <div class="container case-hero-grid">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
       <div>
-        <a class="back-link" href="index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Case study · AI workflow orchestration</p>
-        <h1>AgentFlow</h1>
-        <p class="case-summary">A multi-tenant AI workflow orchestrator with 6 node types, 4 trigger modes, conditional routing, human approval pause/resume, live GraphQL status, and Gemini execution.</p>
-        <div class="case-actions"><a class="button button-primary" href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noreferrer">Open live app ↗</a><a class="button button-quiet" href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noreferrer">View GitHub ↗</a></div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · AI workflow orchestration</p>
+        <h1 class="rv">AgentFlow</h1>
+        <p class="case-summary rv">A multi-tenant AI workflow orchestrator with 6 node types, 4 trigger modes, conditional routing, human approval pause/resume, live GraphQL status, and Gemini execution.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noopener noreferrer">Open live app ↗</a>
+          <a class="btn-line" href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
       </div>
-      <div class="case-facts"><dl><div><dt>Project</dt><dd>Multi-tenant AI workflow orchestrator</dd></div><div><dt>Frontend</dt><dd>Next.js · TypeScript</dd></div><div><dt>Backend & data</dt><dd>Nhost · Hasura · PostgreSQL · GraphQL</dd></div><div><dt>AI</dt><dd>Gemini</dd></div></dl></div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Project</dt><dd>Multi-tenant AI workflow orchestrator</dd></div>
+          <div><dt>Frontend</dt><dd>Next.js · TypeScript</dd></div>
+          <div><dt>Backend & data</dt><dd>Nhost · Hasura · PostgreSQL · GraphQL</dd></div>
+          <div><dt>AI</dt><dd>Gemini</dd></div>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <section class="case-showcase"><div class="container"><div class="large-browser agentflow-large"><div class="browser-bar"><i></i><i></i><i></i><span>AgentFlow · workflow execution</span></div><div class="workflow-case-canvas"><div class="flow-lane"><div class="flow-box flow-ai"><span>01</span><strong>Gemini LLM</strong><small>AI execution</small></div><div class="flow-arrow">→</div><div class="flow-box"><span>02</span><strong>Conditional</strong><small>branch routing</small></div><div class="flow-arrow">→</div><div class="flow-box"><span>03</span><strong>HTTP request</strong><small>external integration</small></div></div><div class="flow-lane second"><div class="flow-box flow-approval"><span>04</span><strong>Approval</strong><small>pause / resume</small></div><div class="flow-arrow">→</div><div class="flow-box"><span>05</span><strong>Persist</strong><small>PostgreSQL state</small></div><div class="flow-arrow">→</div><div class="flow-box"><span>06</span><strong>Status</strong><small>live execution update</small></div></div><div class="flow-observer"><b>GraphQL status</b><span>Execution state remains visible while the workflow progresses.</span></div></div></div></div></section>
+  <div class="divider"><span class="divider-mark"></span></div>
 
-  <section class="section case-content-section">
-    <div class="container case-content-grid">
-      <aside class="case-nav"><a href="#problem">Problem</a><a href="#built">What I built</a><a href="#architecture">Architecture</a><a href="#decisions">Engineering decisions</a><a href="#proof">Proof</a></aside>
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>AgentFlow · workflow execution</span></div>
+        <div class="flow-canvas">
+          <div class="flow-row">
+            <div class="flow-box"><small>01 · AI</small><strong>Gemini LLM</strong><span>AI execution</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>02 · Logic</small><strong>Conditional</strong><span>branch routing</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>03 · API</small><strong>HTTP request</strong><span>external integration</span></div>
+          </div>
+          <div class="flow-row">
+            <div class="flow-box"><small>04 · Human</small><strong>Approval</strong><span>pause / resume</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>05 · Data</small><strong>Persist</strong><span>PostgreSQL state</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>06 · Live</small><strong>Status</strong><span>execution update</span></div>
+          </div>
+          <div class="flow-note">GraphQL status keeps execution state visible while the workflow progresses.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation">
+        <a href="#problem">Problem</a><a href="#built">What I built</a><a href="#architecture">Architecture</a><a href="#decisions">Decisions</a><a href="#proof">Proof</a>
+      </aside>
       <div class="case-content">
-        <section id="problem"><p class="eyebrow">The problem</p><h2>AI workflows need more than a visual builder.</h2><p>The system needed to execute different kinds of workflow steps, branch conditionally, pause when human approval was required, preserve state, and show execution status while keeping organization access scoped correctly.</p></section>
+        <section id="problem" class="rv">
+          <p class="case-eyebrow">The problem</p>
+          <h2>AI workflows need more than a visual builder.</h2>
+          <p>The system needed to execute different kinds of workflow steps, branch conditionally, pause when human approval was required, preserve state, and show execution status while keeping organization access scoped correctly.</p>
+        </section>
 
-        <section id="built"><p class="eyebrow">What I built</p><h2>A workflow engine around six node types and four trigger modes.</h2><div class="case-points"><article><span>01</span><div><h3>Workflow execution</h3><p>Built 6 node types with conditional routing and external API/LLM execution.</p></div></article><article><span>02</span><div><h3>Human approval</h3><p>Implemented approval pause/resume so a workflow can stop for a decision and then continue.</p></div></article><article><span>03</span><div><h3>Live status</h3><p>Used GraphQL status updates to make workflow execution observable in the interface.</p></div></article><article><span>04</span><div><h3>Multiple triggers</h3><p>Supported 4 trigger modes for starting workflow execution.</p></div></article></div></section>
+        <section id="built" class="rv">
+          <p class="case-eyebrow">What I built</p>
+          <h2>A workflow engine around six node types and four trigger modes.</h2>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Workflow execution</h3><p>Built 6 node types with conditional routing and external API/LLM execution.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Human approval</h3><p>Implemented approval pause/resume so a workflow can stop for a decision and then continue.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Live status</h3><p>Used GraphQL status updates to make workflow execution observable in the interface.</p></div></article>
+            <article class="case-point"><span>04</span><div><h3>Multiple triggers</h3><p>Supported 4 trigger modes for starting workflow execution.</p></div></article>
+          </div>
+        </section>
 
-        <section id="architecture"><p class="eyebrow">Architecture</p><h2>Application, identity, GraphQL, workflow state, and AI execution work as one system.</h2><div class="architecture-diagram agent-architecture"><div><strong>Next.js</strong><span>workflow interface</span></div><b>→</b><div><strong>Nhost</strong><span>identity & backend services</span></div><b>→</b><div><strong>Hasura / GraphQL</strong><span>data access & live status</span></div><b>→</b><div><strong>PostgreSQL + Gemini</strong><span>workflow state & AI execution</span></div></div></section>
+        <section id="architecture" class="rv">
+          <p class="case-eyebrow">Architecture</p>
+          <h2>Application, identity, GraphQL, workflow state, and AI execution work as one system.</h2>
+          <div class="architecture">
+            <div><strong>Next.js</strong><span>workflow interface</span></div><b>→</b>
+            <div><strong>Nhost</strong><span>identity & backend services</span></div><b>→</b>
+            <div><strong>Hasura / GraphQL</strong><span>data access & live status</span></div><b>→</b>
+            <div><strong>PostgreSQL + Gemini</strong><span>workflow state & AI execution</span></div>
+          </div>
+        </section>
 
-        <section id="decisions"><p class="eyebrow">Engineering decisions</p><h2>Specific controls are more useful than broad security claims.</h2><div class="decision-grid"><article><h3>Organization-scoped RBAC</h3><p>Hasura and Nhost are used to keep workflow access scoped by organization and role.</p></article><article><h3>Retries & quotas</h3><p>Retry handling and quota accounting are part of the execution model rather than being left to the interface.</p></article><article><h3>Webhook security</h3><p>Webhook security is handled as part of the trigger path for externally initiated workflows.</p></article></div></section>
+        <section id="decisions" class="rv">
+          <p class="case-eyebrow">Engineering decisions</p>
+          <h2>Specific controls are more useful than broad security claims.</h2>
+          <div class="decision-grid">
+            <article><h3>Organization-scoped RBAC</h3><p>Hasura and Nhost are used to keep workflow access scoped by organization and role.</p></article>
+            <article><h3>Retries & quotas</h3><p>Retry handling and quota accounting are part of the execution model rather than being left to the interface.</p></article>
+            <article><h3>Webhook security</h3><p>Webhook security is handled as part of the trigger path for externally initiated workflows.</p></article>
+          </div>
+        </section>
 
-        <section id="proof"><p class="eyebrow">Proof of work</p><h2>The project can be reviewed as a live application and as source code.</h2><p>The live deployment demonstrates workflow creation and execution, while the GitHub repository provides the implementation for the application, backend workflow logic, and supporting configuration.</p><div class="case-actions"><a class="button button-primary" href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noreferrer">Live app ↗</a><a class="button button-quiet" href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noreferrer">GitHub ↗</a></div></section>
+        <section id="proof" class="rv">
+          <p class="case-eyebrow">Proof of work</p>
+          <h2>The project can be reviewed as a live application and as source code.</h2>
+          <p>The live deployment demonstrates workflow creation and execution, while the GitHub repository provides the implementation for the application, backend workflow logic, and supporting configuration.</p>
+          <div class="case-actions"><a class="btn-fill" href="https://ai-agent-workflow-builder-seven.vercel.app" target="_blank" rel="noopener noreferrer">Live app ↗</a><a class="btn-line" href="https://github.com/ashh-droid/ai-agent-workflow-builder" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+        </section>
       </div>
     </div>
   </section>
 
-  <section class="next-project"><div class="container next-project-inner"><div><p class="eyebrow">Next case study</p><h2>Arcanelinx Corporate Website</h2></div><a class="button button-primary" href="project-arcanelinx.html">View project →</a></div></section>
+  <section class="next-case">
+    <div class="wrap"><div class="next-card rv-scale"><div><small>Next case study</small><h2>Arcanelinx Corporate Website</h2></div><a class="btn-fill" href="project-arcanelinx.html">View project →</a></div></div>
+  </section>
 </main>
-<footer class="site-footer"><div class="container footer-shell"><div><strong>Asmita G V</strong><p>Computer Science & Engineering · Bengaluru</p></div><div class="footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></div><p class="copyright">© <span data-current-year>2026</span></p></div></footer>
+
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20260816-case1" defer></script>
 </body>
 </html>
