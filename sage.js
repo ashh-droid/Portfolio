@@ -1,6 +1,18 @@
 (function(){
   'use strict';
 
+  /* ─── Browser chrome / theme color ─── */
+  var themeColor='#4e7350';
+  var themeMetas=document.querySelectorAll('meta[name="theme-color"]');
+  if(themeMetas.length){
+    themeMetas.forEach(function(meta){meta.setAttribute('content',themeColor)});
+  }else{
+    var themeMeta=document.createElement('meta');
+    themeMeta.name='theme-color';
+    themeMeta.content=themeColor;
+    document.head.appendChild(themeMeta);
+  }
+
   /* ─── Reveals ─── */
   var els=document.querySelectorAll('.rv,.rv-clip,.rv-left,.rv-right,.rv-scale');
   if('IntersectionObserver' in window){
