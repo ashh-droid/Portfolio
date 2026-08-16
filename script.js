@@ -1,3 +1,14 @@
+const themeColor = "#4e7350";
+const themeMetas = document.querySelectorAll('meta[name="theme-color"]');
+if (themeMetas.length) {
+  themeMetas.forEach((meta) => meta.setAttribute("content", themeColor));
+} else {
+  const themeMeta = document.createElement("meta");
+  themeMeta.name = "theme-color";
+  themeMeta.content = themeColor;
+  document.head.appendChild(themeMeta);
+}
+
 document.querySelectorAll("[data-current-year]").forEach((element) => {
   element.textContent = String(new Date().getFullYear());
 });
