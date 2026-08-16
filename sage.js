@@ -52,12 +52,6 @@
     document.head.appendChild(themeMeta);
   }
 
-  /* ─── Source-backed homepage positioning ─── */
-  var heroHeading=document.querySelector('.hero h1');
-  if(heroHeading){heroHeading.innerHTML='Building backend systems,<br>AI-powered applications,<br><em>and cloud-ready<br>products.</em>';}
-  var heroSub=document.querySelector('.hero-sub');
-  if(heroSub){heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across full-stack development, AI workflows, cloud deployment, and cybersecurity.';}
-
   /* ─── Internship copy: source of truth = latest final resume ─── */
   var experience=document.querySelector('#experience');
   if(experience){
