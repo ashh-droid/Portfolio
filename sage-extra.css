@@ -25,8 +25,8 @@ body{background-color:var(--bg)}
 .cert-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1.4rem;font-size:.8rem;font-weight:600;color:var(--sage)}
 .cert-link:hover span{transform:translate(2px,-2px)}.cert-link span{transition:transform .25s var(--ease)}
 
-/* Desktop hero: match the earlier reference composition, only adapting the new copy. */
-@media(min-width:1100px){html body .hero h1{font-size:clamp(3.9rem,4vw,4.25rem)!important;line-height:1.08!important;letter-spacing:-.02em!important}}
+/* Preserve the original black + sage hero treatment even with later branding rules. */
+.hero h1 em{color:var(--sage)!important;-webkit-text-fill-color:var(--sage)!important;font-style:italic}
 
 @media(max-width:900px){.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.mini-grid,.cert-grid{grid-template-columns:1fr}.mini-card{min-height:auto}.more-work{margin-top:2.75rem;padding-top:2.25rem}.cert-top{align-items:flex-start}}
