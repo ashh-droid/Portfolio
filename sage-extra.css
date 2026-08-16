@@ -25,8 +25,8 @@ body{background-color:var(--bg)}
 .cert-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1.4rem;font-size:.8rem;font-weight:600;color:var(--sage)}
 .cert-link:hover span{transform:translate(2px,-2px)}.cert-link span{transition:transform .25s var(--ease)}
 
-/* Keep the original desktop composition; only scale the longer hero copy down. */
-@media(min-width:1100px){html body .hero h1{font-size:clamp(3rem,3.35vw,3.55rem)!important;line-height:1.08!important;letter-spacing:-.02em!important}}
+/* Desktop hero: match the earlier reference composition, only adapting the new copy. */
+@media(min-width:1100px){html body .hero h1{font-size:clamp(3.9rem,4vw,4.25rem)!important;line-height:1.08!important;letter-spacing:-.02em!important}}
 
 @media(max-width:900px){.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.mini-grid,.cert-grid{grid-template-columns:1fr}.mini-card{min-height:auto}.more-work{margin-top:2.75rem;padding-top:2.25rem}.cert-top{align-items:flex-start}}
