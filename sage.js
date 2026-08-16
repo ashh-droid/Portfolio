@@ -52,6 +52,12 @@
     document.head.appendChild(themeMeta);
   }
 
+  /* ─── Source-backed homepage positioning ─── */
+  var heroHeading=document.querySelector('.hero h1');
+  if(heroHeading){heroHeading.innerHTML='Building backend systems,<br>AI-powered applications,<br><em>and cloud-ready products.</em>';}
+  var heroSub=document.querySelector('.hero-sub');
+  if(heroSub){heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across full-stack development, AI workflows, cloud deployment, and cybersecurity.';}
+
   /* ─── Internship copy: source of truth = latest final resume ─── */
   var experience=document.querySelector('#experience');
   if(experience){
@@ -63,6 +69,15 @@
       expBullets[1].textContent='Supported debugging, testing and feature implementation in collaboration with the development team.';
     }
   }
+
+  /* ─── Keep opportunity wording aligned with LinkedIn ─── */
+  document.querySelectorAll('.about-detail').forEach(function(detail){
+    var label=detail.querySelector('.about-detail-l');
+    var value=detail.querySelector('.about-detail-v');
+    if(label&&value&&label.textContent.trim()==='Open to'){
+      value.textContent='Entry-level Backend · Full-stack · Software Engineering';
+    }
+  });
 
   /* ─── Contact/link consistency ─── */
   function icon(type){
