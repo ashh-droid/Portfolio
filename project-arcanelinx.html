@@ -2,59 +2,140 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
   <meta name="description" content="Case study: Arcanelinx Corporate Website, a responsive website for an industrial automation company with a guided RFQ workflow as a key feature.">
   <meta property="og:title" content="Arcanelinx Corporate Website Case Study — Asmita G V">
   <meta property="og:description" content="A responsive company website for industrial automation, including SEO, company profile downloads, contact validation, and a guided RFQ feature.">
   <meta property="og:type" content="article">
   <title>Arcanelinx Corporate Website Case Study — Asmita G V</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#fffaf5">
-  <meta name="color-scheme" content="light">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refresh.css?v=20260816-refine2">
-  <link rel="stylesheet" href="refine.css?v=20260816-refine2">
-  <script src="script.js?v=20260816-refine2" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
 </head>
-<body>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><div class="container nav-shell"><a class="brand" href="index.html" aria-label="Asmita G V portfolio home"><span class="brand-mark">AG</span><span><strong>Asmita G V</strong><small>Computer Science &amp; Engineering Graduate</small></span></a><button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button><nav id="site-nav" aria-label="Primary navigation"><a href="index.html#projects" aria-current="page">Projects</a><a href="index.html#experience">Experience</a><a href="index.html#about">About</a><a href="resume.html">Resume</a><a class="nav-contact" href="index.html#contact">Contact</a></nav></div></header>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">Asmita.</a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
 
 <main id="main">
   <section class="case-hero">
-    <div class="container case-hero-grid">
+    <div class="wrap case-hero-grid">
       <div>
-        <a class="back-link" href="index.html#projects">← Back to projects</a>
-        <p class="eyebrow">Case study · Corporate website</p>
-        <h1>Arcanelinx Corporate Website</h1>
-        <p class="case-summary">A responsive website built for an industrial automation company to present its engineering capabilities clearly, provide company information and downloadable profiles, and give visitors a guided path to submit quotation requirements.</p>
-        <div class="case-actions"><a class="button button-primary" href="https://arcanelinx.com" target="_blank" rel="noreferrer">Visit live website ↗</a></div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Corporate website</p>
+        <h1 class="rv">Arcanelinx Corporate Website</h1>
+        <p class="case-summary rv">A responsive website built for an industrial automation company to present its engineering capabilities clearly, provide company information and downloadable profiles, and give visitors a guided path to submit quotation requirements.</p>
+        <div class="case-actions rv"><a class="btn-fill" href="https://arcanelinx.com" target="_blank" rel="noopener noreferrer">Visit live website ↗</a></div>
       </div>
-      <div class="case-facts"><dl><div><dt>Project</dt><dd>Industrial automation company website</dd></div><div><dt>Frontend</dt><dd>Next.js · React · TypeScript</dd></div><div><dt>Key feature</dt><dd>Guided quotation workflow</dd></div><div><dt>Delivery</dt><dd>Cloudflare · GitHub</dd></div></dl></div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Project</dt><dd>Industrial automation company website</dd></div>
+          <div><dt>Frontend</dt><dd>Next.js · React · TypeScript</dd></div>
+          <div><dt>Key feature</dt><dd>Guided quotation workflow</dd></div>
+          <div><dt>Delivery</dt><dd>Cloudflare · GitHub</dd></div>
+        </dl>
+      </aside>
     </div>
   </section>
 
-  <section class="case-showcase"><div class="container"><div class="large-browser arc-large"><div class="browser-bar"><i></i><i></i><i></i><span>arcanelinx.com · company website</span></div><div class="arc-site-preview"><div class="preview-nav"><div class="preview-brand">ARCANELINX</div><div class="preview-links"><span></span><span></span><span></span><span></span></div></div><div class="preview-hero"><small>INDUSTRIAL AUTOMATION & ENGINEERING</small><h2>Engineering intelligence for modern industry.</h2><p>Company capabilities, solutions, downloadable profiles, contact paths, and a guided quotation request feature in one responsive website.</p><div><b>Explore solutions</b><b>Start quotation request</b></div></div><div class="preview-grid"><article><strong>Solutions</strong><span></span><span></span></article><article><strong>Company profile</strong><span></span><span></span></article><article><strong>RFQ feature</strong><span></span><span></span></article></div></div></div></div></section>
+  <div class="divider"><span class="divider-mark"></span></div>
 
-  <section class="section case-content-section">
-    <div class="container case-content-grid">
-      <aside class="case-nav"><a href="#website">Website</a><a href="#rfq">RFQ feature</a><a href="#architecture">Architecture</a><a href="#delivery">Delivery</a><a href="#proof">Proof</a></aside>
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>arcanelinx.com · company website</span></div>
+        <div class="site-preview">
+          <div class="site-preview-top"><b>Arcanelinx</b><span>Industrial automation & engineering</span></div>
+          <div class="site-preview-body">
+            <small>INDUSTRIAL AUTOMATION & ENGINEERING</small>
+            <h2>Engineering intelligence for modern industry.</h2>
+            <p>Company capabilities, solutions, downloadable profiles, contact paths, and a guided quotation request feature in one responsive website.</p>
+            <div class="site-preview-cards"><div>Solutions & capabilities</div><div>Company profiles</div><div>Guided RFQ feature</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation"><a href="#website">Website</a><a href="#rfq">RFQ feature</a><a href="#architecture">Architecture</a><a href="#delivery">Delivery</a><a href="#proof">Proof</a></aside>
       <div class="case-content">
-        <section id="website"><p class="eyebrow">The website</p><h2>Present an industrial company clearly without overwhelming the visitor.</h2><p>The website was designed around Arcanelinx’s industrial automation and engineering capabilities, with responsive layouts for desktop, tablet, and mobile. Company information, solutions, downloadable profiles, contact paths, and SEO metadata are organised so visitors can understand the business before deciding how to engage.</p><div class="case-points"><article><span>01</span><div><h3>Responsive layouts</h3><p>Built responsive pages and navigation using Next.js, React, and TypeScript.</p></div></article><article><span>02</span><div><h3>Business content</h3><p>Presented company capabilities and downloadable profiles through a customer-focused information structure.</p></div></article><article><span>03</span><div><h3>Contact & discovery</h3><p>Added contact validation and SEO metadata to support clearer enquiry paths and search visibility.</p></div></article></div></section>
+        <section id="website" class="rv">
+          <p class="case-eyebrow">The website</p>
+          <h2>Present an industrial company clearly without overwhelming the visitor.</h2>
+          <p>The website was designed around Arcanelinx’s industrial automation and engineering capabilities, with responsive layouts for desktop, tablet, and mobile. Company information, solutions, downloadable profiles, contact paths, and SEO metadata are organised so visitors can understand the business before deciding how to engage.</p>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Responsive layouts</h3><p>Built responsive pages and navigation using Next.js, React, and TypeScript.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Business content</h3><p>Presented company capabilities and downloadable profiles through a customer-focused information structure.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Contact & discovery</h3><p>Added contact validation and SEO metadata to support clearer enquiry paths and search visibility.</p></div></article>
+          </div>
+        </section>
 
-        <section id="rfq"><p class="eyebrow">Key feature · Guided RFQ</p><h2>The quotation workflow is a feature inside the company website.</h2><p>The guided workflow helps visitors turn an engineering requirement into a more structured quotation request. It supports step-by-step requirement capture, validation, multiple items, attachments, and review before submission.</p><div class="case-points"><article><span>01</span><div><h3>Guided input</h3><p>Breaks the quotation request into understandable steps rather than relying on one long contact form.</p></div></article><article><span>02</span><div><h3>Validation</h3><p>Checks information during the workflow so incomplete details can be corrected before submission.</p></div></article><article><span>03</span><div><h3>Requirements & files</h3><p>Supports multiple requirement items and private file uploads for engineering context.</p></div></article></div></section>
+        <section id="rfq" class="rv">
+          <p class="case-eyebrow">Key feature · Guided RFQ</p>
+          <h2>The quotation workflow is a feature inside the company website.</h2>
+          <p>The guided workflow helps visitors turn an engineering requirement into a more structured quotation request. It supports step-by-step requirement capture, validation, multiple items, attachments, and review before submission.</p>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Guided input</h3><p>Breaks the quotation request into understandable steps rather than relying on one long contact form.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Validation</h3><p>Checks information during the workflow so incomplete details can be corrected before submission.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Requirements & files</h3><p>Supports multiple requirement items and private file uploads for engineering context.</p></div></article>
+          </div>
+        </section>
 
-        <section id="architecture"><p class="eyebrow">RFQ architecture</p><h2>Cloudflare services support the interactive quotation feature behind the website.</h2><div class="architecture-diagram"><div><strong>Next.js</strong><span>website + guided UI</span></div><b>→</b><div><strong>Cloudflare Worker</strong><span>server-side workflow</span></div><b>→</b><div><strong>D1 / R2</strong><span>submission data + private files</span></div></div></section>
+        <section id="architecture" class="rv">
+          <p class="case-eyebrow">RFQ architecture</p>
+          <h2>Cloudflare services support the interactive quotation feature behind the website.</h2>
+          <div class="architecture">
+            <div><strong>Next.js</strong><span>website + guided UI</span></div><b>→</b>
+            <div><strong>Cloudflare Worker</strong><span>server-side workflow</span></div><b>→</b>
+            <div><strong>D1 / R2</strong><span>submission data + private files</span></div>
+          </div>
+        </section>
 
-        <section id="delivery"><p class="eyebrow">Delivery</p><h2>The project included deployment and build validation, not only page design.</h2><div class="decision-grid"><article><h3>Cloudflare deployment</h3><p>The website is deployed through Cloudflare for the live company domain.</p></article><article><h3>GitHub version control</h3><p>Source changes are managed through GitHub as part of the delivery workflow.</p></article><article><h3>Build validation</h3><p>Production build validation was configured to catch deployment issues before release.</p></article></div></section>
+        <section id="delivery" class="rv">
+          <p class="case-eyebrow">Delivery</p>
+          <h2>The project included deployment and build validation, not only page design.</h2>
+          <div class="decision-grid">
+            <article><h3>Cloudflare deployment</h3><p>The website is deployed through Cloudflare for the live company domain.</p></article>
+            <article><h3>GitHub version control</h3><p>Source changes are managed through GitHub as part of the delivery workflow.</p></article>
+            <article><h3>Build validation</h3><p>Production build validation was configured to catch deployment issues before release.</p></article>
+          </div>
+        </section>
 
-        <section id="proof"><p class="eyebrow">Proof of work</p><h2>The finished website is live for the company.</h2><p>The live Arcanelinx website is the clearest proof of the responsive design, company presentation, navigation, and guided quotation experience.</p><div class="case-actions"><a class="button button-primary" href="https://arcanelinx.com" target="_blank" rel="noreferrer">Visit arcanelinx.com ↗</a></div></section>
+        <section id="proof" class="rv">
+          <p class="case-eyebrow">Proof of work</p>
+          <h2>The finished website is live for the company.</h2>
+          <p>The live Arcanelinx website is the clearest proof of the responsive design, company presentation, navigation, and guided quotation experience.</p>
+          <div class="case-actions"><a class="btn-fill" href="https://arcanelinx.com" target="_blank" rel="noopener noreferrer">Visit arcanelinx.com ↗</a></div>
+        </section>
       </div>
     </div>
   </section>
 
-  <section class="next-project"><div class="container next-project-inner"><div><p class="eyebrow">Next case study</p><h2>Hostel Allocation System</h2></div><a class="button button-primary" href="project-hostel.html">View project →</a></div></section>
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Next case study</small><h2>Hostel Allocation System</h2></div><a class="btn-fill" href="project-hostel.html">View project →</a></div></div></section>
 </main>
-<footer class="site-footer"><div class="container footer-shell"><div><strong>Asmita G V</strong><p>Computer Science & Engineering · Bengaluru</p></div><div class="footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noreferrer">Resume</a></div><p class="copyright">© <span data-current-year>2026</span></p></div></footer>
+
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20260816-case1" defer></script>
 </body>
 </html>
