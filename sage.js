@@ -5,9 +5,16 @@
   if(!document.querySelector('link[href^="branding.css"]')){
     var brandCss=document.createElement('link');
     brandCss.rel='stylesheet';
-    brandCss.href='branding.css?v=20260816-brand2';
+    brandCss.href='branding.css?v=20260816-brand3';
     document.head.appendChild(brandCss);
   }
+
+  /* ─── Shared wordmark: text only, no logo badge ─── */
+  document.querySelectorAll('.nav-logo').forEach(function(logo){
+    if(!logo.querySelector('.nav-logo-text')){
+      logo.innerHTML='<span class="nav-logo-text">Asmita G V</span><span class="nav-logo-bar" aria-hidden="true"></span>';
+    }
+  });
 
   document.querySelectorAll('link[rel="icon"],link[rel="apple-touch-icon"],link[rel="manifest"]').forEach(function(el){el.remove();});
   [
@@ -20,7 +27,7 @@
   ].forEach(function(item){
     var link=document.createElement('link');
     link.rel=item[0];
-    link.href=item[1]+'?v=20260816-brand2';
+    link.href=item[1]+'?v=20260816-brand3';
     if(item[2]) link.sizes=item[2];
     if(item[3]) link.type=item[3];
     document.head.appendChild(link);
@@ -43,6 +50,18 @@
     themeMeta.name='theme-color';
     themeMeta.content=themeColor;
     document.head.appendChild(themeMeta);
+  }
+
+  /* ─── Internship copy: source of truth = latest final resume ─── */
+  var experience=document.querySelector('#experience');
+  if(experience){
+    var expHeading=experience.querySelector('.sec-h');
+    if(expHeading){expHeading.innerHTML='Five months contributing to<br>Django backend &amp; full-stack development.';}
+    var expBullets=experience.querySelectorAll('.exp .pcard-ul li');
+    if(expBullets.length>=2){
+      expBullets[0].textContent='Contributed to backend modules and REST API development using Python, Django and MySQL.';
+      expBullets[1].textContent='Supported debugging, testing and feature implementation in collaboration with the development team.';
+    }
   }
 
   /* ─── Contact/link consistency ─── */
