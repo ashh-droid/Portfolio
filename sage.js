@@ -45,6 +45,30 @@
     document.head.appendChild(themeMeta);
   }
 
+  /* ─── Focused homepage corrections ─── */
+  var heroSub=document.querySelector('.hero-sub');
+  if(heroSub){
+    heroSub.textContent='CS & Engineering graduate. I build full-stack websites, backend systems, and AI workflows, then deploy them with Docker, Kubernetes, and Cloudflare.';
+  }
+
+  var experience=document.querySelector('#experience');
+  if(experience){
+    var expBullets=experience.querySelectorAll('.exp .pcard-ul li');
+    if(expBullets.length>=2){
+      expBullets[0].textContent='Contributed to backend modules and REST API development using Python, Django and MySQL.';
+      expBullets[1].textContent='Supported debugging, testing and feature implementation in collaboration with the development team.';
+    }
+  }
+
+  var leadNum=document.querySelector('.lead-card .lead-num');
+  if(leadNum){
+    leadNum.innerHTML='400+<span class="lead-unit">participants</span>';
+  }
+
+  var focusedStyle=document.createElement('style');
+  focusedStyle.textContent='.nav-logo-text{font-size:1.28rem!important}.lead-num{display:flex;flex-direction:column;align-items:flex-start;line-height:.95}.lead-unit{font-family:var(--mono);font-size:.54rem;font-style:normal;text-transform:uppercase;letter-spacing:.09em;color:var(--text-3);margin-top:.38rem}@media(max-width:768px){.nav-logo-text{font-size:1.2rem!important}}@media(max-width:640px){.lead-num{align-items:center}}';
+  document.head.appendChild(focusedStyle);
+
   /* ─── Contact/link consistency ─── */
   function icon(type){
     if(type==='linkedin') return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>';
