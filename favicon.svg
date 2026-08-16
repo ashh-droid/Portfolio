@@ -1,7 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Asmita portfolio mark">
-  <rect x="2" y="2" width="60" height="60" rx="15" fill="#f6f4ef" stroke="#d5d0c4" stroke-width="2"/>
-  <path d="M14.5 48.5 28.8 17.2c1.3-2.9 5.1-2.9 6.4 0l14.3 31.3" fill="none" stroke="#2c2a25" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M22.5 36h7" fill="none" stroke="#4e7350" stroke-width="4" stroke-linecap="round"/>
-  <path d="M34.5 36h7" fill="none" stroke="#4e7350" stroke-width="4" stroke-linecap="round"/>
-  <rect x="29.5" y="33.5" width="5" height="5" rx="0.8" fill="#4e7350" transform="rotate(45 32 36)"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="92" fill="#f6f4ef"/>
+  <rect x="5" y="5" width="502" height="502" rx="89" fill="none" stroke="#d5d0c4" stroke-width="9"/>
+  <text x="256" y="410" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="320" font-style="italic" font-weight="400" fill="#2c2a25">A</text>
+  <rect x="92" y="430" width="328" height="14" rx="7" fill="#4e7350"/>
 </svg>
