@@ -24,6 +24,21 @@ body{background-color:var(--bg)}
 .cert-card p{font-size:.76rem;color:var(--text-2);line-height:1.65;margin-top:.55rem}
 .cert-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1.4rem;font-size:.8rem;font-weight:600;color:var(--sage)}
 .cert-link:hover span{transform:translate(2px,-2px)}.cert-link span{transition:transform .25s var(--ease)}
+
+/* Wide desktop: use the canvas instead of forcing the hero into a narrow column */
+@media(min-width:1200px){
+  .wrap{max-width:1280px!important;padding-left:2.5rem!important;padding-right:2.5rem!important}
+  .divider{max-width:1280px!important}
+  .hero{min-height:min(860px,100vh)!important;padding-top:88px!important}
+  .hero-content{max-width:980px!important}
+  .hero h1{font-size:clamp(3.55rem,3.9vw,4.1rem)!important;line-height:1.04!important;letter-spacing:-.03em!important;margin-bottom:1.55rem!important}
+  .hero-sub{max-width:680px!important;font-size:1.03rem!important;line-height:1.68!important}
+  .hero-watermark{right:-1%!important;font-size:clamp(22rem,34vw,34rem)!important}
+  .nav-inner{min-height:44px}
+  .nav-links{gap:2.1rem!important}
+  .pcard{gap:3.25rem!important}
+}
+
 @media(max-width:900px){.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.mini-grid,.cert-grid{grid-template-columns:1fr}.mini-card{min-height:auto}.more-work{margin-top:2.75rem;padding-top:2.25rem}.cert-top{align-items:flex-start}}
 @media(prefers-color-scheme:dark){html,body{background:#f6f4ef!important;color-scheme:only light!important}}
