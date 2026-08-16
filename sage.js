@@ -1,8 +1,36 @@
 (function(){
   'use strict';
 
+  /* ─── Supplied branding package ─── */
+  if(!document.querySelector('link[href="branding.css"]')){
+    var brandCss=document.createElement('link');
+    brandCss.rel='stylesheet';
+    brandCss.href='branding.css?v=20260816-brand1';
+    document.head.appendChild(brandCss);
+  }
+
+  document.querySelectorAll('link[rel="icon"],link[rel="apple-touch-icon"],link[rel="manifest"]').forEach(function(el){el.remove();});
+  [
+    ['icon','favicon.ico','48x48',''],
+    ['icon','favicon-32x32.png','32x32','image/png'],
+    ['icon','favicon-src.svg','','image/svg+xml'],
+    ['apple-touch-icon','apple-touch-icon.png','',''],
+    ['manifest','site.webmanifest','','']
+  ].forEach(function(item){
+    var link=document.createElement('link');
+    link.rel=item[0]; link.href=item[1]+'?v=20260816-brand1';
+    if(item[2]) link.sizes=item[2];
+    if(item[3]) link.type=item[3];
+    document.head.appendChild(link);
+  });
+
+  var ms=document.querySelector('meta[name="msapplication-config"]');
+  if(!ms){ms=document.createElement('meta');ms.name='msapplication-config';document.head.appendChild(ms);} ms.content='browserconfig.xml';
+  var tile=document.querySelector('meta[name="msapplication-TileColor"]');
+  if(!tile){tile=document.createElement('meta');tile.name='msapplication-TileColor';document.head.appendChild(tile);} tile.content='#4e7350';
+
   /* ─── Browser chrome / theme color ─── */
-  var themeColor='#4e7350';
+  var themeColor='#f6f4ef';
   var themeMetas=document.querySelectorAll('meta[name="theme-color"]');
   if(themeMetas.length){
     themeMetas.forEach(function(meta){meta.setAttribute('content',themeColor)});
