@@ -25,19 +25,8 @@ body{background-color:var(--bg)}
 .cert-link{display:inline-flex;align-items:center;gap:.35rem;margin-top:1.4rem;font-size:.8rem;font-weight:600;color:var(--sage)}
 .cert-link:hover span{transform:translate(2px,-2px)}.cert-link span{transition:transform .25s var(--ease)}
 
-/* Wide desktop: use the canvas instead of forcing the hero into a narrow column */
-@media(min-width:1200px){
-  html body .wrap{max-width:1280px!important;padding-left:2.5rem!important;padding-right:2.5rem!important}
-  html body .divider{max-width:1280px!important}
-  html body .hero{min-height:min(860px,100vh)!important;padding-top:88px!important}
-  html body .hero .hero-content{max-width:980px!important}
-  html body .hero h1{font-size:clamp(3.55rem,3.9vw,4.1rem)!important;line-height:1.04!important;letter-spacing:-.03em!important;margin-bottom:1.55rem!important}
-  html body .hero .hero-sub{max-width:680px!important;font-size:1.03rem!important;line-height:1.68!important}
-  html body .hero .hero-watermark{right:-1%!important;font-size:clamp(22rem,34vw,34rem)!important}
-  html body .nav-inner{min-height:44px!important}
-  html body .nav-links{gap:2.1rem!important}
-  html body .pcard{gap:3.25rem!important}
-}
+/* Keep the original desktop composition; only scale the longer hero copy down. */
+@media(min-width:1100px){html body .hero h1{font-size:clamp(3rem,3.35vw,3.55rem)!important;line-height:1.08!important;letter-spacing:-.02em!important}}
 
 @media(max-width:900px){.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.mini-grid,.cert-grid{grid-template-columns:1fr}.mini-card{min-height:auto}.more-work{margin-top:2.75rem;padding-top:2.25rem}.cert-top{align-items:flex-start}}
