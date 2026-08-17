@@ -14,13 +14,13 @@
     ['icon','favicon.ico','48x48',''],
     ['icon','favicon-32x32.png','32x32','image/png'],
     ['icon','favicon-16x16.png','16x16','image/png'],
-    ['icon','favicon-src.svg','','image/svg+xml'],
+    ['icon','android-chrome-512x512.png','512x512','image/png'],
     ['apple-touch-icon','apple-touch-icon.png','',''],
     ['manifest','site.webmanifest','','']
   ].forEach(function(item){
     var link=document.createElement('link');
     link.rel=item[0];
-    link.href=item[1]+'?v=20260816-brand2';
+    link.href=item[1]+'?v=20260817-favicon4';
     if(item[2]) link.sizes=item[2];
     if(item[3]) link.type=item[3];
     document.head.appendChild(link);
