@@ -46,6 +46,11 @@
   }
 
   /* ─── Focused homepage corrections ─── */
+  var heroHeading=document.querySelector('.hero h1');
+  if(heroHeading){
+    heroHeading.innerHTML='I like building the parts people don\'t always see —<br>the APIs, data flows, AI workflows,<br><em>and deployment behind a working product.</em>';
+  }
+
   var heroSub=document.querySelector('.hero-sub');
   if(heroSub){
     heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across Python/Django backends, full-stack web development, AI workflows, and cloud deployment.';
