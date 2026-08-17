@@ -48,15 +48,15 @@
   /* ─── Focused homepage corrections ─── */
   var heroSub=document.querySelector('.hero-sub');
   if(heroSub){
-    heroSub.textContent='CS & Engineering graduate. I build full-stack websites, backend systems, and AI workflows, then deploy them with Docker, Kubernetes, and Cloudflare.';
+    heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across Python/Django backends, full-stack web development, AI workflows, and cloud deployment.';
   }
 
   var experience=document.querySelector('#experience');
   if(experience){
     var expBullets=experience.querySelectorAll('.exp .pcard-ul li');
     if(expBullets.length>=2){
-      expBullets[0].textContent='Contributed to backend modules and REST API development using Python, Django and MySQL.';
-      expBullets[1].textContent='Supported debugging, testing and feature implementation in collaboration with the development team.';
+      expBullets[0].textContent='Gained hands-on experience in Python and Django-based full-stack development, working with backend functionality, REST APIs and application debugging.';
+      expBullets[1].textContent='Applied the concepts learned during the internship to build a Django-based Hostel Allocation System, extending the project with Docker and Kubernetes deployment.';
     }
   }
 
