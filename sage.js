@@ -48,7 +48,7 @@
   /* ─── Focused homepage corrections ─── */
   var heroHeading=document.querySelector('.hero h1');
   if(heroHeading){
-    heroHeading.innerHTML='I like building the parts people don\'t always see:<br>the APIs, data flows, AI workflows,<br><em>and deployment behind a working product.</em>';
+    heroHeading.innerHTML='I like building the parts people don\'t always <span class="hero-no-break">see —</span><br>the APIs, data flows, AI workflows,<br><em>and deployment behind a working product.</em>';
   }
 
   var heroSub=document.querySelector('.hero-sub');
@@ -71,7 +71,7 @@
   }
 
   var focusedStyle=document.createElement('style');
-  focusedStyle.textContent='.nav-logo-text{font-size:1.28rem!important}.lead-num{display:flex;flex-direction:column;align-items:flex-start;line-height:.95}.lead-unit{font-family:var(--mono);font-size:.54rem;font-style:normal;text-transform:uppercase;letter-spacing:.09em;color:var(--text-3);margin-top:.38rem}@media(min-width:1100px){.hero h1{font-size:clamp(2.85rem,4vw,3.65rem)!important;line-height:1.08!important}.hero-tag{margin-bottom:1.55rem!important}.hero-sub{margin-bottom:2rem!important}.hero-btns{margin-bottom:2rem!important}}@media(min-width:769px) and (max-width:1099px){.hero h1{font-size:clamp(2.55rem,5vw,3.35rem)!important;line-height:1.09!important}}@media(max-width:768px){.nav-logo-text{font-size:1.2rem!important}.hero h1{font-size:clamp(2.15rem,8.8vw,2.8rem)!important;line-height:1.1!important}.hero-sub{font-size:.95rem!important;line-height:1.65!important;max-width:100%!important}.hero-tag{margin-bottom:1.4rem!important}.hero-btns{margin-bottom:2rem!important}}@media(max-width:420px){.hero h1{font-size:clamp(1.95rem,9vw,2.4rem)!important;line-height:1.1!important}.lead-num{align-items:center}}';
+  focusedStyle.textContent='.nav-logo-text{font-size:1.28rem!important}.hero-no-break{white-space:nowrap}.lead-num{display:flex;flex-direction:column;align-items:flex-start;line-height:.95}.lead-unit{font-family:var(--mono);font-size:.54rem;font-style:normal;text-transform:uppercase;letter-spacing:.09em;color:var(--text-3);margin-top:.38rem}@media(min-width:1100px){.hero h1{font-size:clamp(2.85rem,4vw,3.65rem)!important;line-height:1.08!important}.hero-tag{margin-bottom:1.55rem!important}.hero-sub{margin-bottom:2rem!important}.hero-btns{margin-bottom:2rem!important}}@media(min-width:769px) and (max-width:1099px){.hero h1{font-size:clamp(2.55rem,5vw,3.35rem)!important;line-height:1.09!important}}@media(max-width:768px){.nav-logo-text{font-size:1.2rem!important}.hero h1{font-size:clamp(2.15rem,8.8vw,2.8rem)!important;line-height:1.1!important}.hero-sub{font-size:.95rem!important;line-height:1.65!important;max-width:100%!important}.hero-tag{margin-bottom:1.4rem!important}.hero-btns{margin-bottom:2rem!important}}@media(max-width:420px){.hero h1{font-size:clamp(1.95rem,9vw,2.4rem)!important;line-height:1.1!important}.lead-num{align-items:center}}';
   document.head.appendChild(focusedStyle);
 
   /* ─── Contact/link consistency ─── */
