@@ -48,20 +48,20 @@
   /* ─── Focused homepage corrections ─── */
   var heroHeading=document.querySelector('.hero h1');
   if(heroHeading){
-    heroHeading.innerHTML='I like building the parts people don\'t always <span class="hero-no-break">see —</span><br>the APIs, data flows, AI workflows,<br><em>and deployment behind a working product.</em>';
+    heroHeading.innerHTML='I like building the parts people don\'t always <span class="hero-no-break">see —</span><br>the APIs, transactions, data flows,<br><em>and systems behind a working product.</em>';
   }
 
   var heroSub=document.querySelector('.hero-sub');
   if(heroSub){
-    heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across Python/Django backends, full-stack web development, AI workflows, and cloud deployment.';
+    heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across Java/Spring Boot backends, Python/Django, REST APIs, PostgreSQL, asynchronous workflows, Docker and Kubernetes.';
   }
 
   var experience=document.querySelector('#experience');
   if(experience){
     var expBullets=experience.querySelectorAll('.exp .pcard-ul li');
     if(expBullets.length>=2){
-      expBullets[0].textContent='Gained hands-on experience in Python and Django-based full-stack development, working with backend functionality, REST APIs and application debugging.';
-      expBullets[1].textContent='Applied the concepts learned during the internship to build a Django-based Hostel Allocation System, extending the project with Docker and Kubernetes deployment.';
+      expBullets[0].textContent='Developed backend and full-stack functionality using Python and Django, working with REST APIs, application logic, database operations and debugging.';
+      expBullets[1].textContent='Built a role-based Hostel Allocation System and extended the application with Docker and Kubernetes deployment.';
     }
   }
 
