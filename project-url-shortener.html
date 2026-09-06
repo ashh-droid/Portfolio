@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Case study: URL Shortener & Analytics API, a Java/Spring Boot REST API with SecureRandom codes, PostgreSQL analytics, scheduled expiration, testing, and Docker.">
+  <meta property="og:title" content="URL Shortener & Analytics API Case Study — Asmita G V">
+  <meta property="og:description" content="Spring Boot short-link service with 7-character SecureRandom codes, HTTP 302 redirects, indexed PostgreSQL lookup, analytics, expiration, tests, and Docker.">
+  <meta property="og:type" content="article">
+  <title>URL Shortener & Analytics API Case Study — Asmita G V</title>
+  <link rel="icon" href="android-chrome-512x512.png?v=20260906-backend1" sizes="512x512" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-logo-text">Asmita G V</span>
+      <span class="nav-logo-bar"></span>
+    </a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Java REST API</p>
+        <h1 class="rv">URL Shortener &amp; Analytics API</h1>
+        <p class="case-summary rv">A Spring Boot REST API for creating short links, resolving them through HTTP 302 redirects, tracking clicks, managing expiration and deactivation, and persisting link state in PostgreSQL.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://github.com/ashh-droid/url-shortener-analytics-api" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Backend</dt><dd>Java 21 · Spring Boot 3</dd></div>
+          <div><dt>Data</dt><dd>Spring Data JPA · PostgreSQL</dd></div>
+          <div><dt>Testing</dt><dd>JUnit 5 · Mockito</dd></div>
+          <div><dt>Deployment</dt><dd>Docker · Docker Compose</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-mark"></span></div>
+
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>URL Shortener · redirect and analytics flow</span></div>
+        <div class="flow-canvas">
+          <div class="flow-row">
+            <div class="flow-box"><small>01 · Input</small><strong>Long URL</strong><span>validated HTTP/HTTPS</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>02 · Code</small><strong>SecureRandom</strong><span>7-character code</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>03 · Data</small><strong>PostgreSQL</strong><span>indexed short code</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>04 · Access</small><strong>Short URL</strong><span>lookup by code</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>05 · HTTP</small><strong>302 Redirect</strong><span>original destination</span></div>
+          </div>
+          <div class="flow-row">
+            <div class="flow-box"><small>Analytics</small><strong>Click count</strong><span>last accessed time</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>Lifecycle</small><strong>Expiration</strong><span>scheduled cleanup</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>Control</small><strong>Deactivate</strong><span>manual API action</span></div>
+          </div>
+          <div class="flow-note">Redirect resolution checks active/expiry state, updates analytics transactionally, then returns the original URL for a 302 response.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation"><a href="#problem">Problem</a><a href="#flow">REST flow</a><a href="#codes">Short codes</a><a href="#data">Data</a><a href="#testing">Testing</a><a href="#scaling">Scaling</a></aside>
+      <div class="case-content">
+        <section id="problem" class="rv">
+          <p class="case-eyebrow">The problem</p>
+          <h2>Turn a long URL into a short, resolvable identifier while preserving link state and analytics.</h2>
+          <p>The service needs to create unique short codes, resolve them quickly, reject expired or inactive links, update analytics, and keep lifecycle rules separate from HTTP handling.</p>
+        </section>
+
+        <section id="flow" class="rv">
+          <p class="case-eyebrow">REST API flow</p>
+          <h2>Keep creation, redirect, analytics, and deactivation as clear API workflows.</h2>
+          <div class="architecture">
+            <div><strong>Controller</strong><span>HTTP requests</span></div><b>→</b>
+            <div><strong>Service</strong><span>link workflows</span></div><b>→</b>
+            <div><strong>Repository</strong><span>JPA lookup</span></div><b>→</b>
+            <div><strong>PostgreSQL</strong><span>persistent links</span></div>
+          </div>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Create</h3><p><code>POST /api/links</code> validates a URL, generates a short code, applies optional expiry, and persists the link.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Redirect</h3><p><code>GET /{code}</code> resolves the link and returns an HTTP 302 redirect when the short link is valid and active.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Analytics &amp; lifecycle</h3><p>Separate endpoints return analytics and manually deactivate links, while a scheduler handles expired active links.</p></div></article>
+          </div>
+        </section>
+
+        <section id="codes" class="rv">
+          <p class="case-eyebrow">Short-code generation</p>
+          <h2>Generate compact codes without relying on predictable sequential IDs.</h2>
+          <p>The generator uses Java <code>SecureRandom</code> and a Base62-style alphabet containing 0-9, A-Z, and a-z. Each code is seven characters long.</p>
+          <div class="decision-grid">
+            <article><h3>SecureRandom</h3><p>Each position is selected using Java's SecureRandom rather than a sequential counter.</p></article>
+            <article><h3>Collision checking</h3><p>Before persistence, the service checks whether the generated code already exists and retries when a collision is found.</p></article>
+            <article><h3>Validation</h3><p>Only HTTP/HTTPS URLs with a valid host are accepted before a short link is created.</p></article>
+          </div>
+        </section>
+
+        <section id="data" class="rv">
+          <p class="case-eyebrow">Persistence &amp; analytics</p>
+          <h2>Optimize the read-heavy lookup path while keeping link lifecycle data together.</h2>
+          <div class="decision-grid">
+            <article><h3>Indexed lookup</h3><p>The JPA entity defines a unique database index on <code>short_code</code>, which is the key lookup used by redirect requests.</p></article>
+            <article><h3>Transactional analytics</h3><p>Resolution runs inside a Spring transaction while click count and last-access time are updated.</p></article>
+            <article><h3>Expiration</h3><p>An optional expiry timestamp is stored per link, and a Spring Scheduler task periodically marks expired active links inactive.</p></article>
+          </div>
+          <p style="margin-top:1.5rem">Manual deactivation is also supported through the REST API. Once a link is inactive or expired, redirect attempts are rejected.</p>
+        </section>
+
+        <section id="testing" class="rv">
+          <p class="case-eyebrow">Testing &amp; delivery</p>
+          <h2>Test service behaviour and package the API with its database environment.</h2>
+          <p>The repository uses JUnit 5 and Mockito for service tests, including short-code generation/persistence and expired-link rejection. Docker and Docker Compose package the Spring Boot service with PostgreSQL, and the Docker build runs the Maven test/package lifecycle before producing the runtime image.</p>
+        </section>
+
+        <section id="scaling" class="rv">
+          <p class="case-eyebrow">Concurrency &amp; future scalability</p>
+          <h2>The current click counter is intentionally simple, and that creates a clear next scaling problem.</h2>
+          <p>The current implementation reads the entity, increments <code>clickCount</code>, and writes the changed state inside a transaction. Under heavier concurrent redirect traffic, a simple read-modify-write counter can lose increments unless the update strategy is made concurrency-safe. A production version could use an atomic database increment, move hot redirect lookups behind a cache, and process analytics asynchronously so redirects are not coupled to analytics writes.</p>
+          <p>Possible future improvements include a cache layer such as Redis, rate limiting, migrations, expanded integration tests, and asynchronous analytics. None of those are implemented in the current repository.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Back to portfolio</small><h2>Explore all projects</h2></div><a class="btn-fill" href="index.html#projects">View projects →</a></div></div></section>
+</main>
+
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20260906-backend1" defer></script>
+</body>
+</html>
