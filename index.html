@@ -6,10 +6,10 @@
 <meta name="color-scheme" content="only light">
 <meta name="supported-color-schemes" content="light">
 <meta name="theme-color" content="#f6f4ef">
-<title>Asmita G V — Portfolio</title>
-<meta name="description" content="Portfolio of Asmita G V — Computer Science & Engineering graduate with internship and project experience across backend development, full-stack applications, AI workflows, cloud deployment, systems, and cybersecurity.">
-<meta property="og:title" content="Asmita G V — Computer Science & Engineering Graduate">
-<meta property="og:description" content="Backend systems, AI workflows, cloud deployment, full-stack applications, and engineering projects.">
+<title>Asmita G V — Backend Engineering Portfolio</title>
+<meta name="description" content="Portfolio of Asmita G V — Computer Science & Engineering graduate building Java/Spring Boot backends, REST APIs, transactional systems, asynchronous workflows, and production web applications.">
+<meta property="og:title" content="Asmita G V — Backend Engineering Portfolio">
+<meta property="og:description" content="Java/Spring Boot backends, transactional systems, asynchronous workflows, REST APIs, cloud deployment, and production engineering projects.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/">
 <meta property="og:image" content="https://ashh-droid.github.io/Portfolio/og-portfolio.png">
@@ -21,7 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="sage-base.css?v=20260816-complete2">
 <link rel="stylesheet" href="sage-components.css?v=20260816-complete2">
-<link rel="stylesheet" href="sage-extra.css?v=20260816-complete2">
+<link rel="stylesheet" href="sage-extra.css?v=20260906-backend1">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,9 +30,9 @@
 <nav class="nav" id="nav">
   <div class="wrap nav-inner">
     <a class="nav-logo" href="#">
-  <span class="nav-logo-text">Asmita G V</span>
-  <span class="nav-logo-bar"></span>
-  </a>
+      <span class="nav-logo-text">Asmita G V</span>
+      <span class="nav-logo-bar"></span>
+    </a>
     <button class="ham" id="ham" aria-label="Menu"><span></span><span></span><span></span></button>
     <ul class="nav-links" id="nl">
       <li><a href="#projects">Projects</a></li>
@@ -48,8 +48,8 @@
   <div class="hero-watermark" aria-hidden="true">A</div>
   <div class="wrap hero-content">
     <div class="hero-tag rv"><span class="hero-tag-dot"></span>Open to opportunities · Bengaluru</div>
-    <h1 class="rv">I like building the parts people don’t always <span class="hero-no-break">see —</span><br>the APIs, data flows, AI workflows,<br><em>and deployment behind a working product.</em></h1>
-    <p class="hero-sub rv">Computer Science &amp; Engineering graduate with internship and project experience across Python/Django backends, full-stack web development, AI workflows, and cloud deployment.</p>
+    <h1 class="rv">I like building the parts people don’t always <span class="hero-no-break">see —</span><br>the APIs, transactions, data flows,<br><em>and systems behind a working product.</em></h1>
+    <p class="hero-sub rv">Computer Science &amp; Engineering graduate with internship and project experience across Java/Spring Boot backends, Python/Django, REST APIs, PostgreSQL, asynchronous workflows, Docker and Kubernetes.</p>
     <div class="hero-btns rv">
       <a class="btn-fill" href="#projects">View projects</a>
       <a class="btn-line" href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a>
@@ -64,7 +64,7 @@
 
 <div class="wrap">
   <div class="stats rv">
-    <div class="stat"><div class="stat-num" data-count="6">0</div><div class="stat-label">Projects built</div></div>
+    <div class="stat"><div class="stat-num" data-count="8">0</div><div class="stat-label">Projects built</div></div>
     <div class="stat"><div class="stat-num" data-count="5">0</div><div class="stat-label">Months internship</div></div>
     <div class="stat"><div class="stat-num" data-count="400" data-suffix="+">0</div><div class="stat-label">Hackathon participants led</div></div>
     <div class="stat"><div class="stat-num" data-count="8.38">0</div><div class="stat-label">B.E. GPA / 10</div></div>
@@ -76,8 +76,8 @@
 <section id="projects">
   <div class="wrap">
     <p class="eye rv">Selected work</p>
-    <h2 class="sec-h rv">Three systems, three different<br>engineering problems.</h2>
-    <p class="sec-p rv">Three featured case studies show the deepest work. Additional projects below show broader experience across cybersecurity, systems programming, and web applications.</p>
+    <h2 class="sec-h rv">Three systems, three different<br>backend engineering problems.</h2>
+    <p class="sec-p rv">Three featured case studies show the deepest work across asynchronous systems, transactional backend design and high-read REST APIs. Additional projects below show broader production, cloud, cybersecurity, systems and full-stack experience.</p>
 
     <div class="projects">
       <article class="pcard rv-left">
@@ -91,13 +91,13 @@
           </div>
         </div>
         <div class="pcard-info">
-          <span class="pcard-num">i.</span><span class="pcard-type">AI workflow orchestration · 2026</span>
+          <span class="pcard-num">i.</span><span class="pcard-type">Workflow orchestration · 2026</span>
           <h3 class="pcard-name">AgentFlow</h3>
-          <p class="pcard-sub">Multi-tenant AI workflow orchestrator</p>
+          <p class="pcard-sub">Multi-tenant workflow orchestration platform</p>
           <ul class="pcard-ul">
-            <li>Workflow engine with 6 node types, 4 trigger modes, conditional routing, and approval pause/resume.</li>
-            <li>Organization-scoped RBAC with Hasura/Nhost, retry handling, quota accounting, and webhook security.</li>
-            <li>Gemini execution with live GraphQL status and PostgreSQL-backed state.</li>
+            <li>Built a multi-tenant workflow orchestration platform with durable asynchronous execution, conditional routing, human-approval pause/resume and real-time GraphQL monitoring.</li>
+            <li>Designed event-triggered background execution with immutable run snapshots, PostgreSQL-backed state, organization-scoped authorization and retry-aware execution.</li>
+            <li>Added secure webhooks, quota accounting, protected operations and CI validation for reliable workflow execution.</li>
           </ul>
           <div class="tags"><span class="tag">Next.js</span><span class="tag">TypeScript</span><span class="tag">GraphQL</span><span class="tag">PostgreSQL</span><span class="tag">Gemini</span></div>
           <div class="pcard-links">
@@ -110,69 +110,90 @@
 
       <article class="pcard rv-right">
         <div class="pcard-vis">
-          <div class="browser">
-            <div class="browser-top"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-url">arcanelinx.com</span></div>
-            <div class="browser-body"><div class="b-tag">Industrial Automation</div><div class="b-name">Arcanelinx</div><div class="b-desc">Engineering intelligence for modern industry.</div></div>
+          <div class="nodes">
+            <div class="node"><span class="node-ic ai">JWT</span><span class="node-name">Spring Security</span><span class="node-desc">USER / ADMIN</span></div>
+            <div class="node"><span class="node-ic api">API</span><span class="node-name">REST Controller</span><span class="node-desc">validated requests</span></div>
+            <div class="node"><span class="node-ic if">SVC</span><span class="node-name">Wallet Service</span><span class="node-desc">business rules</span></div>
+            <div class="node"><span class="node-ic ht">TX</span><span class="node-name">Transactional transfer</span><span class="node-desc">debit → credit</span></div>
+            <div class="node"><span class="node-ic db">DB</span><span class="node-name">PostgreSQL</span><span class="node-desc">JPA / Hibernate</span></div>
           </div>
         </div>
         <div class="pcard-info">
-          <span class="pcard-num">ii.</span><span class="pcard-type">Real company website · 2026</span>
-          <h3 class="pcard-name">Arcanelinx Corporate Website</h3>
-          <p class="pcard-sub">Built for an industrial automation company</p>
+          <span class="pcard-num">ii.</span><span class="pcard-type">Java backend · 2026</span>
+          <h3 class="pcard-name">Digital Wallet &amp; Transaction Service</h3>
+          <p class="pcard-sub">JWT-secured transactional wallet backend</p>
           <ul class="pcard-ul">
-            <li>Designed and developed a responsive company website using Next.js, React, and TypeScript.</li>
-            <li>Built contact validation, downloadable company profiles, SEO metadata, and a guided quotation workflow.</li>
-            <li>The RFQ feature includes multi-item requirements and private file handling, while the overall project remains the company website.</li>
+            <li>Built a Spring Boot digital-wallet backend with JWT authentication, USER/ADMIN role-based authorization, wallet balances, deposits, transfers and paginated transaction history.</li>
+            <li>Implemented atomic transfer processing using Spring @Transactional, JPA/Hibernate and PostgreSQL.</li>
+            <li>Used BigDecimal, optimistic locking, validation and centralized exception handling to protect balance consistency and API correctness.</li>
           </ul>
-          <div class="tags"><span class="tag">Next.js</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Cloudflare</span></div>
-          <div class="pcard-links"><a href="project-arcanelinx.html">Case study <span class="arr">→</span></a><a href="https://arcanelinx.com" target="_blank" rel="noopener noreferrer">Live <span class="arr">↗</span></a></div>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+          <div class="pcard-links">
+            <a href="project-wallet.html">Case study <span class="arr">→</span></a>
+            <a href="https://github.com/ashh-droid/digital-wallet-transaction-service" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
+          </div>
         </div>
       </article>
 
       <article class="pcard rv-left">
         <div class="pcard-vis">
-          <div class="dash">
-            <div class="dash-r">
-              <div class="dash-b"><div class="dash-b-l">Applications</div><div class="dash-b-v">Student</div><div class="dash-bar"><div class="dash-bar-f" data-width="78" style="width:0%;background:var(--sage)"></div></div></div>
-              <div class="dash-b"><div class="dash-b-l">Allocation</div><div class="dash-b-v">Admin</div><div class="dash-bar"><div class="dash-bar-f" data-width="62" style="width:0%;background:#468278"></div></div></div>
-            </div>
-            <div class="dash-r">
-              <div class="dash-b"><div class="dash-b-l">Deployment</div><div class="dash-b-v">Docker</div><div class="dash-bar"><div class="dash-bar-f" data-width="82" style="width:0%;background:#9a7a30"></div></div></div>
-              <div class="dash-b"><div class="dash-b-l">Orchestration</div><div class="dash-b-v">K8s</div><div class="dash-bar"><div class="dash-bar-f" data-width="100" style="width:0%;background:#506e96"></div></div></div>
-            </div>
+          <div class="nodes">
+            <div class="node"><span class="node-ic api">URL</span><span class="node-name">Long URL</span><span class="node-desc">validate input</span></div>
+            <div class="node"><span class="node-ic ai">7</span><span class="node-name">Generate code</span><span class="node-desc">SecureRandom</span></div>
+            <div class="node"><span class="node-ic db">DB</span><span class="node-name">PostgreSQL</span><span class="node-desc">indexed lookup</span></div>
+            <div class="node"><span class="node-ic if">302</span><span class="node-name">Redirect</span><span class="node-desc">resolve short code</span></div>
+            <div class="node"><span class="node-ic ht">↗</span><span class="node-name">Analytics &amp; expiry</span><span class="node-desc">click lifecycle</span></div>
           </div>
         </div>
         <div class="pcard-info">
-          <span class="pcard-num">iii.</span><span class="pcard-type">Full-stack application · 2026</span>
-          <h3 class="pcard-name">Hostel Allocation System</h3>
-          <p class="pcard-sub">Role-based Django app with containerised deployment</p>
+          <span class="pcard-num">iii.</span><span class="pcard-type">Java REST API · 2026</span>
+          <h3 class="pcard-name">URL Shortener &amp; Analytics API</h3>
+          <p class="pcard-sub">Spring Boot short-link service with analytics</p>
           <ul class="pcard-ul">
-            <li>Student and administrative workflows for applications, room allocation, and dashboards using Django authentication and ORM.</li>
-            <li>Containerized with Docker and deployed on Kubernetes/Minikube using Deployments, Services, health probes, and replicas.</li>
+            <li>Developed a Spring Boot REST API using 7-character SecureRandom short codes, collision checking and HTTP 302 redirects.</li>
+            <li>Added click analytics, optional expiration, manual deactivation and indexed PostgreSQL short-code lookup.</li>
+            <li>Implemented transactional analytics updates, Spring Scheduler expiration cleanup, validation, centralized error handling and automated tests.</li>
           </ul>
-          <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
-          <div class="pcard-links"><a href="project-hostel.html">Case study <span class="arr">→</span></a><a href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div>
+          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">JUnit</span><span class="tag">Docker</span></div>
+          <div class="pcard-links">
+            <a href="project-url-shortener.html">Case study <span class="arr">→</span></a>
+            <a href="https://github.com/ashh-droid/url-shortener-analytics-api" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
+          </div>
         </div>
       </article>
     </div>
 
     <div class="more-work">
-      <div class="more-head rv"><p class="eye">More projects</p><h3 class="more-title">Additional work that shows range.</h3><p class="more-copy">Smaller projects, but useful evidence of cybersecurity, networking, concurrency, and product-development experience.</p></div>
+      <div class="more-head rv"><p class="eye">More projects</p><h3 class="more-title">Additional work that shows range.</h3><p class="more-copy">Production web delivery, Django deployment, cybersecurity, networking, concurrency, and full-stack application work beyond the three featured backend case studies.</p></div>
       <div class="mini-grid stg">
         <article class="mini-card rv-scale">
-          <span class="mini-index">04</span><div class="mini-kicker">Cybersecurity · SIEM</div>
+          <span class="mini-index">04</span><div class="mini-kicker">Production web platform</div>
+          <h3>Arcanelinx Corporate Website</h3>
+          <p>Designed and developed a responsive corporate website for an industrial automation company using Next.js, React and TypeScript, including form validation, SEO metadata, downloadable company profiles and a guided multi-item RFQ workflow.</p>
+          <div class="mini-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Cloudflare</span></div>
+          <div class="pcard-links"><a href="project-arcanelinx.html">Case study <span class="arr">→</span></a><a href="https://arcanelinx.com" target="_blank" rel="noopener noreferrer">Live <span class="arr">↗</span></a></div>
+        </article>
+        <article class="mini-card rv-scale">
+          <span class="mini-index">05</span><div class="mini-kicker">Backend application · Deployment</div>
+          <h3>Hostel Allocation System</h3>
+          <p>Built a role-based Django application with student and administrator workflows for applications, room allocation and management, then containerized it with Docker and deployed it using Kubernetes.</p>
+          <div class="mini-tags"><span>Python</span><span>Django</span><span>Docker</span><span>Kubernetes</span></div>
+          <div class="pcard-links"><a href="project-hostel.html">Case study <span class="arr">→</span></a><a href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div>
+        </article>
+        <article class="mini-card rv-scale">
+          <span class="mini-index">06</span><div class="mini-kicker">Cybersecurity · SIEM</div>
           <h3>Ethical Phishing &amp; Cyber Defense Evaluation System</h3>
           <p>Built a controlled phishing-simulation and cyber-defense evaluation environment, forwarded Apache logs into Splunk, and used SPL queries for event analysis and threat-detection exercises.</p>
           <div class="mini-tags"><span>Splunk SIEM</span><span>SET</span><span>Apache</span></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">05</span><div class="mini-kicker">Systems · Networking</div>
+          <span class="mini-index">07</span><div class="mini-kicker">Systems · Networking</div>
           <h3>Real-Time Multi-Client Chat Application</h3>
           <p>Built a concurrent client-server chat application with TCP sockets, POSIX threads, and message broadcasting for multiple simultaneous users.</p>
           <div class="mini-tags"><span>C</span><span>TCP Sockets</span><span>POSIX Threads</span></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">06</span><div class="mini-kicker">Web application</div>
+          <span class="mini-index">08</span><div class="mini-kicker">Web application</div>
           <h3>WEE RIDE — Carpooling &amp; Ride Sharing</h3>
           <p>Developed a web-based carpooling application for creating, discovering, and managing shared rides, including user accounts and ride-participation workflows.</p>
           <div class="mini-tags"><span>Python</span><span>Django</span></div>
@@ -186,17 +207,17 @@
 <section id="experience">
   <div class="wrap">
     <p class="eye rv">Experience</p>
-    <h2 class="sec-h rv">Five months of Django backend<br>&amp; full-stack experience.</h2>
+    <h2 class="sec-h rv">Backend &amp; full-stack internship<br>experience.</h2>
     <div class="timeline rv-scale">
       <div class="timeline-dot"></div>
       <div class="exp">
         <div class="exp-header"><h3 class="exp-role">Python Full Stack Intern</h3><span class="exp-date">Jan — May 2026 · Bengaluru · On-site</span></div>
         <div class="exp-co">Skyllx Technologies Pvt. Ltd.</div>
         <ul class="pcard-ul">
-          <li>Gained hands-on experience in Python and Django-based full-stack development, working with backend functionality, REST APIs and application debugging.</li>
-          <li>Applied the concepts learned during the internship to build a Django-based Hostel Allocation System, extending the project with Docker and Kubernetes deployment.</li>
+          <li>Developed backend and full-stack functionality using Python and Django, working with REST APIs, application logic, database operations and debugging.</li>
+          <li>Built a role-based Hostel Allocation System and extended the application with Docker and Kubernetes deployment.</li>
         </ul>
-        <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">MySQL</span><span class="tag">REST APIs</span></div>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Django</span><span class="tag">REST APIs</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
       </div>
     </div>
   </div>
@@ -207,15 +228,12 @@
   <div class="wrap">
     <p class="eye rv">Technical foundation</p><h2 class="sec-h rv">Technologies connected to the work.</h2>
     <div class="tgrid stg">
-      <div class="tcell rv-scale"><div class="tcell-h">Languages</div><div class="tcell-body">Python · TypeScript · JavaScript · Java · C · SQL</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Frontend</div><div class="tcell-body">Next.js · React · HTML5 · CSS3 · Tailwind CSS</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Backend &amp; APIs</div><div class="tcell-body">Django · REST APIs · GraphQL · Hasura · Nhost · Cloudflare Workers</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Databases &amp; Cloud</div><div class="tcell-body">PostgreSQL · MySQL · SQLite · Cloudflare D1/R2 · Vercel · Cloudflare</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">DevOps &amp; Tools</div><div class="tcell-body">Git · GitHub · GitHub Actions · CI/CD · Docker · Kubernetes · Linux/Ubuntu</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">AI</div><div class="tcell-body">Gemini API · LLM Integration · Generative AI · Prompt Engineering</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Cybersecurity</div><div class="tcell-body">Splunk SIEM · SPL · Nmap · SET · Apache · Syslog · Log Analysis</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Systems &amp; Networking</div><div class="tcell-body">TCP/IP · TCP Sockets · POSIX Threads · Concurrency · VMware · VirtualBox</div></div>
-      <div class="tcell rv-scale"><div class="tcell-h">Core CS</div><div class="tcell-body">DSA · OOP · DBMS · Operating Systems · Computer Networks</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">Java &amp; Spring</div><div class="tcell-body">Java · Spring Boot · Spring MVC · Spring Data JPA · Hibernate · Spring Security · JWT · Spring Scheduler · Maven</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">Backend &amp; APIs</div><div class="tcell-body">REST APIs · JDBC · JUnit 5 · Mockito · GraphQL · Hasura · Nhost</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">Databases</div><div class="tcell-body">PostgreSQL · MySQL · SQLite</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">DevOps &amp; Cloud</div><div class="tcell-body">Docker · Kubernetes · GitHub Actions / CI · Git · Linux · Cloudflare · Vercel</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">Full Stack</div><div class="tcell-body">Python · Django · JavaScript · TypeScript · Next.js · React</div></div>
+      <div class="tcell rv-scale"><div class="tcell-h">AI</div><div class="tcell-body">Gemini API · Generative AI · LLM Integration</div></div>
     </div>
   </div>
 </section>
@@ -226,13 +244,13 @@
     <p class="eye rv">About</p><h2 class="sec-h rv">I like understanding how the<br>whole system fits together.</h2>
     <div class="about-grid rv">
       <div>
-        <p>I'm a Computer Science &amp; Engineering graduate who gravitates toward projects that go beyond basic CRUD work and require attention to APIs, databases, security, deployment, and user experience as one connected system.</p>
-        <div class="pull-quote">I enjoy the moment when the backend, the database, the deployment, and the interface finally click into one working thing.</div>
-        <p>Recent work includes AgentFlow, the Arcanelinx corporate website with its guided RFQ feature, and a Django hostel allocation system deployed with Docker and Kubernetes. Earlier projects also cover cybersecurity, TCP socket programming, and a Django carpooling application. I'm looking for entry-level backend, full-stack, and software engineering roles.</p>
+        <p>Computer Science and Engineering graduate focused on backend engineering, with internship experience in Python/Django and hands-on project work in Java and Spring Boot.</p>
+        <div class="pull-quote">I enjoy understanding how systems work beyond the interface — how requests flow, how data remains consistent, how failures are handled and how software can be made easier to operate and extend.</div>
+        <p>Recent work spans REST APIs, authentication, transactional data consistency, PostgreSQL persistence, asynchronous workflows, Docker/Kubernetes deployment and production web development.</p>
       </div>
       <div>
         <div class="about-detail"><div class="about-detail-l">Location</div><div class="about-detail-v">Bengaluru, Karnataka</div></div>
-        <div class="about-detail"><div class="about-detail-l">Engineering focus</div><div class="about-detail-v">Backend · Full-stack · AI applications</div></div>
+        <div class="about-detail"><div class="about-detail-l">Engineering focus</div><div class="about-detail-v">Backend · Java/Spring Boot · Systems</div></div>
         <div class="about-detail"><div class="about-detail-l">Open to</div><div class="about-detail-v">On-site · Hybrid · Remote</div></div>
         <div class="about-detail"><div class="about-detail-l">Education</div><div class="about-detail-v">B.E. Computer Science &amp; Engineering</div></div>
       </div>
@@ -254,16 +272,13 @@
 <div class="divider cert-divider"><span class="divider-mark"></span></div>
 <section id="certifications">
   <div class="wrap">
-    <p class="eye rv">Certifications &amp; learning</p><h2 class="sec-h rv">Seven credentials supporting the work.</h2>
+    <p class="eye rv">Certifications &amp; learning</p><h2 class="sec-h rv">Four credentials supporting the work.</h2>
     <p class="sec-p rv">Projects and internship experience come first. These credentials show the structured learning behind the broader stack.</p>
     <div class="cert-grid stg">
-      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Skyllx</span><span class="cert-date">May 2026</span></div><h3>Python Full Stack Internship</h3><p>Internship completion credential connected to the five-month Skyllx experience.</p></article>
-      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Google Cloud Skills Boost</span><span class="cert-date">Aug 2025</span></div><h3>Generative AI Leader Track</h3></article>
-      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Google Cloud Skills Boost</span><span class="cert-date">Aug 2025</span></div><h3>Prompt Design in Vertex AI Skill Badge</h3></article>
+      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Telusko / Udemy</span></div><h3>Java Spring Framework, Spring Boot, Spring AI – Gen AI</h3></article>
+      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">GeeksforGeeks</span><span class="cert-date">Sep 2024</span></div><h3>Full Stack Developer Bootcamp</h3></article>
+      <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Google Cloud</span><span class="cert-date">Aug 2025</span></div><h3>Generative AI Leader Track</h3></article>
       <article class="cert-card cert-featured rv-scale"><div class="cert-top"><span class="cert-provider">Coursera</span><span class="cert-date">Jan 2024</span></div><h3>Foundations of Cybersecurity</h3></article>
-      <article class="cert-card rv-scale"><div class="cert-top"><span class="cert-provider">Udemy</span><span class="cert-date">Mar 2026</span></div><h3>Complete AI &amp; Machine Learning, Data Science Bootcamp</h3></article>
-      <article class="cert-card rv-scale"><div class="cert-top"><span class="cert-provider">Udemy</span><span class="cert-date">Oct 2024</span></div><h3>100 Days of Code: The Complete Python Pro Bootcamp</h3></article>
-      <article class="cert-card rv-scale"><div class="cert-top"><span class="cert-provider">GeeksforGeeks</span><span class="cert-date">Sep 2024</span></div><h3>Full Stack Developer Bootcamp — Master Frontend to Backend</h3></article>
     </div>
     <a class="cert-link rv" href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">View profile &amp; credentials on LinkedIn <span>↗</span></a>
   </div>
@@ -283,6 +298,6 @@
 </section>
 
 <footer class="footer"><div class="wrap footer-inner"><span class="footer-copy">Designed &amp; built by Asmita G V · 2026</span><div class="footer-r"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
-<script src="sage.js?v=20260817-hero4" defer></script>
+<script src="sage.js?v=20260906-backend1" defer></script>
 </body>
 </html>
