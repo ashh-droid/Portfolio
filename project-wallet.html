@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Case study: Digital Wallet & Transaction Service, a Java/Spring Boot backend with JWT authentication, transactional transfers, PostgreSQL persistence, and Docker deployment.">
+  <meta property="og:title" content="Digital Wallet & Transaction Service Case Study — Asmita G V">
+  <meta property="og:description" content="Spring Boot wallet backend with JWT security, transactional balance updates, JPA/Hibernate persistence, PostgreSQL, validation, and Docker.">
+  <meta property="og:type" content="article">
+  <title>Digital Wallet & Transaction Service Case Study — Asmita G V</title>
+  <link rel="icon" href="android-chrome-512x512.png?v=20260906-backend1" sizes="512x512" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-logo-text">Asmita G V</span>
+      <span class="nav-logo-bar"></span>
+    </a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Java backend</p>
+        <h1 class="rv">Digital Wallet &amp; Transaction Service</h1>
+        <p class="case-summary rv">A Spring Boot wallet backend with stateless JWT authentication, USER/ADMIN authorization, wallet balances, deposits, user-to-user transfers, paginated transaction history, and PostgreSQL persistence.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://github.com/ashh-droid/digital-wallet-transaction-service" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Backend</dt><dd>Java 21 · Spring Boot 3</dd></div>
+          <div><dt>Security</dt><dd>Spring Security · JWT · USER / ADMIN</dd></div>
+          <div><dt>Persistence</dt><dd>Spring Data JPA · Hibernate · PostgreSQL</dd></div>
+          <div><dt>Deployment</dt><dd>Docker · Docker Compose</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-mark"></span></div>
+
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>Digital Wallet · transactional request flow</span></div>
+        <div class="flow-canvas">
+          <div class="flow-row">
+            <div class="flow-box"><small>01 · Client</small><strong>Authenticated request</strong><span>Bearer JWT</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>02 · Security</small><strong>Spring Security</strong><span>identity + role checks</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>03 · API</small><strong>REST Controller</strong><span>request / response</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>04 · Service</small><strong>Wallet Service</strong><span>business rules</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>05 · Data</small><strong>Repository</strong><span>JPA / PostgreSQL</span></div>
+          </div>
+          <div class="flow-row">
+            <div class="flow-box"><small>Transfer</small><strong>Debit sender</strong><span>balance check</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>Transfer</small><strong>Credit recipient</strong><span>same transaction</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>Record</small><strong>Save transaction</strong><span>commit or rollback</span></div>
+          </div>
+          <div class="flow-note">Sender debit, recipient credit, and transaction creation run inside one Spring-managed database transaction.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation"><a href="#problem">Problem</a><a href="#architecture">Architecture</a><a href="#security">Security</a><a href="#consistency">Transactions</a><a href="#api">API design</a><a href="#production">Production</a></aside>
+      <div class="case-content">
+        <section id="problem" class="rv">
+          <p class="case-eyebrow">The problem</p>
+          <h2>Model balance-changing operations without leaving partial updates behind.</h2>
+          <p>A wallet transfer changes more than one row: the sender balance decreases, the recipient balance increases, and a transaction record is created. The backend needs to validate the request, authorize the caller, persist all related changes together, and return consistent API errors when something fails.</p>
+        </section>
+
+        <section id="architecture" class="rv">
+          <p class="case-eyebrow">Architecture</p>
+          <h2>Separate HTTP handling, business rules, and persistence through a layered Spring Boot design.</h2>
+          <div class="architecture">
+            <div><strong>Controller</strong><span>HTTP + validation</span></div><b>→</b>
+            <div><strong>Service</strong><span>wallet rules</span></div><b>→</b>
+            <div><strong>Repository</strong><span>Spring Data JPA</span></div><b>→</b>
+            <div><strong>PostgreSQL</strong><span>persistent state</span></div>
+          </div>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Controller layer</h3><p>REST controllers receive requests and expose authentication, wallet, transfer, history, and admin endpoints.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Service layer</h3><p>Business rules such as self-transfer checks, balance validation, deposits, transfers, and transaction mapping stay outside the controller.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Repository layer</h3><p>Spring Data JPA repositories manage wallet, user, and transaction persistence through Hibernate and PostgreSQL.</p></div></article>
+          </div>
+        </section>
+
+        <section id="security" class="rv">
+          <p class="case-eyebrow">Authentication &amp; authorization</p>
+          <h2>Protect wallet operations with stateless JWT authentication and role-aware access.</h2>
+          <div class="decision-grid">
+            <article><h3>JWT authentication</h3><p>Registration and login issue JWTs that are processed by Spring Security for protected API requests.</p></article>
+            <article><h3>USER / ADMIN roles</h3><p>Wallet routes require authenticated access, while administration endpoints are restricted to the ADMIN role.</p></article>
+            <article><h3>Password handling</h3><p>Passwords are stored as BCrypt hashes, while JWT and database secrets are externalized from source control.</p></article>
+          </div>
+        </section>
+
+        <section id="consistency" class="rv">
+          <p class="case-eyebrow">Transactional consistency</p>
+          <h2>Use one database transaction for the complete transfer operation.</h2>
+          <p>The transfer service is annotated with <code>@Transactional</code>. If validation or persistence fails before completion, Spring rolls the transaction back instead of leaving only one balance updated.</p>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>BigDecimal for money</h3><p>Wallet balances and transfer amounts use BigDecimal so decimal monetary values are not handled with binary floating-point arithmetic.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Optimistic locking</h3><p>The Wallet entity uses <code>@Version</code> so concurrent updates can be detected instead of silently overwriting a newer wallet state.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Atomic business operation</h3><p>Debit, credit, and transaction-record creation belong to the same transaction boundary and commit together.</p></div></article>
+          </div>
+        </section>
+
+        <section id="api" class="rv">
+          <p class="case-eyebrow">API correctness</p>
+          <h2>Keep request validation, error responses, and transaction history predictable.</h2>
+          <div class="decision-grid">
+            <article><h3>Validation</h3><p>Requests validate transfer amounts, users, available balance, self-transfers, and authenticated identity before changing state.</p></article>
+            <article><h3>Centralized exceptions</h3><p>A global exception handler turns application errors into a consistent API response structure rather than exposing stack traces.</p></article>
+            <article><h3>Paginated history</h3><p>Transaction history uses Spring Data pagination so clients can request pages instead of loading all records at once.</p></article>
+          </div>
+          <p style="margin-top:1.5rem">The project is packaged with Docker and Docker Compose, with PostgreSQL data stored in a persistent Docker volume.</p>
+        </section>
+
+        <section id="production" class="rv">
+          <p class="case-eyebrow">What I would improve next</p>
+          <h2>Make the demo backend easier to evolve and operate under real production conditions.</h2>
+          <p>The repository identifies Flyway migrations, OpenAPI documentation, broader integration testing, explicit optimistic-lock conflict handling, refresh tokens, rate limiting, audit logging, and CI as logical next improvements. The current project remains a portfolio wallet simulation and does not process real money or connect to banking networks.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Next case study</small><h2>URL Shortener &amp; Analytics API</h2></div><a class="btn-fill" href="project-url-shortener.html">View project →</a></div></div></section>
+</main>
+
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20260906-backend1" defer></script>
+</body>
+</html>
