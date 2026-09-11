@@ -1,6 +1,8 @@
 (function(){
   'use strict';
 
+  document.title='Asmita G V — Portfolio';
+
   /* ─── Supplied branding package ─── */
   if(!document.querySelector('link[href^="branding.css"]')){
     var brandCss=document.createElement('link');
