@@ -1,7 +1,9 @@
 (function(){
   'use strict';
 
-  document.title='Asmita G V — Portfolio';
+  if(!document.body.classList.contains('case-page')){
+    document.title='Asmita G V — Portfolio';
+  }
 
   /* ─── Supplied branding package ─── */
   if(!document.querySelector('link[href^="branding.css"]')){
