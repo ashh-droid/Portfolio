@@ -48,12 +48,12 @@
   /* ─── Focused homepage corrections ─── */
   var heroHeading=document.querySelector('.hero h1');
   if(heroHeading){
-    heroHeading.innerHTML='I like building the parts people don\'t always <span class="hero-no-break">see —</span><br>the APIs, transactions, data flows,<br><em>and systems behind a working product.</em>';
+    heroHeading.innerHTML='I like building systems from end to <span class="hero-no-break">end —</span><br>the APIs, interfaces, data flows,<br><em>and deployment behind a working product.</em>';
   }
 
   var heroSub=document.querySelector('.hero-sub');
   if(heroSub){
-    heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across Java/Spring Boot backends, Python/Django, REST APIs, PostgreSQL, asynchronous workflows, Docker and Kubernetes.';
+    heroSub.textContent='Computer Science & Engineering graduate with internship and project experience across backend and full-stack development, Java/Spring Boot, Python/Django, REST APIs, AI workflows, Docker, Kubernetes and cloud deployment.';
   }
 
   var experience=document.querySelector('#experience');
