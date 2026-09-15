@@ -2,7 +2,7 @@
   'use strict';
 
   if(!document.body.classList.contains('case-page')){
-    document.title='Asmita G V — Portfolio';
+    document.title='Asmita G V | Portfolio';
   }
 
   /* ─── Supplied branding package ─── */
