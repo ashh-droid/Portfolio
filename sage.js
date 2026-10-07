@@ -62,11 +62,16 @@
 
   var experience=document.querySelector('#experience');
   if(experience){
-    var expBullets=experience.querySelectorAll('.exp .pcard-ul li');
-    if(expBullets.length>=2){
-      expBullets[0].textContent='Developed backend and full-stack functionality using Python and Django, working with REST APIs, application logic, database operations and debugging.';
-      expBullets[1].textContent='Built a role-based Hostel Allocation System and extended the application with Docker and Kubernetes deployment.';
-    }
+    experience.querySelectorAll('.exp').forEach(function(exp){
+      var company=exp.querySelector('.exp-co');
+      if(company && company.textContent.indexOf('Skyllx Technologies')>=0){
+        var expBullets=exp.querySelectorAll('.pcard-ul li');
+        if(expBullets.length>=2){
+          expBullets[0].textContent='Developed backend and full-stack functionality using Python and Django, working with REST APIs, application logic, database operations and debugging.';
+          expBullets[1].textContent='Applied internship learning to build a role-based Hostel Allocation System using Django, SQLite, Docker and Kubernetes.';
+        }
+      }
+    });
   }
 
   var leadNum=document.querySelector('.lead-card .lead-num');
