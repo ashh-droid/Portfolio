@@ -137,7 +137,7 @@ Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel
 JUnit 5 · Mockito · Maven
 
 **AI & Security Exposure**  
-Gemini API · Generative AI · LLM Integration · Splunk SIEM · SPL · Nmap
+Gemini API · LLM Integration · Splunk SIEM · SPL · Nmap
 
 ## About This Portfolio
 
