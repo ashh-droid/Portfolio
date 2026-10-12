@@ -42,6 +42,22 @@
 .wee-image-viewer button{position:absolute;right:1rem;top:.8rem;background:transparent;border:1px solid #fff;color:#fff;border-radius:30px;width:42px;height:42px;font-size:1.4rem;cursor:pointer}
 @media(max-width:760px){.wee-role-grid{grid-template-columns:1fr}.wee-system-map{padding:1rem}}
   .wee-gallery-heading{margin:2.15rem 0 .5rem;color:var(--ink);font-size:1.03rem;line-height:1.5}
+
+/* Dedicated accessible, native-resolution image inspector */
+.portfolio-zoom{padding:0!important;flex-direction:column;align-items:stretch;justify-content:stretch;background:rgba(12,14,14,.98)}
+.portfolio-zoom.open{display:flex}
+.portfolio-zoom .pz-toolbar{flex:none;display:flex;align-items:center;flex-wrap:wrap;gap:.5rem;padding:.7rem 1rem;background:#212521;border-bottom:1px solid #454a44;color:#fff;z-index:1}
+.portfolio-zoom .pz-title{flex:1 1 230px;color:#f2f5f0;font-family:var(--mono,monospace);font-size:.75rem;line-height:1.5}
+.portfolio-zoom .pz-toolbar button{position:static;width:auto;height:auto;min-width:40px;min-height:38px;border:1px solid #697269;background:#353b35;color:#fff;border-radius:8px;padding:.35rem .7rem;font-size:.82rem;font-family:inherit;white-space:nowrap}
+.portfolio-zoom .pz-toolbar button:hover{background:#505d51}
+.portfolio-zoom .pz-toolbar button:focus-visible{outline:2px solid #d8e7cd;outline-offset:2px}
+.portfolio-zoom .pz-zoom-label{font-family:var(--mono,monospace);min-width:4rem;text-align:center;color:#eee;font-size:.74rem}
+.portfolio-zoom .pz-stage{flex:1 1 auto;min-height:0;min-width:0;overflow:auto;overscroll-behavior:contain;padding:1rem;background:#151817;touch-action:pan-x pan-y;cursor:grab}
+.portfolio-zoom .pz-stage:active{cursor:grabbing}
+.portfolio-zoom .pz-stage img{display:block;max-width:none!important;max-height:none!important;min-width:0;width:auto;height:auto;object-fit:contain;box-shadow:0 12px 35px rgba(0,0,0,.3);margin:auto}
+.portfolio-zoom .pz-note{flex:none;padding:.35rem 1rem .5rem;background:#212521;color:#c9d0c7;font-size:.72rem;line-height:1.5}
+@media(max-width:620px){.portfolio-zoom .pz-toolbar{gap:.35rem;padding:.55rem}.portfolio-zoom .pz-title{flex-basis:100%;font-size:.7rem}.portfolio-zoom .pz-toolbar button{min-height:36px;padding:.3rem .55rem}.portfolio-zoom .pz-stage{padding:.4rem}.portfolio-zoom .pz-note{font-size:.66rem}}
+
 </style></head>
 <body class="case-page">
 <a class="skip" href="#main">Skip to content</a>
@@ -189,7 +205,45 @@
 
 <footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
 <script src="sage.js?v=20260817-header1" defer></script>
-<div id="weeViewer" class="wee-image-viewer" role="dialog" aria-modal="true" aria-label="Expanded Wee Ride screenshot" aria-hidden="true"><button type="button" aria-label="Close image">×</button><img alt=""></div><script>
-(()=>{const box=document.getElementById('weeViewer'),large=box.querySelector('img'),closeBtn=box.querySelector('button'),imgs=document.querySelectorAll('#walkthrough .gallery-pair img');let previous=null;function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');large.removeAttribute('src');document.body.style.overflow='';previous?.focus()}function open(img){previous=document.activeElement;large.src=img.src;large.alt=img.alt;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';closeBtn.focus()}imgs.forEach(img=>{img.tabIndex=0;img.setAttribute('role','button');img.addEventListener('click',()=>open(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img)}})});closeBtn.addEventListener('click',close);box.addEventListener('click',e=>{if(e.target===box)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&box.classList.contains('open'))close()})})();
-</script></body>
+<div id="weeViewer" class="wee-image-viewer portfolio-zoom" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Expanded Wee Ride project screenshot">
+  <div class="pz-toolbar" role="toolbar" aria-label="Image zoom controls">
+    <span class="pz-title" id="weeViewerTitle">Project screenshot</span>
+    <button type="button" data-action="zoom-out" aria-label="Zoom out">−</button>
+    <span class="pz-zoom-label" aria-live="polite">Fit</span>
+    <button type="button" data-action="zoom-in" aria-label="Zoom in">+</button>
+    <button type="button" data-action="actual" aria-label="View at original size">100%</button>
+    <button type="button" data-action="fit" aria-label="Fit whole image to screen">Fit</button>
+    <button type="button" data-action="close" aria-label="Close image viewer">Close ×</button>
+  </div>
+  <div class="pz-stage" tabindex="0" aria-label="Zoomed image; scroll or drag to examine details"><img alt=""></div>
+  <div class="pz-note">Use + / − to zoom, 100% to see original pixels, and drag or scroll to inspect details. Press Esc to close.</div>
+</div>
+<script>
+(()=>{
+  const box=document.getElementById('weeViewer');
+  if(!box)return;
+  const stage=box.querySelector('.pz-stage'), big=stage.querySelector('img'), zoomText=box.querySelector('.pz-zoom-label'),title=box.querySelector('.pz-title');
+  const actions=Object.fromEntries([...box.querySelectorAll('[data-action]')].map(el=>[el.dataset.action,el]));
+  const thumbs=[...document.querySelectorAll('#walkthrough .gallery-pair img')];
+  let scale=1,previous=null,previousOverflow='',drag=null;
+  const bounds=()=>({w:big.naturalWidth||1,h:big.naturalHeight||1});
+  function apply(next){scale=Math.min(4,Math.max(.1,next));const {w,h}=bounds();big.style.width=Math.round(w*scale)+'px';big.style.height=Math.round(h*scale)+'px';zoomText.textContent=Math.round(scale*100)+'%';}
+  function fit(){const {w,h}=bounds();const availableW=Math.max(200,stage.clientWidth-32),availableH=Math.max(160,stage.clientHeight-32);apply(Math.min(1,availableW/w,availableH/h));stage.scrollTo(0,0);}
+  function close(){box.classList.remove('open');box.setAttribute('aria-hidden','true');big.removeAttribute('src');big.removeAttribute('style');document.body.style.overflow=previousOverflow;previous?.focus();drag=null;}
+  function open(img){previous=document.activeElement;previousOverflow=document.body.style.overflow;const fig=img.closest('figure');title.textContent=fig?.querySelector('figcaption')?.textContent||img.alt||'Project screenshot';big.alt=img.alt||'Expanded screenshot';big.onload=()=>{fit();};big.src=img.currentSrc||img.src;box.classList.add('open');box.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';actions.fit.focus();if(big.complete&&big.naturalWidth)fit();}
+  thumbs.forEach(img=>{img.tabIndex=0;img.setAttribute('role','button');img.setAttribute('aria-label',img.alt+' — open zoomable full-resolution view');img.addEventListener('click',()=>open(img));img.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});});
+  actions.close.addEventListener('click',close);
+  actions.fit.addEventListener('click',fit);
+  actions.actual.addEventListener('click',()=>apply(1));
+  actions['zoom-in'].addEventListener('click',()=>apply(scale*1.3));
+  actions['zoom-out'].addEventListener('click',()=>apply(scale/1.3));
+  box.addEventListener('click',e=>{if(e.target===box)close();});
+  document.addEventListener('keydown',e=>{if(!box.classList.contains('open'))return;if(e.key==='Escape'){e.preventDefault();close();}else if(e.key==='+'||e.key==='='){e.preventDefault();apply(scale*1.3);}else if(e.key==='-'){e.preventDefault();apply(scale/1.3);}else if(e.key==='0'){e.preventDefault();apply(1);}});
+  stage.addEventListener('pointerdown',e=>{if(e.button!==0)return;drag={x:e.clientX,y:e.clientY,left:stage.scrollLeft,top:stage.scrollTop};stage.setPointerCapture(e.pointerId);});
+  stage.addEventListener('pointermove',e=>{if(!drag)return;stage.scrollLeft=drag.left-(e.clientX-drag.x);stage.scrollTop=drag.top-(e.clientY-drag.y);});
+  stage.addEventListener('pointerup',()=>{drag=null;});
+  stage.addEventListener('pointercancel',()=>{drag=null;});
+})();
+</script>
+</body>
 </html>
