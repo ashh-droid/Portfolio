@@ -1,6 +1,32 @@
 (function(){
   'use strict';
 
+  /* ─── Resume PDF: always load the latest manually uploaded copy ─── */
+  /* The PDF retains one filename; stamp a fresh URL on each open to bypass cached copies. */
+  function refreshResumeUrl(link){
+    if(!link) return;
+    var url=new URL(link.href,document.baseURI);
+    if(url.pathname.split('/').pop()!=='Asmita_GV_Resume.pdf') return;
+    url.searchParams.set('v',String(Date.now()));
+    link.href=url.toString();
+  }
+  function refreshResumeLinks(){
+    document.querySelectorAll('a[href*="Asmita_GV_Resume.pdf"]').forEach(refreshResumeUrl);
+  }
+  refreshResumeLinks();
+  function freshResumeOnInteraction(event){
+    var target=event.target;
+    var link=target&&target.closest?target.closest('a[href*="Asmita_GV_Resume.pdf"]'):null;
+    if(link) refreshResumeUrl(link);
+  }
+  document.addEventListener('pointerdown',freshResumeOnInteraction,true);
+  document.addEventListener('click',freshResumeOnInteraction,true);
+  document.addEventListener('contextmenu',freshResumeOnInteraction,true);
+  document.addEventListener('keydown',function(event){
+    if(event.key==='Enter') freshResumeOnInteraction(event);
+  },true);
+  window.addEventListener('pageshow',refreshResumeLinks);
+
   if(!document.body.classList.contains('case-page')){
     document.title='Asmita G V | Portfolio';
   }
