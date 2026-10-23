@@ -28,3 +28,18 @@ body{background-color:var(--bg)}
 @media(max-width:900px){.mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.mini-grid,.cert-grid{grid-template-columns:1fr}.mini-card{min-height:auto}.more-work{margin-top:2.75rem;padding-top:2.25rem}.cert-top{align-items:flex-start}}
 @media(prefers-color-scheme:dark){html,body{background:#f6f4ef!important;color-scheme:only light!important}}
+
+
+/* Arcanelinx internship client websites */
+.exp-sites{margin:1.2rem 0 1.25rem}
+.exp-sites-label{font-family:var(--mono);font-size:.63rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--sage);margin:0 0 .7rem}
+.exp-sites-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.7rem}
+.exp-site{display:flex;flex-direction:column;min-width:0;padding:1.1rem 1.05rem;background:var(--bg);border:1px solid var(--border-dim);border-radius:9px;color:var(--ink);text-decoration:none;transition:border-color .2s,box-shadow .2s,transform .2s}
+.exp-site:hover{border-color:var(--sage);box-shadow:0 6px 20px rgba(78,115,80,.07);transform:translateY(-2px)}
+.exp-site:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
+.exp-site-heading{display:flex;align-items:flex-start;justify-content:space-between;gap:.5rem;font-family:var(--serif);font-size:1.03rem;line-height:1.25;font-weight:500;color:var(--ink)}
+.exp-site-arrow{font-family:var(--mono);font-size:.85rem;color:var(--sage);flex-shrink:0}
+.exp-site-desc{display:block;flex:1;margin-top:.55rem;font-size:.76rem;line-height:1.6;color:var(--text-2)}
+.exp-site-url{display:block;margin-top:.9rem;font-family:var(--mono);font-size:.61rem;color:var(--sage);overflow-wrap:anywhere}
+@media(max-width:900px){.exp-sites-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.exp-sites-grid{grid-template-columns:1fr}.exp-site{padding:1rem}.exp-site-heading{font-size:1.08rem}}
