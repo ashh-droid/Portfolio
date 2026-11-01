@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="AksharaCheck case study by Asmita G V: from the BharatCode Build League 2026 hackathon to a Hindi and Kannada browser-rendering scanner with multilingual AI explanations, Chromium-verified repairs and real-site evidence.">
+  <meta property="og:title" content="AksharaCheck Case Study — Asmita G V">
+  <meta property="og:description" content="A BharatCode hackathon project turned into an evidence-first Hindi and Kannada text rendering auditor. Python, Chromium, verified AI repairs, and real-world validation.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/project-aksharacheck.html">
+  <link rel="canonical" href="https://ashh-droid.github.io/Portfolio/project-aksharacheck.html">
+  <title>AksharaCheck Case Study — Asmita G V</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html"><span class="nav-logo-text">Asmita G V</span><span class="nav-logo-bar"></span></a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · BharatCode Build League 2026</p>
+        <h1 class="rv">AksharaCheck</h1>
+        <p class="case-summary rv">What began as a BharatCode hackathon challenge became a browser-based audit tool for Hindi and Kannada text. I built a workflow that finds evidence in Chromium, uses BharatCode AI to explain actionable findings, and tests proposed fixes in a fresh browser before trusting them.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://ashh-droid.github.io/AksharaCheck/" target="_blank" rel="noopener noreferrer">Open project ↗</a>
+          <a class="btn-line" href="https://ashh-droid.github.io/AksharaCheck/samples/akshara-fixture-demo/report.html" target="_blank" rel="noopener noreferrer">View AI demo report ↗</a>
+          <a class="btn-line" href="https://github.com/ashh-droid/AksharaCheck" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Origin</dt><dd>BharatCode Build League · 2026</dd></div>
+          <div><dt>Core scanner</dt><dd>Python · Playwright · Chromium</dd></div>
+          <div><dt>AI &amp; API</dt><dd>BharatCode · FastAPI</dd></div>
+          <div><dt>Showcase</dt><dd>React · TypeScript · Vite · GitHub Pages</dd></div>
+          <div><dt>Recorded demo</dt><dd>9/9 AI explanations · 4 verified repairs</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-mark"></span></div>
+
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>AksharaCheck · actual saved Chromium report</span></div>
+        <div class="gallery-pair">
+          <figure>
+            <a href="https://raw.githubusercontent.com/ashh-droid/AksharaCheck/main/docs/report-overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size AksharaCheck report overview screenshot">
+              <img src="https://raw.githubusercontent.com/ashh-droid/AksharaCheck/main/docs/report-overview.png" loading="lazy" alt="AksharaCheck recorded report overview showing the count and severity of findings at phone and desktop widths">
+            </a>
+            <figcaption>Actual report overview · controlled test fixture</figcaption>
+          </figure>
+          <figure>
+            <a href="https://raw.githubusercontent.com/ashh-droid/AksharaCheck/main/docs/report-finding.png" target="_blank" rel="noopener noreferrer" aria-label="Open the full-size AksharaCheck verified repair screenshot">
+              <img src="https://raw.githubusercontent.com/ashh-droid/AksharaCheck/main/docs/report-finding.png" loading="lazy" alt="Recorded finding details showing multilingual explanations and a Chromium-verified language tag repair">
+            </a>
+            <figcaption>Finding evidence · BharatCode explanation and verified repair</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation">
+        <a href="#origin">How it started</a>
+        <a href="#problem">The problem</a>
+        <a href="#build">What I built</a>
+        <a href="#architecture">How it works</a>
+        <a href="#iterations">What changed</a>
+        <a href="#results">Evidence</a>
+        <a href="#reflection">Reflection</a>
+      </aside>
+      <div class="case-content">
+        <section id="origin" class="rv">
+          <p class="case-eyebrow">From hackathon idea to working product</p>
+          <h2>It started with a question: what would make an AI-powered developer tool genuinely useful?</h2>
+          <p>I began AksharaCheck for the BharatCode Build League 2026, where I wanted to use the model for a problem that could be demonstrated and measured, not just generate text. I focused on Hindi and Kannada because webpages can render these scripts incorrectly in subtle ways: character combinations, font fallback, language labels and mobile clipping.</p>
+          <p>The first step was a deliberately broken test page. That gave me known cases to detect, explain and repair. I then developed a browser scanner, connected BharatCode's Responses API, built evidence-rich reports and a public React showcase, and tested the rules against real websites.</p>
+          <p>It grew beyond the original demo through iteration: each unexpected result from a real site became a reason to investigate the detector rather than assume the website was wrong.</p>
+        </section>
+
+        <section id="problem" class="rv">
+          <p class="case-eyebrow">The problem</p>
+          <h2>Finding an apparent problem is not the same as proving one.</h2>
+          <p>A screenshot alone cannot explain whether a Kannada vowel sequence is malformed, whether a font substitution is intentional, or whether a line is actually clipped. An AI model can also suggest a plausible repair that makes things worse. I wanted a tool that separates measurement, explanation and verification, with the browser as the source of truth.</p>
+        </section>
+
+        <section id="build" class="rv">
+          <p class="case-eyebrow">What I built</p>
+          <h2>A complete finding-to-report workflow, rather than a single AI prompt.</h2>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Browser-based scanning</h3><p>Used Playwright and Chromium at 390 px and 1440 px to inspect sampled Hindi and Kannada text, language metadata, character clusters, font usage and layout geometry.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>BharatCode explanations</h3><p>Integrated the BharatCode streaming Responses API to explain actionable findings in English and provide Hindi and Kannada summaries. Model suggestions are limited to permitted CSS properties or a language tag.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Independent repair verification</h3><p>Applied proposed repairs in a fresh Chromium context, checked that the issue cleared without sacrificing visibility, and preserved rejected attempts instead of treating every model suggestion as correct.</p></div></article>
+            <article class="case-point"><span>04</span><div><h3>Reports and public showcase</h3><p>Generated standalone HTML, JSON and Markdown reports with screenshots, measurements and attempts; built a React/Vite site for viewing recorded reports and checking pasted text.</p></div></article>
+          </div>
+        </section>
+
+        <section id="architecture" class="rv">
+          <p class="case-eyebrow">Architecture and engineering choices</p>
+          <h2>The model proposes. The browser decides.</h2>
+          <div class="workflow-line"><span>URL or test fixture</span><i>→</i><span>Playwright + Chromium</span><i>→</i><span>Evidence and findings</span><i>→</i><span>BharatCode (optional)</span><i>→</i><span>Fresh-browser verification</span><i>→</i><span>HTML / JSON / Markdown</span></div>
+          <div class="decision-grid">
+            <article><h3>Evidence first</h3><p>The scanner produces findings from browser observations. BharatCode explains them but never invents the underlying finding.</p></article>
+            <article><h3>Bounded repairs</h3><p>The verifier accepts only restricted CSS changes or a <code>lang</code> attribute and tests each proposal in an isolated browser page. It never edits the third-party website.</p></article>
+            <article><h3>Reliable AI integration</h3><p>Handled provider stream failures with retries, useful diagnostics and checkpoints so a completed explanation could be reused while the scanner and fixture remained unchanged.</p></article>
+          </div>
+        </section>
+
+        <section id="iterations" class="rv">
+          <p class="case-eyebrow">Iteration and debugging</p>
+          <h2>The real-world scans taught me to reduce false positives, not inflate counts.</h2>
+          <p>The early Karnataka Varthe scan flagged the valid Kannada loanword <span lang="kn">ಆ್ಯಪ್</span> as broken. That exposed a limitation in the original Unicode rule. I narrowed the rule and added regression tests instead of claiming a government-site defect. Other checks were improved to exclude collapsed or off-screen elements and trace inherited language tags back to their parent element.</p>
+          <p>A DD News Hindi scan initially produced 63 informational font and line-spacing observations. After reviewing the screenshots and Windows font behavior, I refined the rules for ordinary line heights and expected Devanagari fallback. A fresh scan recorded zero findings at the tested widths. This was a correction to AksharaCheck, not a change to DD News.</p>
+          <p>I also worked through BharatCode stream interruptions, resilient progress saving, report re-rendering, multilingual fonts and responsive browser QA. These were engineering problems that mattered as much as the initial detection logic.</p>
+        </section>
+
+        <section id="results" class="rv">
+          <p class="case-eyebrow">Recorded results and proof</p>
+          <h2>Three reports show the system from different angles.</h2>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Controlled BharatCode demonstration</h3><p>On a deliberately broken test page, BharatCode explained 9 of 9 actionable findings, while Chromium verified four proposed repairs. The saved report includes before/after screenshots and a rejected-then-accepted attempt trail.</p><p><a href="https://ashh-droid.github.io/AksharaCheck/samples/akshara-fixture-demo/report.html" target="_blank" rel="noopener noreferrer">Open recorded AI demonstration ↗</a></p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Karnataka Varthe · Kannada</h3><p>A browser-only scan found 72 sampled Kannada text observations inheriting <code>lang="en"</code> from the page's HTML element. These share one language-tag source, rather than representing 72 distinct defects. One separate possible overflow finding still requires visual confirmation.</p><p><a href="https://ashh-droid.github.io/AksharaCheck/samples/karnataka-varthe-kannada/report.html" target="_blank" rel="noopener noreferrer">Open Kannada evidence ↗</a></p></div></article>
+            <article class="case-point"><span>03</span><div><h3>DD News · Hindi</h3><p>A corrected browser-only scan produced no findings at the tested widths, with 162 sampled text elements on mobile and 213 on desktop. Both page screenshots are preserved as evidence of what was checked.</p><p><a href="https://ashh-droid.github.io/AksharaCheck/samples/dd-news-hindi/report.html" target="_blank" rel="noopener noreferrer">Open Hindi evidence ↗</a></p></div></article>
+          </div>
+          <p style="margin-top:1.5rem">These reports are dated browser snapshots, not full accessibility certifications. The public site hosts recorded results and a text checker; the live Chromium scanner is run locally.</p>
+          <div class="case-actions"><a class="btn-fill" href="https://ashh-droid.github.io/AksharaCheck/" target="_blank" rel="noopener noreferrer">Explore the showcase ↗</a><a class="btn-line" href="https://github.com/ashh-droid/AksharaCheck" target="_blank" rel="noopener noreferrer">Read the source ↗</a></div>
+        </section>
+
+        <section id="reflection" class="rv">
+          <p class="case-eyebrow">What I learned</p>
+          <h2>A trustworthy AI feature needs a way to disagree with the model.</h2>
+          <p>AksharaCheck gave me practical experience combining Python, browser automation, API streaming, defensive validation, test-driven debugging and a deployed React showcase. The biggest lesson was that a lower finding count can be a better engineering result when it comes from more precise rules and honest evidence.</p>
+          <p>This was an independently developed hackathon project with AI-assisted planning, coding and debugging. I reviewed and iterated on the implementation and kept reproducible tests and recorded outcomes in the public repository. I have not presented it as an award-winning or formally certified audit tool.</p>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Back to portfolio</small><h2>Explore all projects</h2></div><a class="btn-fill" href="index.html#projects">View projects →</a></div></div></section>
+</main>
+
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20261023-resume-refresh1" defer></script>
+</body>
+</html>

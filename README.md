@@ -91,6 +91,21 @@ PostgreSQL persistence.
 
 ## More Projects
 
+### AksharaCheck
+
+**Hackathon-origin Hindi and Kannada web-rendering auditor**
+
+I began AksharaCheck for the BharatCode Build League 2026 and developed it into an evidence-first tool for inspecting Indic text in Chromium. Python and Playwright collect language-tag, Unicode, font and layout evidence at mobile and desktop widths. The optional BharatCode AI flow explains actionable findings in English, Hindi and Kannada and proposes restricted repairs, which Chromium tests independently before marking them verified.
+
+The controlled recorded demonstration explains 9 of 9 actionable findings and contains 4 browser-verified repairs. Real-site browser-only checks of Karnataka Varthe (Kannada) and DD News (Hindi) helped refine the rules to reduce false positives.
+
+**Tech:** Python · Playwright · Chromium · FastAPI · BharatCode · React · Vite
+
+- [Case Study](https://ashh-droid.github.io/Portfolio/project-aksharacheck.html)
+- [Live Showcase](https://ashh-droid.github.io/AksharaCheck/)
+- [Recorded AI Demo](https://ashh-droid.github.io/AksharaCheck/samples/akshara-fixture-demo/report.html)
+- [GitHub](https://github.com/ashh-droid/AksharaCheck)
+
 - **URL Shortener & Analytics API**  
   Spring Boot REST API with short-code generation, redirects, click analytics,
   link expiration, PostgreSQL indexing and automated testing.  
