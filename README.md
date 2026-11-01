@@ -137,7 +137,7 @@ Java · Python · SQL · JavaScript · TypeScript · C
 
 **Backend & APIs**  
 Spring Boot · Spring MVC · Spring Data JPA · Hibernate · Spring Security ·
-Django · REST APIs · GraphQL
+Django · FastAPI · REST APIs · GraphQL
 
 **Frontend**  
 Next.js · React · HTML5 · CSS3 · Tailwind CSS
@@ -149,10 +149,10 @@ PostgreSQL · MySQL · SQLite · Hasura · Nhost
 Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel
 
 **Testing & Build**  
-JUnit 5 · Mockito · Maven
+Playwright · Chromium · JUnit 5 · Mockito · Maven
 
 **AI & Security Exposure**  
-Gemini API · LLM Integration · Splunk SIEM · SPL · Nmap
+BharatCode API · Gemini API · LLM Integration · Splunk SIEM · SPL · Nmap
 
 ## About This Portfolio
 
