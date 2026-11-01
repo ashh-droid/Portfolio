@@ -45,7 +45,7 @@
     ['icon','favicon-32x32.png','32x32','image/png'],
     ['icon','favicon-16x16.png','16x16','image/png'],
     ['icon','android-chrome-512x512.png','512x512','image/png'],
-    ['apple-touch-icon','apple-touch-icon.png','',''],
+    ['apple-touch-icon','android-chrome-192x192.png','','image/png'],
     ['manifest','site.webmanifest','','']
   ].forEach(function(item){
     var link=document.createElement('link');
