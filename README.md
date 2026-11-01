@@ -58,19 +58,20 @@ Gemini-powered workflow steps.
 
 ---
 
-### Arcanelinx Corporate Website
+### AksharaCheck
 
-**Production website developed as part of my Arcanelinx internship**
+**Hackathon-origin Hindi and Kannada web-rendering auditor**
 
-Developed and enhanced a responsive corporate website for an industrial
-automation company, including a guided multi-item quotation workflow,
-validated forms, downloadable company profiles, SEO metadata,
-CI validation and Cloudflare deployment.
+I began AksharaCheck for the BharatCode Build League 2026 and developed it into an evidence-first tool for inspecting Indic text in Chromium. Python and Playwright collect language-tag, Unicode, font and layout evidence at mobile and desktop widths. The optional BharatCode AI flow explains actionable findings in English, Hindi and Kannada and proposes restricted repairs, which Chromium tests independently before marking them verified.
 
-**Tech:** Next.js · React · TypeScript · Cloudflare
+The controlled recorded demonstration explains 9 of 9 actionable findings and contains 4 browser-verified repairs. Real-site browser-only checks of Karnataka Varthe (Kannada) and DD News (Hindi) helped refine the rules to reduce false positives.
 
-- [Case Study](https://ashh-droid.github.io/Portfolio/project-arcanelinx.html)
-- [Live Website](https://arcanelinx.com/)
+**Tech:** Python · Playwright · Chromium · FastAPI · BharatCode · React · Vite
+
+- [Case Study](https://ashh-droid.github.io/Portfolio/project-aksharacheck.html)
+- [Live Showcase](https://ashh-droid.github.io/AksharaCheck/)
+- [Recorded AI Demo](https://ashh-droid.github.io/AksharaCheck/samples/akshara-fixture-demo/report.html)
+- [GitHub](https://github.com/ashh-droid/AksharaCheck)
 
 ---
 
@@ -91,20 +92,19 @@ PostgreSQL persistence.
 
 ## More Projects
 
-### AksharaCheck
+### Arcanelinx Corporate Website
 
-**Hackathon-origin Hindi and Kannada web-rendering auditor**
+**Production website developed as part of my Arcanelinx internship**
 
-I began AksharaCheck for the BharatCode Build League 2026 and developed it into an evidence-first tool for inspecting Indic text in Chromium. Python and Playwright collect language-tag, Unicode, font and layout evidence at mobile and desktop widths. The optional BharatCode AI flow explains actionable findings in English, Hindi and Kannada and proposes restricted repairs, which Chromium tests independently before marking them verified.
+Developed and enhanced a responsive corporate website for an industrial
+automation company, including a guided multi-item quotation workflow,
+validated forms, downloadable company profiles, SEO metadata,
+CI validation and Cloudflare deployment.
 
-The controlled recorded demonstration explains 9 of 9 actionable findings and contains 4 browser-verified repairs. Real-site browser-only checks of Karnataka Varthe (Kannada) and DD News (Hindi) helped refine the rules to reduce false positives.
+**Tech:** Next.js · React · TypeScript · Cloudflare
 
-**Tech:** Python · Playwright · Chromium · FastAPI · BharatCode · React · Vite
-
-- [Case Study](https://ashh-droid.github.io/Portfolio/project-aksharacheck.html)
-- [Live Showcase](https://ashh-droid.github.io/AksharaCheck/)
-- [Recorded AI Demo](https://ashh-droid.github.io/AksharaCheck/samples/akshara-fixture-demo/report.html)
-- [GitHub](https://github.com/ashh-droid/AksharaCheck)
+- [Case Study](https://ashh-droid.github.io/Portfolio/project-arcanelinx.html)
+- [Live Website](https://arcanelinx.com/)
 
 - **URL Shortener & Analytics API**  
   Spring Boot REST API with short-code generation, redirects, click analytics,
