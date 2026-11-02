@@ -11,9 +11,11 @@ https://ashh-droid.github.io/Portfolio/
 I am a Computer Science & Engineering graduate based in Bengaluru with
 9 months of internship experience in software and full-stack development.
 
-My work spans Java/Spring Boot and Python/Django backends, REST and GraphQL APIs,
-SQL and PostgreSQL, Next.js/TypeScript, Docker, Kubernetes, CI/CD and
-AI-enabled application workflows.
+My work spans Java/Spring Boot and Python/Django/FastAPI backends, REST and
+GraphQL APIs, SQL and PostgreSQL, Next.js/TypeScript, Docker, Kubernetes,
+AI-enabled workflows and real-world data analysis. Gate demonstrates
+time-series validation, point-in-time reconstruction, forecast error metrics
+and chronological evaluation, without claiming a trained ML model.
 
 I enjoy understanding software beyond the interface — how APIs, application logic,
 data models, user workflows, deployment and reliability come together to create
