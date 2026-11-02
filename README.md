@@ -90,6 +90,21 @@ PostgreSQL persistence.
 - [Case Study](https://ashh-droid.github.io/Portfolio/project-wallet.html)
 - [GitHub](https://github.com/ashh-droid/digital-wallet-transaction-service)
 
+### Gate — Day-Ahead Wind Intelligence
+
+**Decision-time wind forecasting and historical analytics pilot**
+
+Developed a Python/FastAPI and React application using real Elexon WINDFOR and FUELHH wind data. The app reconstructs which forecast was available before each auction cutoff, compares hourly forecasts with metered generation and investigates error patterns. A wind-band adjustment was evaluated chronologically on 552 later hours: published forecast MAE of 2,123 MW versus 1,382 MW for the exploratory adjustment. The sample is historical and short; the result is not a validated trading recommendation.
+
+**Tech:** Python · FastAPI · React · TypeScript · Statistics · Elexon BMRS
+
+- [Case Study](https://ashh-droid.github.io/Portfolio/project-gate.html)
+- [Live App](https://r7k4m2q.vercel.app/)
+- [GitHub](https://github.com/ashh-droid/r7k4m2q)
+- [Recorded Demo](https://youtu.be/sP-w30T-zRY)
+
+---
+
 ## More Projects
 
 ### Arcanelinx Corporate Website

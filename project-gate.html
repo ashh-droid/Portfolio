@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Gate case study by Asmita G V: Python/FastAPI and React analytics for point-in-time wind forecasts, real Elexon data, error analysis, and chronological evaluation.">
+  <meta property="og:title" content="Gate — Day-Ahead Wind Intelligence | Asmita G V">
+  <meta property="og:description" content="Real wind data, decision-time forecast reconstruction, FastAPI, and transparent walk-forward analytics.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/project-gate.html">
+  <link rel="canonical" href="https://ashh-droid.github.io/Portfolio/project-gate.html">
+  <title>Gate — Day-Ahead Wind Intelligence | Asmita G V</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html"><span class="nav-logo-text">Asmita G V</span><span class="nav-logo-bar"></span></a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Python & data analytics · 2026</p>
+        <h1 class="rv">Gate</h1>
+        <p class="case-summary rv">A historical day-ahead wind intelligence pilot that reconstructs what UK electricity buyers could have known before an auction. Real forecast history, measured error, and an exploratory adjustment evaluated without peeking into future outcomes.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://r7k4m2q.vercel.app/" target="_blank" rel="noopener noreferrer">Open live app ↗</a>
+          <a class="btn-line" href="https://github.com/ashh-droid/r7k4m2q" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+          <a class="btn-line" href="https://youtu.be/sP-w30T-zRY" target="_blank" rel="noopener noreferrer">Watch demo ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale">
+        <dl>
+          <div><dt>Problem</dt><dd>Decision-time wind forecast analysis</dd></div>
+          <div><dt>Data</dt><dd>Elexon WINDFOR + FUELHH WIND</dd></div>
+          <div><dt>Backend</dt><dd>Python · FastAPI · statistical analysis</dd></div>
+          <div><dt>Frontend</dt><dd>React · TypeScript · responsive charts</dd></div>
+          <div><dt>Scope</dt><dd>January 2026 historical pilot</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <div class="divider"><span class="divider-mark"></span></div>
+
+  <section class="case-showcase">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>Gate · day view · published forecast and historical adjustment</span></div>
+        <figure class="gallery-main">
+          <img src="assets/gate-day.png" alt="Gate analytics application showing the January 21 day view, published wind forecast, historical adjustment and decision-time comparison" width="1901" height="976" loading="eager" decoding="async">
+        </figure>
+      </div>
+      <p class="case-summary" style="margin-top:1rem;font-size:.82rem">Real application screenshot. The adjusted estimate is exploratory, and observed generation is shown separately from information available at the original decision.</p>
+    </div>
+  </section>
+
+  <section class="case-body">
+    <div class="wrap case-layout">
+      <aside class="case-toc" aria-label="Case study navigation">
+        <a href="#problem">The problem</a>
+        <a href="#built">What I built</a>
+        <a href="#method">Method</a>
+        <a href="#results">Results</a>
+        <a href="#decisions">Engineering</a>
+        <a href="#limits">Limitations</a>
+        <a href="#proof">Explore</a>
+      </aside>
+      <div class="case-content">
+        <section id="problem" class="rv">
+          <p class="case-eyebrow">The problem</p>
+          <h2>A forecast can look accurate in hindsight and still be useless at decision time.</h2>
+          <p>Day-ahead procurement decisions happen before the electricity is generated. Wind forecasts are revised repeatedly, so comparing the latest available forecast with the final result can leak information that was not yet known when the decision had to be made. Gate asks a narrower and more defensible question: what did the published wind forecast say <em>before</em> each auction cutoff?</p>
+        </section>
+
+        <section id="built" class="rv">
+          <p class="case-eyebrow">What I built</p>
+          <h2>A research application with a day view, a month view and visible evidence.</h2>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Decision-time day view</h3><p>Compare the forecast available at the selected auction gate with a trial historical adjustment. Reveal actual generation separately, inspect each hour and export the selected day as CSV.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Publication history</h3><p>Inspect forecast revisions and distinguish values published before the cutoff from revisions that arrived too late.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Monthly analytics</h3><p>Explore forecast errors by hour, wind-level band and lead time. Compare the original forecast with exploratory adjustments on later, chronologically evaluated days.</p></div></article>
+            <article class="case-point"><span>04</span><div><h3>Explainable methodology</h3><p>Document source resolution, timing assumptions, data alignment, validation rules and limitations in the interface and repository.</p></div></article>
+          </div>
+        </section>
+
+        <section id="method" class="rv">
+          <p class="case-eyebrow">Data & methodology</p>
+          <h2>Only use information available before the auction.</h2>
+          <p>Gate works from real Elexon BMRS datasets: WINDFOR publishes forecasts for native hourly targets, while FUELHH WIND reports half-hourly observed generation. The pilot covers purchase-decision dates from 1–31 January 2026 and the corresponding delivery days from 2 January–1 February.</p>
+          <div class="case-points">
+            <article class="case-point"><span>01</span><div><h3>Preserve source timestamps</h3><p>Keep every forecast publication timestamp. For each hourly target, select only the latest forecast published no later than the auction closing time minus an assumed five-minute margin.</p></div></article>
+            <article class="case-point"><span>02</span><div><h3>Respect the data's native resolution</h3><p>Compare hourly forecast targets with the observation for the half-hour starting on the hour. Do not manufacture missing half-hour forecasts.</p></div></article>
+            <article class="case-point"><span>03</span><div><h3>Train on earlier completed days</h3><p>The experimental adjustment groups forecasts into three wind-level bands and learns their historical signed differences using complete days on or before delivery day D−2. It requires at least seven earlier days before being shown.</p></div></article>
+          </div>
+        </section>
+
+        <section id="results" class="rv">
+          <p class="case-eyebrow">Measured findings</p>
+          <h2>The dataset exposed a systematic gap, but the conclusion stays limited.</h2>
+          <p>In the January snapshot, the published WINDFOR series was higher than the FUELHH wind outturn in approximately 85% of the matched hourly comparisons. The gap was larger at higher forecast wind levels. On the same held-out, walk-forward evaluation set of 552 hours across 23 days, the exploratory wind-band adjustment reduced mean absolute difference.</p>
+          <div class="decision-grid">
+            <article><h3>2,123 MW</h3><p>Published forecast mean absolute difference on the walk-forward evaluation set.</p></article>
+            <article><h3>1,382 MW</h3><p>Wind-band-adjusted mean absolute difference on the same historical evaluation set.</p></article>
+            <article><h3>85.5%</h3><p>Observed hours above the exploratory lower reference, below the study's 90% target.</p></article>
+          </div>
+          <p style="margin-top:1.3rem">These numbers are reproducible findings from a short historical pilot, <strong>not</strong> an operational performance guarantee or advice on how much electricity to buy.</p>
+        </section>
+
+        <section id="decisions" class="rv">
+          <p class="case-eyebrow">Engineering choices</p>
+          <h2>The difficult part was protecting the meaning of the analysis.</h2>
+          <div class="decision-grid">
+            <article><h3>Point-in-time selection</h3><p>Publication cutoffs and timezone-aware timestamps prevent later forecasts from slipping into earlier decisions.</p></article>
+            <article><h3>Real data quality</h3><p>Snapshot metadata, validation scripts and source-resolution handling make source assumptions inspectable.</p></article>
+            <article><h3>Reproducible interface</h3><p>FastAPI serves read-only analysis; React and TypeScript present day and month views, forecast history and CSV exports.</p></article>
+          </div>
+          <div class="flow-canvas" style="margin-top:1.5rem">
+            <div class="flow-row">
+              <div class="flow-box"><small>Input</small><strong>Elexon data</strong><span>FUELHH + WINDFOR</span></div><span class="flow-arrow">→</span>
+              <div class="flow-box"><small>Processing</small><strong>Python</strong><span>normalize & validate</span></div><span class="flow-arrow">→</span>
+              <div class="flow-box"><small>API</small><strong>FastAPI</strong><span>day, month & revisions</span></div><span class="flow-arrow">→</span>
+              <div class="flow-box"><small>Client</small><strong>React</strong><span>decision-focused views</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section id="limits" class="rv">
+          <p class="case-eyebrow">What the results do not prove</p>
+          <h2>Clear limitations matter as much as the chart.</h2>
+          <p>WINDFOR and FUELHH may represent different wind-generation populations. Some apparent forecast error could reflect curtailment or differences in coverage. The retrospective October 2026 data snapshot may include actual-value revisions that were not available during January, and one month's historical evaluation is insufficient to promise future accuracy. Gate also has no demand forecasts, power prices or existing client positions, so it cannot recommend a purchase quantity.</p>
+        </section>
+
+        <section id="proof" class="rv">
+          <p class="case-eyebrow">Proof & further reading</p>
+          <h2>Open the application, inspect the code, or follow the recorded walkthrough.</h2>
+          <p>The GitHub repository includes source data and metadata, the ingestion and audit scripts, backend tests, the frontend implementation and a reproducible README. The demo shows the application flow and methodology.</p>
+          <div class="case-actions">
+            <a class="btn-fill" href="https://r7k4m2q.vercel.app/" target="_blank" rel="noopener noreferrer">Open Gate ↗</a>
+            <a class="btn-line" href="https://github.com/ashh-droid/r7k4m2q" target="_blank" rel="noopener noreferrer">Source code ↗</a>
+            <a class="btn-line" href="https://youtu.be/sP-w30T-zRY" target="_blank" rel="noopener noreferrer">Recorded demo ↗</a>
+            <a class="btn-line" href="https://r7k4m2q.vercel.app/api/docs" target="_blank" rel="noopener noreferrer">API docs ↗</a>
+          </div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-case">
+    <div class="wrap"><div class="next-card rv-scale"><div><small>Explore another case study</small><h2>Digital Wallet &amp; Transaction Service</h2></div><a class="btn-fill" href="project-wallet.html">View project →</a></div></div>
+  </section>
+</main>
+
+<footer class="case-footer">
+  <div class="wrap case-footer-inner">
+    <a class="case-footer-brand" href="index.html">Asmita.</a>
+    <div class="case-footer-links">
+      <a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:gujjarasmita@gmail.com">Email</a>
+      <a href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé</a>
+    </div>
+  </div>
+</footer>
+<script src="sage.js?v=20261023-resume-refresh1" defer></script>
+</body>
+</html>
