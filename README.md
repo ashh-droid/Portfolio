@@ -101,8 +101,8 @@ Developed a Python/FastAPI and React application using real Elexon WINDFOR and F
 **Tech:** Python · FastAPI · React · TypeScript · Statistics · Elexon BMRS
 
 - [Case Study](https://ashh-droid.github.io/Portfolio/project-gate.html)
-- [Live App](https://r7k4m2q.vercel.app/)
-- [GitHub](https://github.com/ashh-droid/r7k4m2q)
+- [Live App](https://gate-ashhdroid.vercel.app/)
+- [GitHub](https://github.com/ashh-droid/Gate)
 - [Recorded Demo](https://youtu.be/sP-w30T-zRY)
 
 ---
