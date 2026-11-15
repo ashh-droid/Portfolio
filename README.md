@@ -144,8 +144,8 @@ CI validation and Cloudflare deployment.
   POSIX threads.
 
 - **WEE RIDE — Carpooling & Ride Sharing**  
-  Django-based web application for creating, discovering and managing
-  shared rides.
+  Academic carpooling and ride-sharing web project built with PHP, MySQL,
+  AngularJS and Bootstrap; includes driver, passenger and administrator workflows.
 
 - **Dispatch Load Balancer — Vehicle Routing REST API**
   Priority-aware, capacity-constrained dispatch planning with Haversine distances,
@@ -168,16 +168,16 @@ Java · Python · SQL · JavaScript · TypeScript · C
 
 **Backend & APIs**  
 Spring Boot · Spring MVC · Spring Data JPA · Hibernate · Spring Security ·
-Django · FastAPI · REST APIs · GraphQL
+Django · FastAPI · Node.js · Express · REST APIs · GraphQL
 
 **Frontend**  
-Next.js · React · HTML5 · CSS3 · Tailwind CSS
+Next.js · React · Vite · HTML5 · CSS3 · Tailwind CSS
 
 **Databases & Platforms**  
 PostgreSQL · MySQL · SQLite · Hasura · Nhost
 
 **DevOps & Cloud**  
-Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel
+Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel · Render
 
 **Testing & Build**  
 Playwright · Chromium · JUnit 5 · Mockito · Maven
