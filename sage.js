@@ -14,9 +14,9 @@
       cvLink.href='Asmita_GV_CV.pdf';
       cvLink.textContent=resumeLink.textContent.indexOf('↗')>=0?'CV ↗':'CV';
       if(isListItem){
-        var cvItem=parent.cloneNode(false);
-        cvItem.appendChild(cvLink);
-        parent.insertAdjacentElement('afterend',cvItem);
+        /* Keep résumé and CV within one nav item, not two widely spaced items. */
+        parent.classList.add('nav-document-actions');
+        parent.appendChild(cvLink);
       }else{
         resumeLink.insertAdjacentElement('afterend',cvLink);
       }
