@@ -77,20 +77,19 @@ The controlled recorded demonstration explains 9 of 9 actionable findings and co
 
 ---
 
-### Digital Wallet & Transaction Service
+### Dispatch Load Balancer — Vehicle Routing REST API
 
-**Secure transactional wallet backend**
+**Priority-aware delivery allocation and route optimization**
 
-Built a Spring Boot backend with JWT authentication, role-based authorization,
-wallet balances, deposits, transfers and transaction history.
+Built and deployed a Java Spring Boot REST API for capacity-constrained vehicle dispatch, deterministic Haversine routing, and an optional 2-opt route-improvement strategy. The reference dataset assigns 22 of 30 orders without exceeding fleet capacity; JUnit integration tests and GitHub Actions validate API and algorithm behavior.
 
-Implemented transactional transfer processing, optimistic locking and
-PostgreSQL persistence.
+**Tech:** Java 21 · Spring Boot · H2 · JUnit · Docker · Swagger
 
-**Tech:** Java · Spring Boot · Spring Security · PostgreSQL · Docker
+- [Case Study](https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html)
+- [Live Swagger API](https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html)
+- [GitHub](https://github.com/ashh-droid/dispatch-load-balancer)
 
-- [Case Study](https://ashh-droid.github.io/Portfolio/project-wallet.html)
-- [GitHub](https://github.com/ashh-droid/digital-wallet-transaction-service)
+---
 
 ### Gate — Day-Ahead Wind Intelligence
 
@@ -108,6 +107,19 @@ Developed a Python/FastAPI and React application using real Elexon WINDFOR and F
 ---
 
 ## More Projects
+
+- **Digital Wallet & Transaction Service**
+  Spring Boot backend with JWT authentication, role-based access, transaction-safe
+  transfers, optimistic locking and PostgreSQL persistence.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-wallet.html) ·
+  [GitHub](https://github.com/ashh-droid/digital-wallet-transaction-service)
+
+- **Sweety — Blood Glucose Logbook**
+  Responsive React / Express / PostgreSQL application with authenticated accounts,
+  four daily reading slots, calendar history and summary reports.
+  The full-stack application runs locally; the repository contains real screenshots.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-sweety.html) ·
+  [GitHub](https://github.com/ashh-droid/sweety-glucose-tracker)
 
 ### Arcanelinx Corporate Website
 
@@ -146,20 +158,6 @@ CI validation and Cloudflare deployment.
 - **WEE RIDE — Carpooling & Ride Sharing**  
   Academic carpooling and ride-sharing web project built with PHP, MySQL,
   AngularJS and Bootstrap; includes driver, passenger and administrator workflows.
-
-- **Dispatch Load Balancer — Vehicle Routing REST API**
-  Priority-aware, capacity-constrained dispatch planning with Haversine distances,
-  optional 2-opt route improvements, validation, automated tests and a Docker deployment.
-  [Case Study](https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html) ·
-  [Live Swagger API](https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html) ·
-  [GitHub](https://github.com/ashh-droid/dispatch-load-balancer)
-
-- **Sweety — Blood Glucose Logbook**
-  Responsive React / Express / PostgreSQL application with authenticated accounts,
-  four daily reading slots, calendar history and summary reports.
-  The full-stack application runs locally; the repository contains real screenshots.
-  [Case Study](https://ashh-droid.github.io/Portfolio/project-sweety.html) ·
-  [GitHub](https://github.com/ashh-droid/sweety-glucose-tracker)
 
 ## Technical Foundation
 
