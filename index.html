@@ -136,29 +136,31 @@
       <article class="pcard rv-left">
         <div class="pcard-vis">
           <div class="nodes">
-            <div class="node"><span class="node-ic ai">JWT</span><span class="node-name">Spring Security</span><span class="node-desc">USER / ADMIN</span></div>
-            <div class="node"><span class="node-ic api">API</span><span class="node-name">REST Controller</span><span class="node-desc">validated requests</span></div>
-            <div class="node"><span class="node-ic if">SVC</span><span class="node-name">Wallet Service</span><span class="node-desc">business rules</span></div>
-            <div class="node"><span class="node-ic ht">TX</span><span class="node-name">Transactional transfer</span><span class="node-desc">debit → credit</span></div>
-            <div class="node"><span class="node-ic db">DB</span><span class="node-name">PostgreSQL</span><span class="node-desc">JPA / Hibernate</span></div>
+            <div class="node"><span class="node-ic ai">API</span><span class="node-name">Orders</span><span class="node-desc">Validated input</span></div>
+            <div class="node"><span class="node-ic if">P1</span><span class="node-name">Priority</span><span class="node-desc">HIGH to LOW</span></div>
+            <div class="node"><span class="node-ic db">KG</span><span class="node-name">Capacity</span><span class="node-desc">Feasible fleet</span></div>
+            <div class="node"><span class="node-ic ht">KM</span><span class="node-name">Route planning</span><span class="node-desc">Haversine + 2-opt</span></div>
+            <div class="node"><span class="node-ic api">→</span><span class="node-name">Dispatch plan</span><span class="node-desc">Swagger REST API</span></div>
           </div>
         </div>
         <div class="pcard-info">
-          <span class="pcard-num">iii.</span><span class="pcard-type">Backend application · 2026</span>
-          <h3 class="pcard-name">Digital Wallet &amp; Transaction Service</h3>
-          <p class="pcard-sub">Secure transactional wallet backend</p>
+          <span class="pcard-num">iii.</span><span class="pcard-type">Java backend · Route optimization · 2026</span>
+          <h3 class="pcard-name">Dispatch Load Balancer</h3>
+          <p class="pcard-sub">Priority-aware, capacity-constrained vehicle dispatch</p>
           <ul class="pcard-ul">
-            <li>Built a Spring Boot digital-wallet backend with JWT authentication, role-based authorization, wallet balances, deposits, transfers and paginated transaction history.</li>
-            <li>Implemented atomic transfer processing using Spring @Transactional, JPA/Hibernate and PostgreSQL.</li>
-            <li>Used BigDecimal, optimistic locking, validation and centralized exception handling to protect balance consistency.</li>
+            <li>Built and deployed a Spring Boot REST API for priority-based allocation, fleet capacity validation and deterministic Haversine distance calculations.</li>
+            <li>Added an optional distance-aware 2-opt strategy, explicit unassigned-order reasons and batch database upserts.</li>
+            <li>Verified allocation rules through automated tests and GitHub Actions; published HTTPS Swagger documentation on Render.</li>
           </ul>
-          <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">Spring Security</span><span class="tag">PostgreSQL</span><span class="tag">Docker</span></div>
+          <div class="tags"><span class="tag">Java 21</span><span class="tag">Spring Boot</span><span class="tag">REST APIs</span><span class="tag">JUnit</span><span class="tag">Docker</span></div>
           <div class="pcard-links">
-            <a href="project-wallet.html">Case study <span class="arr">→</span></a>
-            <a href="https://github.com/ashh-droid/digital-wallet-transaction-service" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
+            <a href="project-dispatch-load-balancer.html">Case study <span class="arr">→</span></a>
+            <a href="https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html" target="_blank" rel="noopener noreferrer">Live API <span class="arr">↗</span></a>
+            <a href="https://github.com/ashh-droid/dispatch-load-balancer" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
           </div>
         </div>
       </article>
+
       <article class="pcard rv-right">
         <div class="pcard-vis">
           <div class="browser">
@@ -192,8 +194,28 @@
     <div class="more-work">
       <div class="more-head rv"><p class="eye">More projects</p><h3 class="more-title">Additional work that shows range.</h3><p class="more-copy">Additional projects spanning production websites, backend APIs, deployment, cybersecurity, networking and full-stack development.</p></div>
       <div class="mini-grid stg">
+                <article class="mini-card rv-scale">
+          <span class="mini-index">05</span><div class="mini-kicker">Java backend · Transactional consistency</div>
+          <h3>Digital Wallet &amp; Transaction Service</h3>
+          <p>Built a Spring Boot wallet API with JWT authentication, role-based access, atomic transfers, BigDecimal balances, optimistic locking and PostgreSQL persistence.</p>
+          <div class="mini-tags"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>PostgreSQL</span><span>Docker</span></div>
+          <div class="pcard-links">
+            <a href="project-wallet.html">Case study <span class="arr">→</span></a>
+            <a href="https://github.com/ashh-droid/digital-wallet-transaction-service" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
+          </div>
+        </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">05</span><div class="mini-kicker">Professional work · Production website</div>
+          <span class="mini-index">06</span><div class="mini-kicker">Full-stack · Personal data logbook</div>
+          <h3>Sweety — Blood Glucose Logbook</h3>
+          <p>Built a responsive glucose logbook with four daily reading slots, a monthly calendar, summary reports, authenticated accounts and PostgreSQL-backed user data.</p>
+          <div class="mini-tags"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span></div>
+          <div class="pcard-links">
+            <a href="project-sweety.html">Case study <span class="arr">→</span></a>
+            <a href="https://github.com/ashh-droid/sweety-glucose-tracker" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
+          </div>
+        </article>
+        <article class="mini-card rv-scale">
+          <span class="mini-index">07</span><div class="mini-kicker">Professional work · Production website</div>
           <h3>Arcanelinx Corporate Website</h3>
           <p>Designed and deployed a responsive industrial company website with a guided multi-item quotation workflow, validated enquiry forms, downloadable profiles, SEO metadata and Cloudflare hosting.</p>
           <div class="mini-tags"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Cloudflare</span></div>
@@ -203,60 +225,39 @@
           </div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">06</span><div class="mini-kicker">REST API · Backend</div>
+          <span class="mini-index">08</span><div class="mini-kicker">REST API · Backend</div>
           <h3>URL Shortener &amp; Analytics API</h3>
           <p>Developed a Spring Boot REST API with SecureRandom short-code generation, collision handling, HTTP redirects, click analytics, PostgreSQL indexing, link expiration, scheduled cleanup and automated testing.</p>
           <div class="mini-tags"><span>Java</span><span>Spring Boot</span><span>PostgreSQL</span><span>JUnit</span><span>Docker</span></div>
           <div class="pcard-links"><a href="project-url-shortener.html">Case study <span class="arr">→</span></a><a href="https://github.com/ashh-droid/url-shortener-analytics-api" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">07</span><div class="mini-kicker">Backend application · Deployment</div>
+          <span class="mini-index">09</span><div class="mini-kicker">Backend application · Deployment</div>
           <h3>Hostel Allocation System</h3>
           <p>Built a role-based Django application with student and administrator workflows for applications, room allocation and management, then containerized it with Docker and deployed it using Kubernetes.</p>
           <div class="mini-tags"><span>Python</span><span>Django</span><span>Docker</span><span>Kubernetes</span></div>
           <div class="pcard-links"><a href="project-hostel.html">Case study <span class="arr">→</span></a><a href="https://github.com/ashh-droid/Hostel-Allocation-System" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">08</span><div class="mini-kicker">Cybersecurity · SIEM</div>
+          <span class="mini-index">10</span><div class="mini-kicker">Cybersecurity · SIEM</div>
           <h3>Ethical Phishing &amp; Cyber Defense Evaluation System</h3>
           <p>Built a controlled phishing-simulation and cyber-defense evaluation environment, forwarded Apache logs into Splunk, and used SPL queries for event analysis and threat-detection exercises.</p>
           <div class="mini-tags"><span>Splunk SIEM</span><span>SET</span><span>Apache</span></div>
           <div class="pcard-links"><a href="project-cybersecurity.html">Case study <span class="arr">→</span></a></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">09</span><div class="mini-kicker">Systems Programming · Networking</div>
+          <span class="mini-index">11</span><div class="mini-kicker">Systems Programming · Networking</div>
           <h3>Real-Time Chat Application</h3>
           <p>Academic mini-project in C using TCP sockets to establish a client-server connection and demonstrate synchronous bidirectional terminal messaging.</p>
           <div class="mini-tags"><span>C</span><span>TCP/IP</span><span>POSIX Sockets</span><span>Linux</span></div>
           <div class="pcard-links"><a href="project-realtime-chat.html">Case study <span class="arr">→</span></a></div>
         </article>
         <article class="mini-card rv-scale">
-          <span class="mini-index">10</span><div class="mini-kicker">Carpooling · Full-stack web application</div>
+          <span class="mini-index">12</span><div class="mini-kicker">Carpooling · Full-stack web application</div>
           <h3>WEE RIDE — Carpooling &amp; Ride Sharing</h3>
           <p>Academic team project demonstrating registration, ride discovery, booking requests, and role-based driver, passenger, and administrator workflows.</p>
           <div class="mini-tags"><span>PHP</span><span>MySQL</span><span>AngularJS</span><span>Bootstrap</span></div>
           <div class="pcard-links"><a href="project-wee-ride.html">Case study <span class="arr">→</span></a></div>
-        </article>
-        <article class="mini-card rv-scale">
-          <span class="mini-index">11</span><div class="mini-kicker">Java backend · Route optimization</div>
-          <h3>Dispatch Load Balancer</h3>
-          <p>Built and deployed a Spring Boot REST API for priority-based, capacity-constrained vehicle allocation, with Haversine distances, a distance-aware routing option, repeatable sample results and automated tests.</p>
-          <div class="mini-tags"><span>Java 21</span><span>Spring Boot</span><span>REST APIs</span><span>JUnit</span><span>Docker</span></div>
-          <div class="pcard-links">
-            <a href="project-dispatch-load-balancer.html">Case study <span class="arr">→</span></a>
-            <a href="https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html" target="_blank" rel="noopener noreferrer">Live API <span class="arr">↗</span></a>
-            <a href="https://github.com/ashh-droid/dispatch-load-balancer" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
-          </div>
-        </article>
-        <article class="mini-card rv-scale">
-          <span class="mini-index">12</span><div class="mini-kicker">Full-stack · Personal data logbook</div>
-          <h3>Sweety — Blood Glucose Logbook</h3>
-          <p>Built a responsive glucose logbook with four daily reading slots, a monthly calendar, summary reports, authenticated accounts and PostgreSQL-backed user data.</p>
-          <div class="mini-tags"><span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>PostgreSQL</span></div>
-          <div class="pcard-links">
-            <a href="project-sweety.html">Case study <span class="arr">→</span></a>
-            <a href="https://github.com/ashh-droid/sweety-glucose-tracker" target="_blank" rel="noopener noreferrer">GitHub <span class="arr">↗</span></a>
-          </div>
         </article>
       </div>
     </div>
