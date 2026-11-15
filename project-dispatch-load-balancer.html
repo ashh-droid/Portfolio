@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="Java Spring Boot API for priority-aware vehicle assignment, Haversine distances, capacity constraints, distance-aware routing, automated tests and Render deployment.">
+  <meta property="og:title" content="Dispatch Load Balancer Case Study — Asmita G V">
+  <meta property="og:description" content="Java Spring Boot API for priority-aware vehicle assignment, Haversine distances, capacity constraints, distance-aware routing, automated tests and Render deployment.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html">
+  <link rel="canonical" href="https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html">
+  <title>Dispatch Load Balancer Case Study — Asmita G V</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-logo-text">Asmita G V</span>
+      <span class="nav-logo-bar"></span>
+    </a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Java backend · 2026</p>
+        <h1 class="rv">Dispatch Load Balancer</h1>
+        <p class="case-summary rv">A deployed Java Spring Boot REST API for assigning delivery orders to available vehicles by priority, remaining capacity and geographic distance. It provides deterministic greedy allocation, optional distance-aware route improvement and traceable reasons for unassigned orders.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html" target="_blank" rel="noopener noreferrer">Open live Swagger API ↗</a>
+          <a class="btn-line" href="https://github.com/ashh-droid/dispatch-load-balancer" target="_blank" rel="noopener noreferrer">View GitHub ↗</a>
+          <a class="btn-line" href="https://github.com/ashh-droid/dispatch-load-balancer/actions" target="_blank" rel="noopener noreferrer">Automated tests ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale"><dl>
+        <div><dt>Backend</dt><dd>Java 21 · Spring Boot · REST API</dd></div>
+        <div><dt>Routing</dt><dd>Priority-first greedy · optional 2-opt</dd></div>
+        <div><dt>Storage</dt><dd>H2 demo · PostgreSQL option</dd></div>
+        <div><dt>Verification</dt><dd>JUnit · MockMvc · CI · JaCoCo</dd></div>
+        <div><dt>Deployment</dt><dd>Docker · Render · OpenAPI</dd></div>
+      </dl></aside>
+    </div>
+  </section>
+  <div class="divider"><span class="divider-mark"></span></div>
+  <section class="case-showcase" aria-label="Dispatch planning architecture">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>Dispatch Load Balancer · backend planning workflow</span></div>
+        <div class="flow-canvas">
+          <div class="flow-row">
+            <div class="flow-box"><small>01 · Input</small><strong>Orders + fleet</strong><span>Validated JSON</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>02 · Storage</small><strong>Batch upserts</strong><span>H2 / PostgreSQL</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>03 · Dispatch</small><strong>Greedy allocation</strong><span>Priority + capacity</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>04 · Optional</small><strong>2-opt routing</strong><span>Same assigned orders</span></div><div class="flow-arrow">→</div>
+            <div class="flow-box"><small>05 · Output</small><strong>Dispatch plan</strong><span>Routes + reasons</span></div>
+          </div>
+          <div class="flow-note">Official synthetic sample: 30 orders · 5 vehicles · 22 assigned · 8 unassigned · 73.42 km calculated straight-line travel</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="case-body"><div class="wrap case-layout">
+    <aside class="case-toc" aria-label="Case study navigation"><a href="#problem">Problem</a><a href="#approach">Approach</a><a href="#architecture">Architecture</a><a href="#results">Results</a><a href="#testing">Testing</a><a href="#limits">Limits</a></aside>
+    <div class="case-content">
+      <section id="problem" class="rv">
+        <p class="case-eyebrow">The problem</p>
+        <h2>Choose feasible deliveries when demand exceeds fleet capacity.</h2>
+        <p>Not every order can be allocated when vehicles have limited remaining capacity. A useful dispatch plan must prioritize important orders, choose a suitable vehicle, avoid exceeding capacity and make unassigned deliveries visible rather than hiding them.</p>
+      </section>
+      <section id="approach" class="rv">
+        <p class="case-eyebrow">Routing choices</p>
+        <h2>Separate which orders are assigned from how each vehicle visits its stops.</h2>
+        <div class="case-points">
+          <article class="case-point"><span>01</span><div><h3>Priority-first allocation</h3><p>Orders are considered HIGH, MEDIUM then LOW, with heavier orders first within each tier. The algorithm selects the nearest feasible vehicle using Haversine great-circle distance and deterministic tie-breaking.</p></div></article>
+          <article class="case-point"><span>02</span><div><h3>Capacity rules</h3><p>Each assignment reduces its vehicle's available capacity. Unassigned orders report whether no vehicle is available, the order exceeds maximum single-vehicle capacity or the fleet lacks remaining space.</p></div></article>
+          <article class="case-point"><span>03</span><div><h3>Optional distance-aware strategy</h3><p>A bounded 2-opt pass reorders stops within allocated vehicle routes when that shortens the route. It preserves the assigned-order sets and loads; it is a local heuristic rather than a global route optimizer.</p></div></article>
+        </div>
+      </section>
+      <section id="architecture" class="rv">
+        <p class="case-eyebrow">Backend architecture</p>
+        <h2>Keep HTTP concerns, dispatch logic and persistence separate.</h2>
+        <div class="architecture">
+          <div><strong>REST controller</strong><span>JSON validation</span></div><b>→</b>
+          <div><strong>Services</strong><span>Request handling</span></div><b>→</b>
+          <div><strong>Strategy</strong><span>Allocation + routing</span></div><b>→</b>
+          <div><strong>Repositories</strong><span>Batch upserts</span></div>
+        </div>
+        <p style="margin-top:1.5rem">Swagger/OpenAPI documents the required order-upload, vehicle-upload and dispatch-plan endpoints. Structured errors handle invalid requests, while database upserts keep repeated sample uploads consistent.</p>
+      </section>
+      <section id="results" class="rv">
+        <p class="case-eyebrow">Reproducible sample</p>
+        <h2>22 assigned orders and explicit reasons for the other eight.</h2>
+        <div class="decision-grid">
+          <article><h3>30 orders</h3><p>The synthetic sample contains 645 kg of order demand across HIGH, MEDIUM and LOW priorities.</p></article>
+          <article><h3>5 vehicles</h3><p>Fleet capacity totals 500 kg; 22 orders carrying 490 kg fit under the allocation rules.</p></article>
+          <article><h3>73.42 km</h3><p>Calculated straight-line travel across routes. Both strategies give the same distance on this sample; neither claims a universal optimum.</p></article>
+        </div>
+        <p style="margin-top:1.5rem">The <a href="https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html" target="_blank" rel="noopener noreferrer">live Swagger interface</a> allows reviewers to inspect the plan and test the documented API methods.</p>
+      </section>
+      <section id="testing" class="rv">
+        <p class="case-eyebrow">Reliability and tests</p>
+        <h2>Exercise both the HTTP contract and the planning invariants.</h2>
+        <p>JUnit and Spring integration tests cover the sample dataset, invalid input, CRUD behavior, capacity constraints and both dispatch strategies. Seeded randomized cases check allocation invariants, and a 200-stop test exercises the distance-aware route improvement. GitHub Actions runs the Java build, tests and configured JaCoCo coverage checks.</p>
+        <p><a href="https://github.com/ashh-droid/dispatch-load-balancer/actions" target="_blank" rel="noopener noreferrer">Inspect CI runs ↗</a></p>
+      </section>
+      <section id="limits" class="rv">
+        <p class="case-eyebrow">Deployment and limits</p>
+        <h2>A verifiable API demo, not a production logistics platform.</h2>
+        <p>The Dockerized Spring Boot service is deployed on Render with a restartable H2 demonstration database and optional synthetic-data seeding. Haversine estimates great-circle distance rather than road distance, and the heuristics are not guaranteed to find the globally shortest routes. The demo exposes unauthenticated write APIs and should not store real customer data without access controls.</p>
+      </section>
+    </div>
+  </div></section>
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Explore another case study</small><h2>Sweety — Blood Glucose Logbook</h2></div><a class="btn-fill" href="project-sweety.html">View project →</a></div></div></section>
+</main>
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20261023-resume-refresh1" defer></script>
+</body>
+</html>

@@ -144,8 +144,22 @@ CI validation and Cloudflare deployment.
   POSIX threads.
 
 - **WEE RIDE — Carpooling & Ride Sharing**  
-  Django-based web application for creating, discovering and managing
-  shared rides.
+  Academic carpooling and ride-sharing web project built with PHP, MySQL,
+  AngularJS and Bootstrap; includes driver, passenger and administrator workflows.
+
+- **Dispatch Load Balancer — Vehicle Routing REST API**
+  Priority-aware, capacity-constrained dispatch planning with Haversine distances,
+  optional 2-opt route improvements, validation, automated tests and a Docker deployment.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html) ·
+  [Live Swagger API](https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html) ·
+  [GitHub](https://github.com/ashh-droid/dispatch-load-balancer)
+
+- **Sweety — Blood Glucose Logbook**
+  Responsive React / Express / PostgreSQL application with authenticated accounts,
+  four daily reading slots, calendar history and summary reports.
+  The full-stack application runs locally; the repository contains real screenshots.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-sweety.html) ·
+  [GitHub](https://github.com/ashh-droid/sweety-glucose-tracker)
 
 ## Technical Foundation
 
@@ -154,16 +168,16 @@ Java · Python · SQL · JavaScript · TypeScript · C
 
 **Backend & APIs**  
 Spring Boot · Spring MVC · Spring Data JPA · Hibernate · Spring Security ·
-Django · FastAPI · REST APIs · GraphQL
+Django · FastAPI · Node.js · Express · REST APIs · GraphQL
 
 **Frontend**  
-Next.js · React · HTML5 · CSS3 · Tailwind CSS
+Next.js · React · Vite · HTML5 · CSS3 · Tailwind CSS
 
 **Databases & Platforms**  
 PostgreSQL · MySQL · SQLite · Hasura · Nhost
 
 **DevOps & Cloud**  
-Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel
+Docker · Kubernetes · GitHub Actions · Git · Linux · Cloudflare · Vercel · Render
 
 **Testing & Build**  
 Playwright · Chromium · JUnit 5 · Mockito · Maven
