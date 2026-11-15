@@ -190,7 +190,7 @@ The résumé and CV are independent downloadable documents with fixed filenames 
 - `Asmita_GV_Resume.pdf` — Résumé
 - `Asmita_GV_CV.pdf` — CV
 
-To replace either one, open the Portfolio repository, upload the updated PDF using **exactly the same filename** and replace the old file on the `main` branch. No HTML changes are needed. Once GitHub Pages deploys, the website's résumé/CV links append a fresh cache-busting query when opened to avoid older saved versions.
+To replace either one, open the Portfolio repository, upload the updated PDF using **exactly the same filename** and replace the old file on the `main` branch. No HTML changes are needed. Once GitHub Pages deploys, the website's résumé/CV links append a fresh cache-busting query when opened to avoid older saved versions. The CV buttons stay hidden until `Asmita_GV_CV.pdf` is available on GitHub Pages, preventing broken download links during initial setup.
 
 ## About This Portfolio
 
