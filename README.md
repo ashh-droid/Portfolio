@@ -147,6 +147,20 @@ CI validation and Cloudflare deployment.
   Django-based web application for creating, discovering and managing
   shared rides.
 
+- **Dispatch Load Balancer — Vehicle Routing REST API**
+  Priority-aware, capacity-constrained dispatch planning with Haversine distances,
+  optional 2-opt route improvements, validation, automated tests and a Docker deployment.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-dispatch-load-balancer.html) ·
+  [Live Swagger API](https://dispatch-load-balancer-0lce.onrender.com/swagger-ui/index.html) ·
+  [GitHub](https://github.com/ashh-droid/dispatch-load-balancer)
+
+- **Sweety — Blood Glucose Logbook**
+  Responsive React / Express / PostgreSQL application with authenticated accounts,
+  four daily reading slots, calendar history and summary reports.
+  The full-stack application runs locally; the repository contains real screenshots.
+  [Case Study](https://ashh-droid.github.io/Portfolio/project-sweety.html) ·
+  [GitHub](https://github.com/ashh-droid/sweety-glucose-tracker)
+
 ## Technical Foundation
 
 **Languages**  
