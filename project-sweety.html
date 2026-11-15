@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="only light">
+  <meta name="supported-color-schemes" content="light">
+  <meta name="theme-color" content="#f6f4ef">
+  <meta name="description" content="React, Node.js, Express and PostgreSQL logbook with authenticated users, four daily reading slots, monthly calendar, history views and summary reports.">
+  <meta property="og:title" content="Sweety — Blood Glucose Logbook Case Study — Asmita G V">
+  <meta property="og:description" content="React, Node.js, Express and PostgreSQL logbook with authenticated users, four daily reading slots, monthly calendar, history views and summary reports.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ashh-droid.github.io/Portfolio/project-sweety.html">
+  <link rel="canonical" href="https://ashh-droid.github.io/Portfolio/project-sweety.html">
+  <title>Sweety — Blood Glucose Logbook Case Study — Asmita G V</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sage-base.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-components.css?v=20260816-case1">
+  <link rel="stylesheet" href="sage-case.css?v=20260816-case1">
+</head>
+<body class="case-page">
+<a class="skip" href="#main">Skip to content</a>
+<div class="scroll-bar" id="sp"></div>
+<nav class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="nav-logo" href="index.html">
+      <span class="nav-logo-text">Asmita G V</span>
+      <span class="nav-logo-bar"></span>
+    </a>
+    <button class="ham" id="ham" aria-label="Menu" aria-controls="nl" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nl">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#experience">Experience</a></li>
+      <li><a href="index.html#stack">Stack</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a class="nav-cta" href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé ↗</a></li>
+    </ul>
+  </div>
+</nav>
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap case-hero-grid">
+      <div>
+        <a class="back-link rv" href="index.html#projects">← Back to projects</a>
+        <p class="case-eyebrow rv">Case study · Full-stack web application · 2026</p>
+        <h1 class="rv">Sweety</h1>
+        <p class="case-summary rv">A responsive personal blood glucose logbook for entering up to four daily readings, exploring calendar and history views, and reviewing simple summary reports. The full-stack implementation emphasizes account isolation, input validation and clear, usable data entry.</p>
+        <div class="case-actions rv">
+          <a class="btn-fill" href="https://github.com/ashh-droid/sweety-glucose-tracker" target="_blank" rel="noopener noreferrer">Explore source and screenshots ↗</a>
+        </div>
+      </div>
+      <aside class="case-facts rv-scale"><dl>
+        <div><dt>Frontend</dt><dd>React · Vite · JavaScript</dd></div>
+        <div><dt>Backend</dt><dd>Node.js · Express · REST APIs</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL · SQL summaries</dd></div>
+        <div><dt>Authentication</dt><dd>bcrypt · JWT · HTTP-only cookies</dd></div>
+        <div><dt>Demo</dt><dd>Local full-stack setup · fictional readings</dd></div>
+      </dl></aside>
+    </div>
+  </section>
+  <div class="divider"><span class="divider-mark"></span></div>
+  <section class="case-showcase" aria-label="Sweety application screenshots">
+    <div class="wrap">
+      <div class="showcase-frame rv-scale">
+        <div class="showcase-bar"><i></i><i></i><i></i><span>Sweety · real application screenshots with fictional demonstration data</span></div>
+        <div class="gallery-main">
+          <a href="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/dashboard.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Sweety daily dashboard screenshot">
+            <img src="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/dashboard.webp" alt="Sweety dashboard with daily glucose reading slots and summary reports" loading="eager">
+          </a>
+        </div>
+        <div class="gallery-pair">
+          <figure><a href="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/month-grid.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Sweety calendar screenshot"><img src="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/month-grid.webp" alt="Monthly glucose logbook grid with four daily reading columns" loading="lazy"></a><figcaption>Monthly logbook · open full size</figcaption></figure>
+          <figure><a href="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/sign-in.webp" target="_blank" rel="noopener noreferrer" aria-label="Open full-size Sweety sign-in screenshot"><img src="https://raw.githubusercontent.com/ashh-droid/sweety-glucose-tracker/main/docs/screenshots/sign-in.webp" alt="Sweety login page with lavender branding and demonstration sign-in" loading="lazy"></a><figcaption>Account sign-in · open full size</figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="case-body"><div class="wrap case-layout">
+    <aside class="case-toc" aria-label="Case study navigation"><a href="#problem">Problem</a><a href="#features">Experience</a><a href="#architecture">Architecture</a><a href="#validation">Validation</a><a href="#testing">Testing</a><a href="#scope">Scope</a></aside>
+    <div class="case-content">
+      <section id="problem" class="rv">
+        <p class="case-eyebrow">The problem</p>
+        <h2>Make repeated daily entries easy to review over time.</h2>
+        <p>A useful personal logbook needs quick entry, a reliable way to edit mistakes, and an overview of days and months without losing track of individual readings. Sweety brings those workflows together in a responsive interface supported by a database-backed REST API.</p>
+      </section>
+      <section id="features" class="rv">
+        <p class="case-eyebrow">User workflows</p>
+        <h2>Four daily slots, calendar navigation and clear summary reports.</h2>
+        <div class="case-points">
+          <article class="case-point"><span>01</span><div><h3>Daily reading entry</h3><p>Users can add, edit and delete values in four defined slots: morning fasting, after breakfast, after lunch and after dinner.</p></div></article>
+          <article class="case-point"><span>02</span><div><h3>History and calendar</h3><p>A clickable monthly grid, grouped day history and older-history pagination make previous entries accessible.</p></div></article>
+          <article class="case-point"><span>03</span><div><h3>Period summaries</h3><p>Reports show reading counts, minimums, maximums and averages for a selected day, month to date and the previous full calendar month.</p></div></article>
+        </div>
+      </section>
+      <section id="architecture" class="rv">
+        <p class="case-eyebrow">Full-stack structure</p>
+        <h2>Connect an approachable React interface to an authenticated Express API.</h2>
+        <div class="architecture">
+          <div><strong>React / Vite</strong><span>Daily + month views</span></div><b>→</b>
+          <div><strong>Express API</strong><span>Auth + validation</span></div><b>→</b>
+          <div><strong>PostgreSQL</strong><span>Scoped records</span></div>
+        </div>
+        <p style="margin-top:1.5rem">Account authentication uses bcrypt password hashes and JWTs in HTTP-only cookies. Readings and reports are scoped to the signed-in user. SQL constraints prevent duplicate readings for the same date and slot.</p>
+      </section>
+      <section id="validation" class="rv">
+        <p class="case-eyebrow">Input and data quality</p>
+        <h2>Enforce the same data rules in the UI, API and database.</h2>
+        <div class="decision-grid">
+          <article><h3>One entry per slot</h3><p>Database uniqueness enforces one reading per user, calendar date and designated daily slot.</p></article>
+          <article><h3>Practical input bounds</h3><p>The application rejects future dates and values outside its implemented input range, returning readable validation errors.</p></article>
+          <article><h3>Consistent calendar dates</h3><p>Stored date strings and a configured application timezone avoid unintended day shifts when reading data.</p></article>
+        </div>
+      </section>
+      <section id="testing" class="rv">
+        <p class="case-eyebrow">Verification</p>
+        <h2>Test date handling, validation and reporting behavior.</h2>
+        <p>The project includes 33 standalone tests covering server-side validation and dates, calendar behavior, history averages and immediate reading-value checks. A separate PostgreSQL integration suite exercises authenticated HTTP endpoints and database-backed workflows when a disposable test database is configured.</p>
+      </section>
+      <section id="scope" class="rv">
+        <p class="case-eyebrow">Scope and limitations</p>
+        <h2>A locally runnable software project, not a clinical device.</h2>
+        <p>The repository provides setup instructions and real application screenshots; a public full-stack deployment is not claimed. Screenshots use fictional values. The illustrative reference band is not an individual health target, and the application does not provide diagnoses, treatment recommendations or medical advice.</p>
+      </section>
+    </div>
+  </div></section>
+  <section class="next-case"><div class="wrap"><div class="next-card rv-scale"><div><small>Explore another case study</small><h2>Dispatch Load Balancer</h2></div><a class="btn-fill" href="project-dispatch-load-balancer.html">View project →</a></div></div></section>
+</main>
+<footer class="case-footer"><div class="wrap case-footer-inner"><a class="case-footer-brand" href="index.html">Asmita.</a><div class="case-footer-links"><a href="https://github.com/ashh-droid" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://linkedin.com/in/asmita-gv" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="mailto:gujjarasmita@gmail.com">Email</a><a href="Asmita_GV_Resume.pdf?v=20261023" target="_blank" rel="noopener noreferrer">Résumé</a></div></div></footer>
+<script src="sage.js?v=20261023-resume-refresh1" defer></script>
+</body>
+</html>
