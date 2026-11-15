@@ -183,6 +183,15 @@ Playwright · Chromium · JUnit 5 · Mockito · Maven
 **AI & Security Exposure**  
 BharatCode API · Gemini API · LLM Integration · Splunk SIEM · SPL · Nmap
 
+## Updating résumé and CV PDFs
+
+The résumé and CV are independent downloadable documents with fixed filenames in the repository root:
+
+- `Asmita_GV_Resume.pdf` — Résumé
+- `Asmita_GV_CV.pdf` — CV
+
+To replace either one, open the Portfolio repository, upload the updated PDF using **exactly the same filename** and replace the old file on the `main` branch. No HTML changes are needed. Once GitHub Pages deploys, the website's résumé/CV links append a fresh cache-busting query when opened to avoid older saved versions.
+
 ## About This Portfolio
 
 The site is a custom responsive portfolio built with HTML, CSS and JavaScript
