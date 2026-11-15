@@ -1,31 +1,59 @@
 (function(){
   'use strict';
 
-  /* ─── Resume PDF: always load the latest manually uploaded copy ─── */
-  /* The PDF retains one filename; stamp a fresh URL on each open to bypass cached copies. */
-  function refreshResumeUrl(link){
+  /* ─── CV + résumé PDFs: stable filenames, always open latest uploaded copy ─── */
+  /* Both documents are independently replaceable in the GitHub repository root. */
+  function addCvBesideResume(){
+    document.querySelectorAll('.nav-links a[href*="Asmita_GV_Resume.pdf"], .contact-row a[href*="Asmita_GV_Resume.pdf"], .footer-r a[href*="Asmita_GV_Resume.pdf"], .case-footer-links a[href*="Asmita_GV_Resume.pdf"]').forEach(function(resumeLink){
+      var parent=resumeLink.parentElement;
+      if(!parent) return;
+      var isListItem=parent.tagName.toLowerCase()==='li';
+      var container=isListItem?parent.parentElement:parent;
+      if(container && container.querySelector('a[href*="Asmita_GV_CV.pdf"]')) return;
+      var cvLink=resumeLink.cloneNode(false);
+      cvLink.href='Asmita_GV_CV.pdf';
+      cvLink.textContent=resumeLink.textContent.indexOf('↗')>=0?'CV ↗':'CV';
+      if(isListItem){
+        var cvItem=parent.cloneNode(false);
+        cvItem.appendChild(cvLink);
+        parent.insertAdjacentElement('afterend',cvItem);
+      }else{
+        resumeLink.insertAdjacentElement('afterend',cvLink);
+      }
+    });
+  }
+
+  function refreshDocumentUrl(link){
     if(!link) return;
     var url=new URL(link.href,document.baseURI);
-    if(url.pathname.split('/').pop()!=='Asmita_GV_Resume.pdf') return;
+    var name=url.pathname.split('/').pop();
+    if(name!=='Asmita_GV_Resume.pdf' && name!=='Asmita_GV_CV.pdf') return;
     url.searchParams.set('v',String(Date.now()));
     link.href=url.toString();
   }
-  function refreshResumeLinks(){
-    document.querySelectorAll('a[href*="Asmita_GV_Resume.pdf"]').forEach(refreshResumeUrl);
+  function refreshDocumentLinks(){
+    document.querySelectorAll('a[href*="Asmita_GV_Resume.pdf"], a[href*="Asmita_GV_CV.pdf"]').forEach(refreshDocumentUrl);
   }
-  refreshResumeLinks();
-  function freshResumeOnInteraction(event){
+  addCvBesideResume();
+  /* Do not show a link to a missing PDF while the initial CV is being uploaded. */
+  document.querySelectorAll('a[href*="Asmita_GV_CV.pdf"]').forEach(function(link){link.style.display='none';});
+  fetch('Asmita_GV_CV.pdf',{method:'HEAD',cache:'no-store'}).then(function(response){
+    if(!response.ok) return;
+    document.querySelectorAll('a[href*="Asmita_GV_CV.pdf"]').forEach(function(link){link.style.display='';});
+  }).catch(function(){/* Leave CV links hidden until the file exists. */});
+  refreshDocumentLinks();
+  function freshDocumentOnInteraction(event){
     var target=event.target;
-    var link=target&&target.closest?target.closest('a[href*="Asmita_GV_Resume.pdf"]'):null;
-    if(link) refreshResumeUrl(link);
+    var link=target&&target.closest?target.closest('a[href*="Asmita_GV_Resume.pdf"], a[href*="Asmita_GV_CV.pdf"]'):null;
+    if(link) refreshDocumentUrl(link);
   }
-  document.addEventListener('pointerdown',freshResumeOnInteraction,true);
-  document.addEventListener('click',freshResumeOnInteraction,true);
-  document.addEventListener('contextmenu',freshResumeOnInteraction,true);
+  document.addEventListener('pointerdown',freshDocumentOnInteraction,true);
+  document.addEventListener('click',freshDocumentOnInteraction,true);
+  document.addEventListener('contextmenu',freshDocumentOnInteraction,true);
   document.addEventListener('keydown',function(event){
-    if(event.key==='Enter') freshResumeOnInteraction(event);
+    if(event.key==='Enter') freshDocumentOnInteraction(event);
   },true);
-  window.addEventListener('pageshow',refreshResumeLinks);
+  window.addEventListener('pageshow',refreshDocumentLinks);
 
   if(!document.body.classList.contains('case-page')){
     document.title='Asmita G V | Portfolio';
