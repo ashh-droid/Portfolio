@@ -35,6 +35,12 @@
     document.querySelectorAll('a[href*="Asmita_GV_Resume.pdf"], a[href*="Asmita_GV_CV.pdf"]').forEach(refreshDocumentUrl);
   }
   addCvBesideResume();
+  /* Do not show a link to a missing PDF while the initial CV is being uploaded. */
+  document.querySelectorAll('a[href*="Asmita_GV_CV.pdf"]').forEach(function(link){link.style.display='none';});
+  fetch('Asmita_GV_CV.pdf',{method:'HEAD',cache:'no-store'}).then(function(response){
+    if(!response.ok) return;
+    document.querySelectorAll('a[href*="Asmita_GV_CV.pdf"]').forEach(function(link){link.style.display='';});
+  }).catch(function(){/* Leave CV links hidden until the file exists. */});
   refreshDocumentLinks();
   function freshDocumentOnInteraction(event){
     var target=event.target;
